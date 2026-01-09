@@ -1,0 +1,163 @@
+{
+  "workout_id": "workout_2026-01-13_endurance",
+  "scheduled_for_date": "2026-01-13",
+  "title": "Vasaloppet Aerobic Base Building - Ski Erg Focus",
+  "workout_type": "endurance",
+  "estimated_duration_min": 65,
+  "intensity_target": "RPE_5_6",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly with controlled breathing. Link each breath to movement. Focus on spinal mobility and warming core."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Controlled transitions between sides. Keep chest upright. This prepares hip mobility for ski movement patterns."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Band Pullaparts",
+          "sets": 1,
+          "reps": 15,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Use light resistance band. Pull apart with straight arms at chest height. Activates shoulder stability for skiing."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Air Bike",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 3.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Easy spin to elevate heart rate. RPE 2-3. Focus on smooth rhythm and breathing pattern."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Ski Erg",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 28.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Steady aerobic effort at RPE 5-6. Maintain consistent power output. Think about ski stride rhythm: drive with legs and core, pull with upper body. Target 22-26 watts (adjust based on monitor). This is your primary Vasaloppet-specific training."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Rowing Machine",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 15.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Moderate aerobic pace, RPE 5. Focus on leg drive (60%) and upper body finish (40%). Maintain steady cadence around 22-24 strokes per minute. This builds complementary endurance capacity."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Air Bike",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 7.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Easy cool-down pace, RPE 3-4. Light spinning to transition toward cooldown. Keep cadence steady around 70-80 RPM."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold each side 30 seconds. Lean into the stretch gently. Important for ski-specific calf engagement recovery."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold each side 30 seconds with arm at 90 degrees. Gently rotate chest away. Opens shoulders after pulling movements."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Slow, controlled spinal articulation. Breathe deeply. Promotes parasympathetic activation and core recovery."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Adductor Rockbacks",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Gentle rockback to each side. Hold 2-3 seconds in the deep position. Recovers hip adductors used in skiing."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "Vasaloppet is a 90km classic cross-country ski race requiring exceptional aerobic capacity; ski erg training directly mimics sport-specific movement patterns and builds the endurance foundation needed in 53 days.",
+    "Progressing from 55min to 65min endurance work maintains progressive overload while keeping intensity at RPE 5-6 (conversation-pace aerobic zone) for sustainable adaptation without excessive fatigue.",
+    "Multi-modal endurance approach (ski erg + rowing + bike) builds cardiovascular resilience while varying muscle recruitment patterns to prevent overuse injury and maintain training enthusiasm during pre-competition phase."
+  ],
+  "questions": null
+}

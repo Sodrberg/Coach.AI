@@ -1,0 +1,175 @@
+{
+  "workout_id": "workout_2026-01-09_strength",
+  "scheduled_for_date": "2026-01-09",
+  "title": "Cross-Country Skiing Foundation Strength",
+  "workout_type": "strength",
+  "estimated_duration_min": 50,
+  "intensity_target": "RPE_6_7",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Slow, controlled spinal movement. Arch and round back fully."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Sit tall, keep chest up while rotating between hip positions."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Banded Shoulder Dislocates",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Use light band, keep arms straight, focus on shoulder mobility."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bear Crawl",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 2.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Keep hips low, core tight. Move opposite hand and foot together."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Back Squat",
+          "sets": 4,
+          "reps": 8,
+          "weight_kg": 70.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 120,
+          "cues": "Descend to parallel, drive through heels. Keep chest up and core braced."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bent Over Row",
+          "sets": 4,
+          "reps": 10,
+          "weight_kg": 55.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Hinge at hips, pull bar to lower chest. Squeeze shoulder blades together."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bulgarian Split Squat",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": 20.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Front leg does the work. Descend straight down, drive up through heel."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Cable Pull-Through",
+          "sets": 3,
+          "reps": 12,
+          "weight_kg": 40.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Hip hinge movement, keep back neutral. Drive hips forward to stand."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 3,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Extend opposite arm and leg. Hold 2 seconds, keep hips level."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Keep back leg straight, lean forward into wall. Feel stretch in calf."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Place palm on wall, turn body away. Keep arm straight."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Slow, gentle movement to decompress spine after loading."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "Foundation strength workout targeting key muscle groups needed for Vasaloppet skiing - legs, back, and core stability",
+    "Moderate intensity (RPE 6-7) appropriate for building strength base 54 days out from race without excessive fatigue",
+    "Functional movement patterns that translate to skiing biomechanics - hip hinge, single leg stability, and posterior chain strength"
+  ],
+  "questions": null
+}

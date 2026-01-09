@@ -1,0 +1,25 @@
+{
+  "plan_id": "plan_user_e7fde6dffbbc_2026-01-07T22:26:20.155241",
+  "goal_id": "goal_1767821180127",
+  "user_id": "user_e7fde6dffbbc",
+  "duration_weeks": 8,
+  "overview_markdown": "# 8-Week Training Plan: Vasaloppet 90km Preparation\n\n## Plan Overview\nThis strategic 8-week plan prepares you for the Vasaloppet 90km cross-country ski race scheduled for March 2, 2026. With 10 years of training experience and intermediate fitness, you have a solid foundation to build upon. The plan leverages your 4 available training days per week (Monday, Tuesday, Saturday, Sunday) to balance high-intensity work with adequate recovery.\n\n## Training Philosophy\nVasaloppet is a classic distance endurance race requiring exceptional aerobic capacity, muscular endurance, and mental toughness. The plan progresses through three distinct phases:\n\n1. **Base Building (Weeks 1-3)**: Establish aerobic foundation with high-volume, moderate-intensity work\n2. **Build Phase (Weeks 4-6)**: Introduce race-specific intensity and longer efforts\n3. **Peak/Taper (Weeks 7-8)**: Peak fitness while reducing volume to ensure freshness at race start\n\n## Weekly Structure\n- **Monday**: Moderate-intensity aerobic work (ski-specific or cross-training)\n- **Tuesday**: High-intensity interval or tempo work\n- **Saturday**: Long, steady-state endurance effort (cornerstone session)\n- **Sunday**: Recovery/easy aerobic session or active recovery\n\n## Key Training Principles\n- Progressive overload in volume and intensity across phases\n- Race-specific energy systems development (primarily aerobic with sustained tempo efforts)\n- Adequate recovery between high-intensity sessions\n- Build to peak fitness by Week 7, then strategically taper for race performance\n- Cross-training opportunities to reduce injury risk while maintaining fitness\n\n## Performance Expectations\nBy Week 7, you should demonstrate:\n- Long aerobic capacity: comfortable 2-3 hour efforts at conversational pace\n- Sustained tempo: ability to hold 70-85% max heart rate for 45-60 minutes\n- High work capacity: multiple intensity blocks within single sessions\n- Mental resilience: experience with fatigue management over extended efforts\n\n## Notes\n- No current injuries or limitations allow for aggressive training progression\n- With 53 days remaining, an 8-week plan provides optimal race preparation timing\n- Consider ski-specific training if available (roller skis, cross-country skiing) for movement patterns\n- Gym equipment can support strength endurance, core stability, and injury prevention\n- Monitor fatigue metrics and adjust intensity if overtraining signs emerge",
+  "phase_breakdown": [
+    {
+      "weeks": "1-3",
+      "focus": "Base Building Phase",
+      "description": "Establish broad aerobic foundation with moderate intensity and building volume. Weekly training focuses on developing work capacity across 4 sessions. Long Saturday sessions build from 60-90 minutes at conversational pace. Monday sessions introduce sustained moderate efforts (20-30 minutes). Tuesday work includes moderate-intensity intervals with longer recovery (e.g., 6-8 x 4 minutes). Sunday features easy recovery efforts. Goal: Build engine capacity and skiing-specific endurance while minimizing injury risk through progressive volume increases."
+    },
+    {
+      "weeks": "4-6",
+      "focus": "Build Phase",
+      "description": "Introduce race-specific intensity while maintaining aerobic base. Saturday long sessions extend to 90-120 minutes at conversational pace, simulating race duration. Tuesday sessions shift to tempo work (20-30 minute sustained efforts at 75-85% effort) or shorter, higher-intensity intervals (4-6 x 6 minutes at 85-90% effort). Monday progresses to moderate efforts with intensity (tempo blocks or hill repeats). Sunday remains easy recovery. Goal: Develop ability to sustain faster paces for extended periods and improve lactate threshold, while building confidence for race distance."
+    },
+    {
+      "weeks": "7-8",
+      "focus": "Peak & Taper Phase",
+      "description": "Reach peak fitness in Week 7, then strategically reduce volume while maintaining intensity. Week 7: Saturday long session reaches 120+ minutes at race pace; Tuesday features race-simulation intervals (e.g., 2-3 x 15-20 minutes at goal race pace); Monday includes shorter, higher-intensity work. Week 8 (Taper): Reduce overall volume by 40-50%. Saturday drops to 60-75 minutes at easy-moderate pace. Tuesday becomes short, sharp efforts (3-4 x 3 minutes at high intensity) to maintain nervous system readiness. Monday and Sunday are easy recovery. Goal: Arrive at race start fresh, sharp, and confident in fitness."
+    }
+  ],
+  "created_at": "2026-01-07T22:26:20.155241"
+}

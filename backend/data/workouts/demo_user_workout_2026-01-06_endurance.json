@@ -1,0 +1,175 @@
+{
+  "workout_id": "workout_2026-01-06_endurance",
+  "scheduled_for_date": "2026-01-06",
+  "title": "Base Endurance Session - Return to Training",
+  "workout_type": "endurance",
+  "estimated_duration_min": 60,
+  "intensity_target": "RPE_5_6",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Alternate between arching and rounding spine slowly, focus on mobility"
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Switch between external hip rotation positions, hold briefly in each position"
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Band Pullaparts",
+          "sets": 2,
+          "reps": 15,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Pull band apart with straight arms, squeeze shoulder blades together"
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Ski Erg",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 3.0,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Easy pace warm-up, focus on technique over intensity"
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Ski Erg",
+          "sets": 6,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 4.0,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Moderate steady pace, RPE 5-6. Focus on consistent stroke rate and good form"
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Rowing Machine",
+          "sets": 5,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 3.0,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Conversational pace, strong leg drive, maintain smooth rhythm"
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Back Squat",
+          "sets": 3,
+          "reps": 12,
+          "weight_kg": 50.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Light weight, focus on depth and control. Build base strength for ski endurance"
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bent-Over Row",
+          "sets": 3,
+          "reps": 12,
+          "weight_kg": 30.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Moderate weight, squeeze shoulder blades. Essential for ski pulling motion"
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Ski Erg",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 3.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Very easy pace, focus on cooling down gradually"
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Hold stretch for 30 seconds each leg, focus on lengthening calf muscles"
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Slow and controlled movements to release spine tension"
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "30 seconds each arm against wall, counteract rowing/skiing pulling motions"
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "Starting with moderate endurance work after extended break to rebuild aerobic base safely",
+    "Combining ski erg and rowing machine to develop ski-specific endurance patterns for Vasaloppet preparation",
+    "Including foundational strength work at manageable loads to support long-distance skiing demands"
+  ],
+  "questions": null
+}

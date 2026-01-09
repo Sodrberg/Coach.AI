@@ -1,0 +1,97 @@
+{
+  "log_id": "log_1767820133213",
+  "user_id": "demo_user",
+  "workout_id": "workout_2026-01-07_endurance",
+  "date": "2026-01-07T21:08:53.213Z",
+  "completed": true,
+  "workout_type": "endurance",
+  "duration_min": 50,
+  "rpe_actual": 7,
+  "exercises": [
+    {
+      "name": "Cat-Cow",
+      "sets": 1,
+      "reps": 12,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "90/90 Hip Switches",
+      "sets": 1,
+      "reps": 10,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Rowing Machine",
+      "sets": 1,
+      "reps": null,
+      "weight_kg": null,
+      "duration_per_set_sec": 300,
+      "distance_km": null,
+      "rest_sec": 0
+    },
+    {
+      "name": "Ski Erg",
+      "sets": 1,
+      "reps": null,
+      "weight_kg": null,
+      "duration_per_set_sec": 1500,
+      "distance_km": null,
+      "rest_sec": 0
+    },
+    {
+      "name": "Air Bike",
+      "sets": 1,
+      "reps": null,
+      "weight_kg": null,
+      "duration_per_set_sec": 600,
+      "distance_km": null,
+      "rest_sec": 0
+    },
+    {
+      "name": "Cat-Cow",
+      "sets": 1,
+      "reps": 10,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "90/90 Hip Switches",
+      "sets": 1,
+      "reps": 8,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Calf Stretch",
+      "sets": 2,
+      "reps": 1,
+      "weight_kg": null,
+      "duration_per_set_sec": 60,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Biceps Wall Stretch",
+      "sets": 2,
+      "reps": 1,
+      "weight_kg": null,
+      "duration_per_set_sec": 60,
+      "distance_km": null,
+      "rest_sec": 30
+    }
+  ],
+  "volume_km": null,
+  "feedback": "felt_great",
+  "intensity": "medium",
+  "notes": null
+}

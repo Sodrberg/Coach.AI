@@ -1,0 +1,139 @@
+{
+  "workout_id": "workout_2026-01-13_recovery",
+  "scheduled_for_date": "2026-01-13",
+  "title": "Active Recovery & Mobility - Vasaloppet Prep",
+  "workout_type": "recovery",
+  "estimated_duration_min": 30,
+  "intensity_target": "RPE_3_4",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly and deliberately. Sync movement with breathing - inhale on cow, exhale on cat. Focus on spinal articulation rather than speed."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Sit with hips flexed at 90 degrees. Gently switch legs, keeping torso upright. This targets hip mobility crucial for skiing endurance events. Move with control."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Ankle Dorsiflexion Mobilization",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 20,
+          "cues": "Pull toes toward shins with control. Hold briefly at top. Important for ski boot comfort and calf flexibility in long events."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "On hands and knees, extend opposite arm and leg. Hold for 2 seconds. Keep core tight and hips level. Improves stability and balance needed for long-distance skiing."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": 1,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Place forearms on wall at shoulder height, step forward until stretch is felt. Hold passively. Releases shoulder and arm tension from training."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": 1,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Face wall, step one foot back, keeping heel down. Lean into wall gently. Hold without bouncing. Essential for ski-specific muscular tension relief."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Arch Hold",
+          "sets": 2,
+          "reps": 6,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Barefoot, curl toes to create arch dome without lifting toes off ground. Hold 3-5 seconds. Strengthens foot arch for better ski boot support and stability."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Adductor Rockbacks",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "In wide-legged squat position, shift weight side to side gently. Keep chest upright. Opens hips and inner thighs - critical for skiing mechanics."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Child's Pose",
+          "sets": 1,
+          "reps": 1,
+          "weight_kg": null,
+          "duration_min": 2.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Kneel, sink hips to heels, extend arms forward. Breathe deeply and relax completely. Focus on parasympathetic recovery to lower heart rate."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "User is returning from extended rest (999 days since last workout) and needs gentle re-acclimation. Recovery workout with RPE 3-4 is appropriate to rebuild movement patterns without excessive fatigue.",
+    "Training for 90km Vasaloppet ski race requires specific mobility and stability in hips, ankles, and feet. This session prioritizes these areas while maintaining low intensity.",
+    "Active recovery approach uses mobility and light movement to promote blood flow and adaptations without creating fatigue debt, allowing proper preparation for harder training ahead with 53 days until race."
+  ],
+  "questions": null
+}

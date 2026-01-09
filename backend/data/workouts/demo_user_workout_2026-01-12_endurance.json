@@ -1,0 +1,163 @@
+{
+  "workout_id": "workout_2026-01-12_endurance",
+  "scheduled_for_date": "2026-01-12",
+  "title": "Vasaloppet Endurance Base: Low-Intensity Cardio & Aerobic Capacity",
+  "workout_type": "endurance",
+  "estimated_duration_min": 50,
+  "intensity_target": "RPE_5_6",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly and deliberately, focusing on spinal mobility. Coordinate breathing with movement: inhale on extension, exhale on flexion."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Maintain upright posture, keep hips level. Switch legs smoothly without compensating at the lower back. This mobilizes hip external rotation needed for skiing."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Band Pullaparts",
+          "sets": 2,
+          "reps": 15,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Keep arms at shoulder height, slight bend in elbows. Pull band apart with controlled movement, squeezing shoulder blades together at the end. This activates posterior chain for skiing posture."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Air Bike",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 3.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Easy pace, focus on finding your rhythm. This is activation, not intensity. Maintain steady breathing and get the body warm for the main session."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Rowing Machine",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 18.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Maintain RPE 5-6 (conversational pace). Sustainable effort where you can speak in short sentences. Focus on smooth, rhythmic strokes: legs drive first, then core, then arms pull. This mimics the lower-intensity cardio needed for Vasaloppet endurance base."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Ski Erg",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 15.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Sport-specific skiing movement at easy RPE 5-6. Focus on maintaining steady power output with full range of motion. Keep shoulders relaxed, engage core, and let the arms drive the movement naturally. This builds event-specific aerobic capacity."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Air Bike",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 10.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Easy transition piece to finish the main work. Stay at RPE 5-6, light and controlled. Use this to accumulate low-intensity volume and practice steady-state effort."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Gentle, slow movements to reduce heart rate and restore mobility. Focus on gentle spinal articulation."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold each side for 30 seconds, lean gently into the stretch. Focus on opening up the chest and anterior shoulder."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold 30 seconds each leg. Keep heel planted, lean forward gently. Important for recovery after rowing and skiing work."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Slow, controlled movement. Extend opposite arm and leg fully, pause briefly, return. This promotes core stability and spinal neutrality after endurance work."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "This endurance workout focuses on low-intensity, high-duration cardio (RPE 5-6) which is essential for building aerobic base 7 weeks out from Vasaloppet 90km. Pure endurance racing requires significant time in zone 2.",
+    "The combination of rowing machine, ski erg, and air bike provides sport-specific training (ski erg) plus cross-training benefits. This mirrors the previous session's structure while building aerobic capacity through steady-state work.",
+    "Total cardio volume is 43 minutes of continuous/near-continuous low-intensity work, fitting the 50-minute target window. This session matches the user's stated status of 'great' and follows appropriate progression after the 55-minute endurance session from 6 days prior."
+  ],
+  "questions": null
+}

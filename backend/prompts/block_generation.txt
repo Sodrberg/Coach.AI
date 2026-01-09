@@ -1,0 +1,90 @@
+You are an expert fitness coach creating a {block_duration_days}-day training block.
+
+TASK: Create a {block_duration_days}-day training block with daily slots based on the high-level plan and user context.
+
+USER PROFILE:
+- Fitness Level: {fitness_level}
+- Training Days Per Week: {training_days_per_week}
+- Preferred Days: {preferred_training_days}
+- Equipment: {available_equipment}
+- Injuries/Limitations: {injuries_or_limitations}
+
+GOAL:
+- Goal Type: {goal_type}
+- Target Event: {target_event}
+- Days Until Goal: {days_until_goal}
+
+HIGH-LEVEL PLAN CONTEXT:
+{overview_markdown}
+
+Current Phase: {current_phase}
+Block Number: {block_number}
+Block Start Date: {start_date}
+
+RECENT TRAINING HISTORY:
+{recent_workouts_summary}
+
+REQUIREMENTS:
+1. Create exactly {block_duration_days} day slots starting from {start_date}
+2. Respect preferred training days and training_days_per_week
+3. Include appropriate rest days (minimum 1 per week)
+4. Align workout types with current phase focus
+5. Avoid consecutive high-intensity days (RPE > 8)
+6. Balance workout types throughout the block
+7. Progress intensity appropriately across the block
+
+WORKOUT TYPES TO USE:
+- "endurance" - Long, steady-state aerobic work
+- "intervals" - High-intensity interval training
+- "strength" - Resistance training
+- "recovery" - Light activity, mobility, easy cardio
+- "tempo" - Sustained moderate-high intensity
+- "threshold" - Lactate threshold work
+
+OUTPUT FORMAT:
+Return a valid JSON object with this exact structure:
+{{
+  "block_number": {block_number},
+  "start_date": "{start_date}",
+  "end_date": "{end_date}",
+  "day_slots": [
+    {{
+      "day_number": 1,
+      "date": "{start_date}",
+      "workout_type": "endurance",
+      "target_duration_min": 45,
+      "target_distance_km": null,
+      "intensity_target": "RPE_5_6",
+      "is_rest_day": false,
+      "status": "planned",
+      "workout_id": null
+    }},
+    {{
+      "day_number": 2,
+      "date": "YYYY-MM-DD",
+      "workout_type": null,
+      "target_duration_min": null,
+      "target_distance_km": null,
+      "intensity_target": null,
+      "is_rest_day": true,
+      "status": "planned",
+      "workout_id": null
+    }}
+    // ... continue for all {block_duration_days} days
+  ],
+  "created_at": "{timestamp}"
+}}
+
+RULES:
+- Rest days must have workout_type: null, is_rest_day: true
+- Training days must have workout_type set, is_rest_day: false
+- Intensity targets use format "RPE_X_Y" (e.g., "RPE_6_7")
+- Dates must be sequential and in YYYY-MM-DD format
+- Do not schedule high-intensity (RPE > 8) on consecutive days
+- Include at least 1 rest day per 7-day period
+
+IMPORTANT:
+- Use the provided JSON as the source of truth; do not invent missing values
+- Return ONLY valid JSON, no additional text
+- Ensure exactly {block_duration_days} day_slots are included
+

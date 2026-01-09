@@ -1,0 +1,187 @@
+{
+  "workout_id": "workout_2026-01-10_strength",
+  "scheduled_for_date": "2026-01-10",
+  "title": "Vasaloppet Prep - Lower Body & Core Strength",
+  "workout_type": "strength",
+  "estimated_duration_min": 45,
+  "intensity_target": "RPE_6_7",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly through each transition, focus on spinal mobility and breathing. Fully extend in cow, fully flex in cat."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Control the rotation from one side to the other. Keep chest upright and engaged. Smooth transitions between positions."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Band Pullaparts",
+          "sets": 2,
+          "reps": 15,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Light resistance band. Pull the band apart to chest level with straight arms. Activate shoulders and upper back. Controlled tempo."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Alternate sides. Extend opposite arm and leg fully. Core stays tight, no spinal rotation. Pause briefly at full extension."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Back Squat",
+          "sets": 4,
+          "reps": 6,
+          "weight_kg": 75.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 120,
+          "cues": "Full depth squat with control. Drive through heels on ascent. Maintain neutral spine. RPE 6-7 range - challenging but controlled reps."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bulgarian Split Squat",
+          "sets": 3,
+          "reps": 8,
+          "weight_kg": 15.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Rear foot elevated on bench. Front leg does the work. Drop knee nearly to ground, drive through front heel. Dumbbells in hands for added load."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bent Over Row",
+          "sets": 4,
+          "reps": 6,
+          "weight_kg": 70.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 120,
+          "cues": "Barbell bent-over row. Hip hinge with neutral spine. Row to lower chest. Engage lats and mid-back. Explosive up, controlled down."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Cable Core Press",
+          "sets": 3,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 75,
+          "cues": "Standing with cable at chest height. Press straight out, resisting rotation. Core bracing essential. Alternate sides each rep."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Back Extension",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Hyperextension bench or bodyweight. Extend hips, lifting torso slightly above parallel. Squeeze glutes and hamstrings at top. Control descent."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Gentle, controlled spinal flexion and extension. Focus on breathing and relaxation. Let tension release from lower back."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 0.75,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Hold 45 seconds each leg against wall or bench. Keep heel on ground, lean forward. Feel stretch in calf muscle."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 0.75,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Back of hands against wall, arms extended. Lean forward to feel chest and biceps stretch. Hold 45 seconds each side."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Child's Pose",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.5,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Knees wide, sink hips to heels, arms extended forward. Relax shoulders and neck. Breathe deeply for 90 seconds."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "53 days to Vasaloppet 90km race - focus on building lower body and posterior chain strength critical for long-distance skiing and endurance on varied terrain",
+    "Intermediate fitness level with strong recent endurance session (55min, RPE 6) calls for moderate-high intensity strength work (RPE 6-7) targeting squats, rows, and core stability essential for cross-country skiing power and efficiency",
+    "Total workout duration ~45 minutes matches target while building strength without excessive fatigue; emphasis on compound movements (squats, rows) and functional core work mirrors demands of prolonged skiing activity"
+  ],
+  "questions": null
+}

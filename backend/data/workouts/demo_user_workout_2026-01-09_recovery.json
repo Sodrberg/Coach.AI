@@ -1,0 +1,151 @@
+{
+  "workout_id": "workout_2026-01-09_recovery",
+  "scheduled_for_date": "2026-01-09",
+  "title": "Active Recovery & Mobility Flow for Vasaloppet Preparation",
+  "workout_type": "recovery",
+  "estimated_duration_min": 30,
+  "intensity_target": "RPE_4_5",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly and deliberately. Synchronize breath with movement\u2014inhale on the cow, exhale on the cat. Focus on spinal mobility and warming up the core."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Control the movement from your hips. Keep your torso upright and chest forward. This mobilizes hip external rotation\u2014critical for skiing mechanics."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Band Pullaparts",
+          "sets": 1,
+          "reps": 15,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Use a light band. Pull the band apart with control, opening through your chest. Keep elbows slightly bent and focus on shoulder stability and posture."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Rowing Machine - Easy Pace",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 8.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Aim for 18-20 strokes per minute. Focus on smooth, controlled movements. Engage legs first, then torso, then arms. Keep heart rate conversational (RPE 3-4)."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Move slowly and with control. Fully extend opposite arm and leg, then return. Keep your core tight throughout. This builds stability and balance."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Adductor Rockbacks",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Sit on your heels and lean back slightly. Feel a gentle stretch in your inner thighs and groin. Hold each rep briefly and breathe deeply."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Banded Shoulder Dislocates",
+          "sets": 2,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Use a light band with hands wide apart. Move slowly from front to overhead to back. This improves shoulder mobility and range of motion."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 0.75,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Place forearms on wall at shoulder height, palms forward. Step feet forward gently. Hold and breathe deeply. Release tension in biceps and shoulders."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 0.75,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Step one leg back with heel down. Feel the stretch in your calf. Hold and breathe. Important for skiing preparation\u2014calves work hard on descent."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Child's Pose",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 2.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Kneel and sink hips back to heels. Extend arms forward and relax. Breathe deeply into your back. This is a restorative finish for recovery."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "Recovery workout (RPE 4-5) follows a moderate-intensity endurance session from 3 days ago, promoting active recovery while allowing central nervous system adaptation before next hard session.",
+    "Vasaloppet 90km race preparation requires mobility in hips, shoulders, and spine for efficient skiing mechanics; this workout targets ski-specific mobility restrictions with gentle, controlled movements.",
+    "User is 53 days out from target event at intermediate fitness level with no injuries\u2014light active recovery with rowing machine prepares aerobic system without adding fatigue, staying well within RPE targets."
+  ],
+  "questions": null
+}

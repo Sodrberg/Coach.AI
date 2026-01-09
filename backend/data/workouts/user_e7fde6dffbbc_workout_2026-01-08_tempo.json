@@ -1,0 +1,163 @@
+{
+  "workout_id": "workout_2026-01-08_tempo",
+  "scheduled_for_date": "2026-01-08",
+  "title": "Tempo Endurance Run with Lower Body Strength",
+  "workout_type": "tempo",
+  "estimated_duration_min": 25,
+  "intensity_target": "RPE_7_8",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Smooth spinal flexion and extension. Move deliberately to warm up the core and prepare for dynamic movement."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Controlled hip mobility work. Keep chest up and alternate sides smoothly to prepare hips for running."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 20,
+          "cues": "Hold each stretch for 20-30 seconds per leg. Focus on calf flexibility for running efficiency."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Butt Kicks",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Light and bouncy. Increase heart rate gradually while activating hamstrings and hip flexors."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Tempo Run",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 12.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Sustained effort at RPE 7-8. Maintain steady pace that feels challenging but sustainable. Focus on rhythm and breathing. This is race-specific preparation for the 90km Vasaloppet."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Back Squat",
+          "sets": 3,
+          "reps": 6,
+          "weight_kg": 75.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Controlled descent, explosive ascent. Drive through heels. Build lower body power for mountain sections of Vasaloppet."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Box Step-Down",
+          "sets": 2,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Controlled eccentric loading. Step down slowly with one leg extended. Builds quad endurance for downhill running."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Hold 30 seconds per leg. Release tension from running effort."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Adductor Rockbacks",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Gentle hip adductor stretch. Slow, controlled movements to reduce post-workout tension."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 6,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Controlled core stability work. Move slowly and deliberately to engage stabilizers without fatigue."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Gentle spinal mobilization. Relax and breathe deeply to restore baseline."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "Tempo workout at RPE 7-8 directly supports Vasaloppet 90km race preparation by building sustainable high-intensity aerobic capacity within 53 days to event.",
+    "Strategically avoided upper body pressing to respect current mild shoulder soreness (3/5 severity), focusing instead on lower body strength and running-specific endurance.",
+    "Integrated eccentric loading (squats, step-downs) to build quad and posterior chain durability for the challenging mountain terrain of the Vasaloppet course."
+  ],
+  "questions": null
+}

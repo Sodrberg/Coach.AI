@@ -1,0 +1,139 @@
+{
+  "workout_id": "workout_2026-01-12_recovery",
+  "scheduled_for_date": "2026-01-12",
+  "title": "Active Recovery & Mobility Session",
+  "workout_type": "recovery",
+  "estimated_duration_min": 30,
+  "intensity_target": "RPE_3_4",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly through full range, focus on spinal articulation"
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 2,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Control the transition, sit tall with engaged core"
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Ankle Dorsiflexion Mobilization",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Drive knee forward over toes, hold briefly at end range"
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Rowing Machine",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 12.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Easy conversational pace, focus on smooth technique and rhythm"
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Adductor Rockbacks",
+          "sets": 2,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Rock back slowly, feel stretch in adductors and hips"
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Hold for 3 seconds each rep, maintain neutral spine"
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 2.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold static stretch, keep heel down and leg straight"
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Gentle stretch, turn body away from wall slowly"
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Slow, meditative movements to finish session"
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "Recovery session designed to promote blood flow and mobility after extended training break, preparing body for upcoming Vasaloppet training",
+    "Low-intensity rowing targets aerobic base development crucial for 90km race while maintaining easy RPE 3-4 intensity",
+    "Emphasis on hip and ankle mobility to address key movement patterns needed for cross-country skiing technique"
+  ],
+  "questions": null
+}

@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface-base text-text-primary min-h-screen antialiased;
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', system-ui, sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-surface-base;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border-light rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-text-muted;
+  }
+}
+
+/* Custom component classes */
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply px-5 py-2.5 rounded-lg font-medium font-heading transition-all duration-200 
+           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-surface-base
+           active:scale-[0.98];
+  }
+
+  .btn-primary {
+    @apply btn bg-accent hover:bg-accent-dark text-surface-base font-semibold
+           focus:ring-accent shadow-glow-sm hover:shadow-glow-md;
+  }
+
+  .btn-secondary {
+    @apply btn bg-surface-card border border-border hover:bg-surface-hover 
+           text-text-primary focus:ring-border-light;
+  }
+
+  .btn-danger {
+    @apply btn bg-danger hover:bg-red-600 text-white focus:ring-danger;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent hover:bg-surface-card text-text-secondary 
+           hover:text-text-primary;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-surface-card rounded-xl p-6 border border-border 
+           shadow-card transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply card hover:border-border-light hover:shadow-lg cursor-pointer;
+  }
+
+  .card-glow {
+    @apply card border-border-accent shadow-glow-sm;
+  }
+
+  /* Inputs */
+  .input {
+    @apply w-full px-4 py-3 bg-surface-elevated border border-border rounded-lg 
+           text-text-primary placeholder-text-muted font-body
+           focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent
+           transition-all duration-200;
+  }
+
+  .input-sm {
+    @apply input px-3 py-2 text-sm;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-text-secondary mb-2 font-heading;
+  }
+
+  /* Badges */
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide font-heading;
+  }
+
+  .badge-strength {
+    @apply badge bg-strength/20 text-strength;
+  }
+
+  .badge-endurance {
+    @apply badge bg-endurance/20 text-endurance;
+  }
+
+  .badge-intervals {
+    @apply badge bg-intervals/20 text-intervals;
+  }
+
+  .badge-recovery {
+    @apply badge bg-recovery/20 text-recovery;
+  }
+
+  .badge-rest {
+    @apply badge bg-rest/20 text-rest;
+  }
+
+  /* Selection cards (radio/checkbox styled as cards) */
+  .selection-card {
+    @apply p-4 rounded-xl border-2 cursor-pointer transition-all duration-200
+           border-border hover:border-border-light bg-surface-elevated;
+  }
+
+  .selection-card-active {
+    @apply border-accent bg-accent-muted shadow-glow-sm;
+  }
+
+  /* Section headers */
+  .section-header {
+    @apply text-lg font-semibold text-text-primary font-heading mb-4;
+  }
+
+  /* Dividers */
+  .divider {
+    @apply border-t border-border my-6;
+  }
+
+  /* Animated elements */
+  .animate-in {
+    @apply animate-fade-in;
+  }
+
+  .animate-in-up {
+    @apply animate-slide-up;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent;
+  }
+
+  /* Glow effects */
+  .ring-glow {
+    @apply ring-2 ring-accent/30 ring-offset-2 ring-offset-surface-base;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Background patterns */
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .bg-radial-gradient {
+    background: radial-gradient(ellipse at top, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+  }
+
+  /* Backdrop blur */
+  .backdrop-blur-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}

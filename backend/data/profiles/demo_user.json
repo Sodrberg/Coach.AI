@@ -1,0 +1,20 @@
+{
+  "user_id": "demo_user",
+  "age": 30,
+  "weight_kg": 70.0,
+  "height_cm": 175,
+  "gender": "",
+  "fitness_level": "intermediate",
+  "training_history_years": 2,
+  "available_equipment": [
+    "gym"
+  ],
+  "injuries_or_limitations": "",
+  "training_days_per_week": 4,
+  "preferred_training_days": [
+    "monday",
+    "tuesday",
+    "saturday",
+    "sunday"
+  ]
+}

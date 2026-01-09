@@ -1,0 +1,187 @@
+{
+  "workout_id": "workout_2026-01-08_strength",
+  "scheduled_for_date": "2026-01-08",
+  "title": "Vasaloppet Prep - Lower Body & Core Strength",
+  "workout_type": "strength",
+  "estimated_duration_min": 40,
+  "intensity_target": "RPE_6_7",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Flow smoothly between positions, synchronize breathing with movement. Focus on spinal mobility from neck to tailbone."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Control the rotation, maintain upright torso. Feel the hip opening in each position. Move with intention, not speed."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Band Pullaparts",
+          "sets": 2,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Use light resistance band. Pull apart with control, engage rear shoulders. Full range of motion before chest."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bodyweight Squats",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Warm up the lower body pattern. Full depth, chest up, weight in heels. Activate quads and glutes."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Back Squat",
+          "sets": 4,
+          "reps": 5,
+          "weight_kg": 85.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 120,
+          "cues": "Focus on depth and control. Chest up, elbows forward. Drive through midfoot. This is your primary strength builder for skiing endurance."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bent Over Row",
+          "sets": 3,
+          "reps": 6,
+          "weight_kg": 85.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Hinge from hips, maintain neutral spine. Drive elbows back and up. Builds posterior chain power essential for ski poling."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bulgarian Split Squat",
+          "sets": 3,
+          "reps": 6,
+          "weight_kg": 25.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Each leg - control the descent, front knee tracks over toe. Address unilateral strength imbalances critical for ski technique."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Cable Core Press",
+          "sets": 3,
+          "reps": 8,
+          "weight_kg": 30.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Press explosively from chest. Resist rotation - core stability is essential for maintaining form over 90km. Brace hard."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Back Extension",
+          "sets": 2,
+          "reps": 8,
+          "weight_kg": 20.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Control the negative, avoid hyperextending at top. Protects lower back and strengthens posterior chain. Full range of motion."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Each side - move with control, maintain neutral spine. Engage core. Excellent for stability and body awareness."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 0.75,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Hold each side 45 seconds. Gently lean forward, feel the calf stretch. Prevents tightness from skiing movements."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 0.75,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Hold each arm 45 seconds. Gentle stretch, no forcing. Opens up anterior shoulders and chest."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Child's Pose",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.5,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Rest and breathe deeply for 90 seconds. Allow body to recover. Finish strong and ready for next session."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "Building maximal and relative strength in lower body through heavy back squats and bent-over rows is critical for Vasaloppet 90km success. These compound movements strengthen the muscles used in the poling and pushing phases of cross-country skiing.",
+    "Incorporating unilateral work (Bulgarian split squats) addresses muscle imbalances and improves skiing efficiency. Core pressing builds anti-rotation stability essential for maintaining form over marathon distances.",
+    "RPE 6-7 intensity with adequate rest periods allows for quality strength work 53 days out from race. Timing this strength block before transitioning to more race-specific endurance work prepares the body for sustained power output."
+  ],
+  "questions": null
+}

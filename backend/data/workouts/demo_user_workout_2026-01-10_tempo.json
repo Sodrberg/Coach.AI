@@ -1,0 +1,163 @@
+{
+  "workout_id": "workout_2026-01-10_tempo",
+  "scheduled_for_date": "2026-01-10",
+  "title": "Ski Erg Tempo Session with Strength Finisher",
+  "workout_type": "tempo",
+  "estimated_duration_min": 35,
+  "intensity_target": "RPE_7_8",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Flow smoothly between positions, warming up spine and establishing rhythm. Move deliberately with breathing."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Switch sides controlled. Open hips fully to prepare for forward propulsion needed in skiing."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Band Pullaparts",
+          "sets": 2,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Light resistance band. Pull apart to shoulder width, feel upper back activation. Prepare shoulders for ski erg pull."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Ski Erg - Easy Warm-up",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 3.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "RPE 4-5. Focus on smooth, controlled strokes. Establish good posture and breathing rhythm before tempo effort."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Ski Erg - Tempo Block 1",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 8.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "RPE 7. Sustain a hard but manageable effort. Maintain consistent stroke rate around 28-32 strokes per minute. Push power through legs and core, not just arms."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Ski Erg - Active Recovery",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 2.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "RPE 4-5. Easy, controlled strokes. Keep moving to maintain warmth and HR elevation but allow partial recovery."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Ski Erg - Tempo Block 2",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 8.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "RPE 7-8. Push intensity back up. This is the critical hard block. Maintain power and efficiency despite fatigue. Mental focus on form."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Kettlebell Goblet Squat",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": 20.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Hold kettlebell at chest. Squat deeply maintaining upright torso. Drive through heels. Builds lower body strength for skiing endurance."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Rowing Machine - Easy Cool-down",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 3.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "RPE 3-4. Very easy pace. Light strokes to gradually lower heart rate. Active recovery promotes blood flow."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Hold 30 seconds each leg against wall or bar. Tight calves limit ankle dorsiflexion needed in skiing mechanics."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Arms out to sides on wall, step forward gently. Hold 30 seconds each side. Release shoulder and chest tightness from ski erg work."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "Tempo workout with 53 days until Vasaloppet 90km race requires sustained harder efforts (RPE 7-8) to build aerobic capacity and lactate threshold. Ski erg is sport-specific and highly relevant for cross-country ski preparation.",
+    "Recent endurance session (55min, RPE 6) demonstrates user is well-recovered and ready for increased intensity. Only 1 day of rest is adequate for stepping up to tempo work.",
+    "Two 8-minute tempo blocks mimic race demands with active recovery between efforts. Kettlebell finisher develops lower body power and muscular endurance critical for 90km event. Cooldown prioritizes active recovery and targeted mobility."
+  ],
+  "questions": null
+}

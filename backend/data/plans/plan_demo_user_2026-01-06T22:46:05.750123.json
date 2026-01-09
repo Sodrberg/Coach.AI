@@ -1,0 +1,25 @@
+{
+  "plan_id": "plan_demo_user_2026-01-06T22:46:05.750123",
+  "goal_id": "goal_1767735965723",
+  "user_id": "demo_user",
+  "duration_weeks": 8,
+  "overview_markdown": "# 8-Week Vasaloppet 90km Training Plan\n\n## Overview\nThis intensive 8-week training plan is designed to prepare you for the Vasaloppet 90km cross-country ski race on March 2nd, 2026. With only 54 days until your target event, this plan focuses on maximizing your skiing-specific fitness while building the endurance foundation necessary for a 90km race.\n\n## Training Philosophy\nGiven your intermediate fitness level and 10 years of training history, this plan assumes you have a solid aerobic base but need skiing-specific conditioning. The plan emphasizes:\n- **Aerobic Power Development**: Building the cardiovascular capacity for sustained effort over 90km\n- **Muscular Endurance**: Developing the specific muscle endurance needed for cross-country skiing\n- **Power Endurance**: Building the ability to maintain higher intensities during climbs and competitive sections\n- **Recovery Integration**: Strategic recovery to prevent overtraining in this compressed timeframe\n\n## Weekly Structure\n**Training Days**: Monday, Wednesday, Thursday, Saturday, Sunday (5 days/week)\n**Equipment Utilization**: Your available equipment (ski erg, rowing machine, kettlebells, resistance bands) will be crucial for skiing-specific training\n\n## Key Training Modalities\n1. **Ski Erg Sessions**: Primary tool for skiing-specific movement patterns and power development\n2. **Rowing Machine**: Complementary aerobic conditioning with similar upper body engagement\n3. **Strength Training**: Kettlebells and resistance bands for functional strength and injury prevention\n4. **Cross-Training**: Varied activities to prevent overuse and maintain motivation\n\n## Periodization Strategy\nThe plan follows a compressed linear periodization:\n- **Weeks 1-3**: Aerobic base building with increasing volume\n- **Weeks 4-6**: Intensity introduction while maintaining aerobic work\n- **Weeks 7-8**: Peak preparation with race-specific efforts and strategic taper\n\n## Expected Adaptations\nBy following this plan, you should see improvements in:\n- VO2 max and aerobic capacity\n- Lactate threshold\n- Skiing-specific muscular endurance\n- Upper body and core strength\n- Race pacing and strategy execution",
+  "phase_breakdown": [
+    {
+      "weeks": "1-3",
+      "focus": "Aerobic Base Building",
+      "description": "Establish aerobic foundation with high-volume, low-intensity training. Focus on ski erg technique development, complement with rowing machine for aerobic capacity. Include strength work with kettlebells for functional movement patterns. Build weekly volume progressively while maintaining conversation pace for most sessions."
+    },
+    {
+      "weeks": "4-6",
+      "focus": "Intensity Integration",
+      "description": "Introduce threshold and VO2 max intervals while maintaining aerobic base. Implement race-pace efforts on ski erg, add tempo sessions on rowing machine. Increase strength training specificity with explosive kettlebell movements. Practice race nutrition and pacing strategies during longer sessions."
+    },
+    {
+      "weeks": "7-8",
+      "focus": "Peak & Taper",
+      "description": "Maintain fitness with reduced volume and race-specific intensities. Include race simulation sessions with proper pacing. Focus on recovery, mobility, and maintaining neuromuscular activation. Final week emphasizes complete preparation with minimal training stress while staying sharp for race day."
+    }
+  ],
+  "created_at": "2026-01-06T22:46:05.750123"
+}

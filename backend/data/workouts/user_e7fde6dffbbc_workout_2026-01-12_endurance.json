@@ -1,0 +1,139 @@
+{
+  "workout_id": "workout_2026-01-12_endurance",
+  "scheduled_for_date": "2026-01-12",
+  "title": "Vasaloppet Base Endurance - Steady State Cardio",
+  "workout_type": "endurance",
+  "estimated_duration_min": 70,
+  "intensity_target": "RPE_5_6",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly through full range of motion, coordinate breath with movement. Warm up spine and core."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Control the transition between sides, maintain upright posture. Prepare hips for endurance work."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Ankle Dorsiflexion Mobilization",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move ankles through full range, increase circulation to lower legs. Essential for endurance activity."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Air Bike - Easy Pace",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 5.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Light resistance, RPE 2-3. Focus on smooth pedal strokes and settling into rhythm."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Air Bike - Steady State Endurance",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 50.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Maintain RPE 5-6 throughout. This is conversational intensity - you should be able to speak but not sing. Find a sustainable cadence (90-100 rpm), keep shoulders relaxed, engage core. Focus on steady breathing rhythm. This builds aerobic base essential for 90km Vasaloppet."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Air Bike - Easy Spin Down",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 5.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Reduce resistance gradually, RPE 2-3. Allow heart rate to settle, focus on deep breathing."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold each side 30 seconds, keep heel on ground. Reduce tightness from cycling motion."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold each side 30 seconds, relax shoulders. Open up upper body after sustained effort."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Slow, controlled movements. Activate stabilizer muscles and promote core recovery."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "User is returning from 999 days without training - starting with moderate intensity endurance base work on Air Bike allows safe cardiovascular rebuilding without impact stress before Vasaloppet in 53 days.",
+    "70-minute steady-state session at RPE 5-6 develops aerobic capacity essential for 90km ski race; gym-based cycling provides controlled environment for base phase training with no injury risk.",
+    "Extended 50-minute main set builds muscular endurance and aerobic threshold with proper warm-up and cool-down protocols appropriate for intermediate athlete returning to training."
+  ],
+  "questions": null
+}

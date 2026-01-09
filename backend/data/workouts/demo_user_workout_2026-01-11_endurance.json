@@ -1,0 +1,163 @@
+{
+  "workout_id": "workout_2026-01-11_endurance",
+  "scheduled_for_date": "2026-01-11",
+  "title": "Sustained Aerobic Endurance - Vasaloppet Preparation",
+  "workout_type": "endurance",
+  "estimated_duration_min": 45,
+  "intensity_target": "RPE_5_6",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Move slowly and deliberately, linking breath to movement. Inhale on cow, exhale on cat. Warm up the spine."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Control the rotation, feel the hip mobility improving. Switch sides smoothly without rushing."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Band Pullaparts",
+          "sets": 2,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Use a light resistance band, pull apart with arms extended. Activate shoulders and upper back."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Rowing Machine - Easy Pace",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 3.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Row at conversational pace, focus on smooth strokes and rhythm. Get heart rate elevated gradually."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Ski Erg - Steady State",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 18.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Maintain RPE 5-6 (moderate effort, can hold conversation but slightly elevated breathing). Focus on consistent pace and full-body engagement. Think of this as simulating the sustained effort needed for Vasaloppet."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Rowing Machine - Steady State",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 15.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Continue at RPE 5-6, alternating muscle groups from skiing. Maintain relaxed shoulders and stable core. Keep stroke rate steady at 18-22 strokes per minute."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Air Bike - Cool Down Pace",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 6.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Easy, low-impact cycling to transition to cooldown. RPE 3-4, allow heart rate to gradually decrease."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Slow, controlled movements to decompress spine. Focus on breath and letting heart rate normalize."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": 1,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold each calf stretch for 30 seconds per leg. Feel the tension release in your lower legs."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": 1,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold each side for 30 seconds. Open up the chest and front shoulders after rowing work."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Slow, deliberate movements. Engage core without strain. Balance and stabilize on each rep."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "Endurance workout targets aerobic base building essential for Vasaloppet 90km race with 53 days to prepare. RPE 5-6 allows for sustainable, quality work without overtraining.",
+    "Multi-modal approach using ski erg and rowing machine mimics cross-country skiing demands while providing recovery variation. Only 1 day since last endurance session, so duration and intensity are appropriately paced.",
+    "Mobility-focused warmup and recovery cooldown support longevity training for intermediate athlete, reducing injury risk during build-up phase toward the goal event."
+  ],
+  "questions": null
+}

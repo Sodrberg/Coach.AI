@@ -69,26 +69,62 @@ Return a valid JSON object with this exact structure:
     {{
       "name": "main",
       "items": [
-        // Main workout exercises
+        {{
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Main Exercise",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Form cues here"
+        }}
       ]
     }},
     {{
       "name": "cooldown",
       "items": [
-        // Cooldown exercises
+        {{
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Stretch Name",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 2,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Hold and breathe"
+        }}
       ]
     }}
   ],
   "rationale": [
     "First reason this workout was chosen based on context",
-    "Second reason related to recent training or goal",
-    "Third optional reason"
+    "Second reason related to recent training or goal"
   ],
   "questions": null
 }}
 
+CRITICAL - VALID "kind" VALUES:
+The "kind" field for each exercise MUST be EXACTLY one of these four values:
+- "strength" - for resistance/weight exercises
+- "endurance" - for cardio/aerobic exercises
+- "mobility" - for stretching/flexibility exercises
+- "recovery" - for cooldown/regeneration exercises
+
+DO NOT USE any other values for "kind". These are INVALID and will be rejected:
+- "cardio" (use "endurance" instead)
+- "stretching" (use "mobility" instead)
+- "warmup" (use "mobility" instead)
+- "activation" (use "mobility" instead)
+- "core" (use "strength" instead)
+- "plyometric" (use "strength" instead)
+
 EXERCISE ITEM FIELDS:
-- kind: "strength" | "endurance" | "mobility" | "recovery"
+- kind: ONLY "strength", "endurance", "mobility", or "recovery"
 - For strength: include sets, reps, weight_kg (if applicable), rest_sec
 - For endurance: include duration_min or distance_km
 - For mobility/recovery: include sets, reps or duration_min
@@ -100,8 +136,14 @@ RULES:
 - Include 1-3 rationale bullets explaining workout choices
 - Set questions to null unless critical information is missing
 
+BEFORE YOU RESPOND - VERIFY THESE REQUIREMENTS:
+[ ] Every "kind" field is EXACTLY one of: "strength", "endurance", "mobility", "recovery"
+[ ] You did NOT use "cardio", "stretching", "warmup", "activation", or any other value for "kind"
+[ ] You have exactly 3 sections: "warmup", "main", "cooldown"
+[ ] Each exercise has the required fields for its kind
+
 IMPORTANT:
 - Use the provided JSON as the source of truth; do not invent missing values
 - Return ONLY valid JSON, no additional text
 - Ensure workout respects equipment and injury constraints
-
+- Every "kind" value MUST be one of: "strength", "endurance", "mobility", "recovery"

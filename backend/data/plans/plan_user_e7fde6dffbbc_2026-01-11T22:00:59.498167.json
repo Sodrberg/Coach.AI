@@ -1,0 +1,25 @@
+{
+  "plan_id": "plan_user_e7fde6dffbbc_2026-01-11T22:00:59.498167",
+  "goal_id": "goal_1768165259274",
+  "user_id": "user_e7fde6dffbbc",
+  "duration_weeks": 8,
+  "overview_markdown": "# 8-Week Training Plan for Engelbrektsloppet 45km\n\n## Plan Summary\nThis 8-week strategic plan is designed to prepare you for the Engelbrektsloppet 45km race scheduled for February 1, 2026. With your advanced fitness level and 10 years of training history, this plan focuses on race-specific preparation while maintaining your aerobic capacity and building event-specific endurance.\n\n## Key Considerations\n- **Event Type**: Ultra-distance trail running (45km)\n- **Training Frequency**: 3 days per week (Tuesday, Wednesday, Friday, Sunday)\n- **Current Status**: Advanced athlete with no injuries or limitations\n- **Timeline**: 8 weeks to peak condition\n\n## Training Philosophy\nGiven the 45km distance, this plan emphasizes:\n1. **Long, sustained efforts** to build race-specific endurance\n2. **Tempo and threshold work** to improve your sustainable pace\n3. **Recovery and adaptation** between sessions to prevent overtraining\n4. **Periodized progression** with a clear peak and taper before race day\n\n## Weekly Structure\n- **Tuesday**: Moderate intensity work (tempo runs, threshold sessions, or structured intervals)\n- **Wednesday**: Lower intensity aerobic work (easy runs, recovery, or cross-training)\n- **Friday**: Speed and power development (intervals, fartlek, or strength work)\n- **Sunday**: Long, sustained efforts (long runs building toward race simulation)\n\nSunday sessions will progressively increase from 60-90 minutes in weeks 1-3, to 90-120 minutes in weeks 4-6, with race simulation in weeks 7-8 before taper.\n\n## Phase Breakdown\n\n### Phase 1 (Weeks 1-3): Aerobic Base Consolidation\nFocus on establishing aerobic foundation and consistency. Long runs build from 60-90 minutes. Introduce race-specific pace awareness. Tuesday sessions feature tempo runs at moderate intensity.\n\n### Phase 2 (Weeks 4-6): Build & Intensity Development\nIncrease long run volume to 100-120 minutes with varied terrain and pacing. Introduce threshold and sub-threshold work. Friday sessions focus on strength-endurance and power maintenance. Race-pace segments integrated into longer efforts.\n\n### Phase 3 (Weeks 7-8): Peak & Taper\nWeek 7 includes final race-simulation session (30-35km). Week 8 reduces volume by 40-50% while maintaining intensity. Focus shifts to recovery, race strategy, and neuromuscular maintenance through short, sharp efforts.\n\n## Nutritional & Recovery Considerations\n- Ensure adequate carbohydrate intake for extended training sessions\n- Implement fueling strategy during long runs to practice race-day nutrition\n- Prioritize sleep (7-9 hours) during build phases\n- Consider cross-training or active recovery on non-running days for adaptability\n\n## Success Metrics\n- Complete all scheduled sessions with consistent effort levels\n- Achieve long run milestones (90+ minutes by week 3, 120+ minutes by week 6)\n- Demonstrate improved pace sustainability in tempo and threshold sessions\n- Finish taper week feeling fresh and confident for race day",
+  "phase_breakdown": [
+    {
+      "weeks": "1-3",
+      "focus": "Aerobic Base Consolidation",
+      "description": "Establish consistent training rhythm with 3 sessions per week. Long runs progress from 60 to 90 minutes with focus on easy aerobic pacing. Tuesday sessions feature moderate-intensity tempo work (20-30 minutes at comfortably hard pace). Friday sessions include strength-endurance work and mobility. Build race-specific awareness through conversational pace runs. Emphasis on consistency and adaptation to training stress."
+    },
+    {
+      "weeks": "4-6",
+      "focus": "Build & Intensity Development",
+      "description": "Increase training stimulus through longer weekend efforts (100-120 minutes) with varied terrain and pace variations. Tuesday sessions introduce threshold work and sustained race-pace segments. Friday sessions focus on power maintenance through short, sharp intervals and strength-endurance circuits. Incorporate race-simulation elements\u2014varied pacing, fueling practice, and elevation changes. Long runs may include continuous 45-60 minute race-pace sections. Begin practicing race-day nutrition strategy."
+    },
+    {
+      "weeks": "7-8",
+      "focus": "Peak & Taper",
+      "description": "Week 7 includes final race simulation (30-35km effort) to test fitness and strategy. Week 8 implements strategic taper\u2014reduce volume by 40-50% while maintaining some intensity through short, sharp efforts on Tuesday (15-20 minute tempo) and Friday (4-6 x 3-minute threshold repeats). Long run reduces to 60-70 minutes easy pace. Final week focuses on recovery, freshness, and confidence building. Include mental preparation and race logistics planning."
+    }
+  ],
+  "created_at": "2026-01-11T22:00:59.498167"
+}

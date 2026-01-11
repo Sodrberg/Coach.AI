@@ -1,9 +1,9 @@
 {
   "workout_id": "workout_2026-01-14_endurance",
   "scheduled_for_date": "2026-01-14",
-  "title": "Steady-State Endurance Run - 90 Minutes (Engelbrektsloppet Prep)",
+  "title": "Engelbrektsloppet Aerobic Base Building - 70min Steady Endurance",
   "workout_type": "endurance",
-  "estimated_duration_min": 90,
+  "estimated_duration_min": 70,
   "intensity_target": "RPE_5_6",
   "sections": [
     {
@@ -19,7 +19,7 @@
           "duration_min": null,
           "distance_km": null,
           "rest_sec": 30,
-          "cues": "Move slowly and deliberately, synchronizing breath with movement. Arch on inhale, round on exhale. Activate core throughout."
+          "cues": "Move slowly through full range of motion, synchronize breathing with movement. Inhale on extension, exhale on flexion."
         },
         {
           "kind": "mobility",
@@ -31,7 +31,7 @@
           "duration_min": null,
           "distance_km": null,
           "rest_sec": 30,
-          "cues": "Extend opposite arm and leg while maintaining a neutral spine. Pause briefly at full extension. Keep movements controlled and balanced."
+          "cues": "Extend opposite arm and leg while maintaining a neutral spine. Hold each rep for 1 second. Focus on core stability."
         },
         {
           "kind": "mobility",
@@ -43,19 +43,19 @@
           "duration_min": null,
           "distance_km": null,
           "rest_sec": 30,
-          "cues": "Rotate hips smoothly between positions, maintaining upright posture. Focus on hip mobility and preparation for running mechanics."
+          "cues": "Control the movement between positions, avoid bouncing. Keep chest upright and core engaged throughout."
         },
         {
           "kind": "endurance",
           "exercise_id": null,
-          "name": "Easy Jogging",
+          "name": "Air Bike - Easy Pace",
           "sets": 1,
           "reps": null,
           "weight_kg": null,
-          "duration_min": 5.0,
+          "duration_min": 3.0,
           "distance_km": null,
           "rest_sec": 0,
-          "cues": "Build heart rate gradually. Stay conversational - you should be able to speak in full sentences. Focus on relaxed, efficient cadence."
+          "cues": "Start at RPE 3-4 to elevate heart rate gradually. Focus on smooth pedaling cadence, aim for 90+ rpm."
         }
       ]
     },
@@ -65,38 +65,14 @@
         {
           "kind": "endurance",
           "exercise_id": null,
-          "name": "Steady-State Running - Phase 1",
+          "name": "Air Bike - Steady State Endurance",
           "sets": 1,
           "reps": null,
           "weight_kg": null,
-          "duration_min": 28.0,
+          "duration_min": 55.0,
           "distance_km": null,
           "rest_sec": 0,
-          "cues": "Maintain RPE 5-6 (conversational pace). Focus on consistent breathing pattern - try 3-4 steps per breath. Relax shoulders, keep arms at 90 degrees. Monitor for steady effort without strain."
-        },
-        {
-          "kind": "endurance",
-          "exercise_id": null,
-          "name": "Steady-State Running - Phase 2",
-          "sets": 1,
-          "reps": null,
-          "weight_kg": null,
-          "duration_min": 28.0,
-          "distance_km": null,
-          "rest_sec": 0,
-          "cues": "Continue same pace and intensity. Mid-workout mental checkpoint: assess breathing ease, leg fatigue level, and hydration needs. Maintain discipline - do not accelerate beyond target RPE."
-        },
-        {
-          "kind": "endurance",
-          "exercise_id": null,
-          "name": "Steady-State Running - Phase 3 (Final Push)",
-          "sets": 1,
-          "reps": null,
-          "weight_kg": null,
-          "duration_min": 24.0,
-          "distance_km": null,
-          "rest_sec": 0,
-          "cues": "Maintain RPE 5-6 for final segment. Legs may feel fatigue - this is normal. Focus on form: upright posture, steady cadence, controlled breathing. You are building aerobic base for 45km race."
+          "cues": "Maintain RPE 5-6 (conversational pace). Hold consistent cadence of 85-95 rpm. This is your aerobic base work for 45km race prep. Focus on efficiency and steady breathing. Every 15 minutes, do a quick form check: relaxed shoulders, engaged core, smooth pedal stroke."
         }
       ]
     },
@@ -106,38 +82,38 @@
         {
           "kind": "endurance",
           "exercise_id": null,
-          "name": "Easy Walking",
+          "name": "Air Bike - Easy Spin Down",
           "sets": 1,
           "reps": null,
           "weight_kg": null,
-          "duration_min": 3.0,
+          "duration_min": 5.0,
           "distance_km": null,
           "rest_sec": 0,
-          "cues": "Gradually reduce intensity. Walk at easy pace, allow heart rate to drop naturally. Focus on steady breathing and recovery."
+          "cues": "Reduce intensity to RPE 3-4. Light pedaling at 80-85 rpm to begin recovery process. Gradually lower heart rate."
         },
         {
           "kind": "recovery",
           "exercise_id": null,
           "name": "Calf Stretch",
-          "sets": 2,
+          "sets": 1,
           "reps": null,
           "weight_kg": null,
-          "duration_min": 1.0,
+          "duration_min": 2.0,
           "distance_km": null,
-          "rest_sec": 30,
-          "cues": "Hold each side 30 seconds. Keep heel planted, lean forward gently. No bouncing - static stretch only."
+          "rest_sec": null,
+          "cues": "Hold a deep but comfortable stretch. Keep heel planted. Breathe deeply and relax into the stretch."
         },
         {
           "kind": "recovery",
           "exercise_id": null,
           "name": "Biceps Wall Stretch",
-          "sets": 2,
+          "sets": 1,
           "reps": null,
           "weight_kg": null,
-          "duration_min": 1.0,
+          "duration_min": 2.0,
           "distance_km": null,
-          "rest_sec": 30,
-          "cues": "Hold each arm 30 seconds. Place palm on wall at shoulder height, gently turn away. Feel stretch in front of shoulder."
+          "rest_sec": null,
+          "cues": "Place forearm against wall at shoulder height. Gently rotate body away. Hold steady, breathe naturally."
         },
         {
           "kind": "recovery",
@@ -149,15 +125,15 @@
           "duration_min": null,
           "distance_km": null,
           "rest_sec": 30,
-          "cues": "Slow, controlled movements to mobilize spine post-run. Synchronize with breath for relaxation and recovery."
+          "cues": "Slow, controlled movements to decompress spine after endurance work. Promotes parasympathetic response."
         }
       ]
     }
   ],
   "rationale": [
-    "At 20 days out from Engelbrektsloppet 45km, building aerobic endurance base is critical. 90-minute steady-state run at RPE 5-6 develops aerobic capacity and race-specific fatigue adaptation without excess injury risk.",
-    "Recent training shows strong recovery with 'great' status. User has completed multiple endurance sessions; this workout builds on that foundation with appropriate duration matching the target 90-minute slot.",
-    "RPE 5-6 intensity is sustainable for long-duration training, promoting fat oxidation and aerobic development while preserving nervous system recovery. No injuries reported, allowing full running volume."
+    "With 20 days until Engelbrektsloppet 45km, this workout builds aerobic base capacity at RPE 5-6, which is the sustainable race intensity for ultra-distance events. A 55-minute steady-state bike session develops your aerobic engine.",
+    "Recent training shows consistent endurance work; this session maintains that rhythm while respecting the advanced fitness level. The steady-state approach avoids accumulating additional fatigue from the recent strength sessions on 2026-01-11.",
+    "Air Bike is appropriate for gym-based endurance training and allows precise intensity control (RPE 5-6). The 70-minute total duration matches the target with adequate warmup and recovery protocols."
   ],
   "questions": null,
   "is_completed": false,

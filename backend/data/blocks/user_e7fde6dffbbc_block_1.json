@@ -6,24 +6,24 @@
     {
       "day_number": 1,
       "date": "2026-01-11",
-      "workout_type": null,
-      "target_duration_min": null,
+      "workout_type": "strength",
+      "target_duration_min": 45,
       "target_distance_km": null,
-      "intensity_target": null,
-      "is_rest_day": true,
+      "intensity_target": "RPE_6_7",
+      "is_rest_day": false,
       "status": "planned",
-      "workout_id": null
+      "workout_id": "workout_2026-01-11_strength"
     },
     {
       "day_number": 2,
       "date": "2026-01-12",
-      "workout_type": null,
-      "target_duration_min": null,
+      "workout_type": "endurance",
+      "target_duration_min": 60,
       "target_distance_km": null,
-      "intensity_target": null,
-      "is_rest_day": true,
+      "intensity_target": "RPE_5_6",
+      "is_rest_day": false,
       "status": "planned",
-      "workout_id": null
+      "workout_id": "workout_2026-01-12_endurance"
     },
     {
       "day_number": 3,
@@ -40,8 +40,8 @@
       "day_number": 4,
       "date": "2026-01-14",
       "workout_type": "endurance",
-      "target_duration_min": 90,
-      "target_distance_km": 25.0,
+      "target_duration_min": 70,
+      "target_distance_km": null,
       "intensity_target": "RPE_5_6",
       "is_rest_day": false,
       "status": "planned",
@@ -50,13 +50,13 @@
     {
       "day_number": 5,
       "date": "2026-01-15",
-      "workout_type": null,
-      "target_duration_min": null,
+      "workout_type": "strength",
+      "target_duration_min": 45,
       "target_distance_km": null,
-      "intensity_target": null,
-      "is_rest_day": true,
+      "intensity_target": "RPE_6_7",
+      "is_rest_day": false,
       "status": "planned",
-      "workout_id": null
+      "workout_id": "workout_2026-01-15_strength"
     },
     {
       "day_number": 6,
@@ -83,21 +83,21 @@
     {
       "day_number": 8,
       "date": "2026-01-18",
-      "workout_type": null,
-      "target_duration_min": null,
+      "workout_type": "endurance",
+      "target_duration_min": 75,
       "target_distance_km": null,
-      "intensity_target": null,
-      "is_rest_day": true,
+      "intensity_target": "RPE_5_6",
+      "is_rest_day": false,
       "status": "planned",
       "workout_id": null
     },
     {
       "day_number": 9,
       "date": "2026-01-19",
-      "workout_type": "recovery",
-      "target_duration_min": 30,
+      "workout_type": "strength",
+      "target_duration_min": 45,
       "target_distance_km": null,
-      "intensity_target": "RPE_3_4",
+      "intensity_target": "RPE_6_7",
       "is_rest_day": false,
       "status": "planned",
       "workout_id": null
@@ -117,8 +117,8 @@
       "day_number": 11,
       "date": "2026-01-21",
       "workout_type": "endurance",
-      "target_duration_min": 105,
-      "target_distance_km": 28.0,
+      "target_duration_min": 80,
+      "target_distance_km": null,
       "intensity_target": "RPE_5_6",
       "is_rest_day": false,
       "status": "planned",
@@ -127,11 +127,11 @@
     {
       "day_number": 12,
       "date": "2026-01-22",
-      "workout_type": null,
-      "target_duration_min": null,
+      "workout_type": "recovery",
+      "target_duration_min": 35,
       "target_distance_km": null,
-      "intensity_target": null,
-      "is_rest_day": true,
+      "intensity_target": "RPE_4_5",
+      "is_rest_day": false,
       "status": "planned",
       "workout_id": null
     },
@@ -160,21 +160,21 @@
     {
       "day_number": 15,
       "date": "2026-01-25",
-      "workout_type": null,
-      "target_duration_min": null,
+      "workout_type": "endurance",
+      "target_duration_min": 85,
       "target_distance_km": null,
-      "intensity_target": null,
-      "is_rest_day": true,
+      "intensity_target": "RPE_5_6",
+      "is_rest_day": false,
       "status": "planned",
       "workout_id": null
     },
     {
       "day_number": 16,
       "date": "2026-01-26",
-      "workout_type": "recovery",
-      "target_duration_min": 35,
+      "workout_type": "strength",
+      "target_duration_min": 50,
       "target_distance_km": null,
-      "intensity_target": "RPE_3_4",
+      "intensity_target": "RPE_6_7",
       "is_rest_day": false,
       "status": "planned",
       "workout_id": null
@@ -182,7 +182,7 @@
     {
       "day_number": 17,
       "date": "2026-01-27",
-      "workout_type": "tempo",
+      "workout_type": "threshold",
       "target_duration_min": 60,
       "target_distance_km": null,
       "intensity_target": "RPE_7_8",
@@ -194,8 +194,8 @@
       "day_number": 18,
       "date": "2026-01-28",
       "workout_type": "endurance",
-      "target_duration_min": 120,
-      "target_distance_km": 30.0,
+      "target_duration_min": 90,
+      "target_distance_km": null,
       "intensity_target": "RPE_5_6",
       "is_rest_day": false,
       "status": "planned",
@@ -204,11 +204,11 @@
     {
       "day_number": 19,
       "date": "2026-01-29",
-      "workout_type": null,
-      "target_duration_min": null,
+      "workout_type": "recovery",
+      "target_duration_min": 40,
       "target_distance_km": null,
-      "intensity_target": null,
-      "is_rest_day": true,
+      "intensity_target": "RPE_4_5",
+      "is_rest_day": false,
       "status": "planned",
       "workout_id": null
     },
@@ -235,5 +235,5 @@
       "workout_id": null
     }
   ],
-  "created_at": "2026-01-11T13:23:06.632719"
+  "created_at": "2026-01-11T22:13:35.991722"
 }

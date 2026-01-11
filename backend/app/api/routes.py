@@ -204,16 +204,10 @@ async def generate_plan(
     
     Returns CompletePlan or ClarifyingQuestions if info is missing.
     """
-    # #region agent log
-    import json as _json; open('/Users/linussoderberg/agentic-coach/.cursor/debug.log','a').write(_json.dumps({"location":"routes.py:generate_plan:entry","message":"Plan generation started","data":{"user_id":user_id,"goal_id":goal_id},"hypothesisId":"A,B","timestamp":__import__('time').time()})+'\n')
-    # #endregion
     # Build snapshot
     snapshot = snapshot_builder.build_snapshot(user_id)
 
     if not snapshot:
-        # #region agent log
-        import json as _json; open('/Users/linussoderberg/agentic-coach/.cursor/debug.log','a').write(_json.dumps({"location":"routes.py:generate_plan:no_snapshot","message":"Snapshot is None - returning ClarifyingQuestions","data":{"user_id":user_id},"hypothesisId":"A","timestamp":__import__('time').time()})+'\n')
-        # #endregion
         return ClarifyingQuestions(
             questions=[
                 "What is your current fitness level?",
@@ -230,16 +224,10 @@ async def generate_plan(
             message=f"Goal {goal_id} does not match user's active goal",
         )
 
-    # #region agent log
-    import json as _json; open('/Users/linussoderberg/agentic-coach/.cursor/debug.log','a').write(_json.dumps({"location":"routes.py:generate_plan:before_hlp","message":"Snapshot built, generating high-level plan","data":{"has_current_plan":snapshot.current_plan is not None,"has_current_block":snapshot.current_block is not None},"hypothesisId":"A","timestamp":__import__('time').time()})+'\n')
-    # #endregion
     # Generate high-level plan
     high_level_plan = high_level_plan_generator.generate(snapshot)
 
     if not high_level_plan:
-        # #region agent log
-        import json as _json; open('/Users/linussoderberg/agentic-coach/.cursor/debug.log','a').write(_json.dumps({"location":"routes.py:generate_plan:hlp_failed","message":"High-level plan generation FAILED","data":{},"hypothesisId":"B,D","timestamp":__import__('time').time()})+'\n')
-        # #endregion
         return ErrorResponse(
             error_code="PLAN_GENERATION_FAILED",
             message="Failed to generate high-level plan",
@@ -257,9 +245,6 @@ async def generate_plan(
     )
 
     if not first_block:
-        # #region agent log
-        import json as _json; open('/Users/linussoderberg/agentic-coach/.cursor/debug.log','a').write(_json.dumps({"location":"routes.py:generate_plan:block_failed","message":"Block generation FAILED","data":{},"hypothesisId":"B,D","timestamp":__import__('time').time()})+'\n')
-        # #endregion
         return ErrorResponse(
             error_code="BLOCK_GENERATION_FAILED",
             message="Failed to generate training block",
@@ -293,9 +278,6 @@ async def generate_plan(
 
     store.save_complete_plan(user_id, complete_plan)
 
-    # #region agent log
-    import json as _json; open('/Users/linussoderberg/agentic-coach/.cursor/debug.log','a').write(_json.dumps({"location":"routes.py:generate_plan:success","message":"Plan generation SUCCEEDED - returning CompletePlan","data":{"plan_id":high_level_plan.plan_id,"block_number":first_block.block_number,"workouts_count":len(detailed_workouts)},"hypothesisId":"B,C,D","timestamp":__import__('time').time()})+'\n')
-    # #endregion
     logger.info(f"Generated complete plan for user {user_id}")
     return complete_plan
 

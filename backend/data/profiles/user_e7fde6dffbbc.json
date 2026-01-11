@@ -4,16 +4,18 @@
   "weight_kg": 85.0,
   "height_cm": 183,
   "gender": "male",
-  "fitness_level": "intermediate",
+  "fitness_level": "advanced",
   "training_history_years": 10,
   "available_equipment": [
     "gym"
   ],
   "injuries_or_limitations": "",
-  "training_days_per_week": 3,
+  "training_days_per_week": 5,
   "preferred_training_days": [
+    "monday",
     "tuesday",
     "wednesday",
-    "sunday"
+    "thursday",
+    "friday"
   ]
 }

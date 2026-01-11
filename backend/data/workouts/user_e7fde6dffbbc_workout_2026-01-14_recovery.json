@@ -1,0 +1,141 @@
+{
+  "workout_id": "workout_2026-01-14_recovery",
+  "scheduled_for_date": "2026-01-14",
+  "title": "Easy Recovery Flow - Mobility & Active Restoration",
+  "workout_type": "recovery",
+  "estimated_duration_min": 30,
+  "intensity_target": "RPE_4_5",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly through each rep, focusing on spinal articulation. Inhale on cow, exhale on cat. Feel the gentle mobilization of your spine."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Extend opposite arm and leg slowly, maintaining a neutral spine. Pause for 1 second at full extension. This activates your core gently."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Rotate gently between hip positions. Move with control and breathe steadily. This prepares hips for the longer race training ahead."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Adductor Rockbacks",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Rock back slowly, feeling a gentle stretch in the adductors. Keep tension low (RPE 3-4). Breathe steadily throughout."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Ankle Dorsiflexion Mobilization",
+          "sets": 2,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Flex your ankles through full range of motion. Important for 45km endurance event - keep ankles mobile and healthy. Move smoothly."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": 1,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold a deep but comfortable calf stretch. Lean gently into the wall. Hold for 60 seconds each side. No bouncing."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 1,
+          "reps": 1,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Place forearm against wall at shoulder height. Gently rotate body away. Hold 60 seconds, breathing deeply. Promotes shoulder recovery."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Butterfly Sit-Up",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Perform slow, controlled sit-ups in butterfly position. Keep motion smooth and relaxed. This gently engages core while stretching hip flexors."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Child's Pose Hold",
+          "sets": 1,
+          "reps": 1,
+          "weight_kg": null,
+          "duration_min": 2.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Hold child's pose for 2 minutes with slow, deep breathing. Focus on relaxation and recovery. This completes your active recovery session."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "After 3 consecutive high-intensity endurance sessions (70min, RPE 6-7) and 2 strength sessions, this recovery workout is essential to manage fatigue and prepare for race-specific training with 20 days until Engelbrektsloppet 45km.",
+    "Recovery day prioritizes mobility work in hips, ankles, and shoulders that support ultra-distance running, using low-intensity (RPE 4-5) exercises that promote blood flow and reduce soreness without adding training stress.",
+    "The 30-minute gentle flow respects your advanced fitness level while allowing active recovery\u2014lighter movement accelerates adaptation and prevents overtraining as you enter the final 3 weeks before your 45km race."
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

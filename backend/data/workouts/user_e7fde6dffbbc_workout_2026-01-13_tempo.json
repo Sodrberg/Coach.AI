@@ -1,7 +1,7 @@
 {
   "workout_id": "workout_2026-01-13_tempo",
   "scheduled_for_date": "2026-01-13",
-  "title": "Tempo Run with Dynamic Activation - Engelbrektsloppet Prep",
+  "title": "Tempo Run Effort with Strength Integration - 45km Race Prep",
   "workout_type": "tempo",
   "estimated_duration_min": 50,
   "intensity_target": "RPE_7_8",
@@ -19,7 +19,7 @@
           "duration_min": null,
           "distance_km": null,
           "rest_sec": 30,
-          "cues": "Move slowly and deliberately, synchronizing breath with movement. Arch on inhale, round on exhale to mobilize the spine."
+          "cues": "Flow smoothly between positions, synchronize breath with movement, warm up spine and core"
         },
         {
           "kind": "mobility",
@@ -31,31 +31,19 @@
           "duration_min": null,
           "distance_km": null,
           "rest_sec": 30,
-          "cues": "Control the switching motion, keeping your torso upright. Feel the external rotation and mobility in each hip position."
-        },
-        {
-          "kind": "mobility",
-          "exercise_id": null,
-          "name": "Bird Dog",
-          "sets": 1,
-          "reps": 10,
-          "weight_kg": null,
-          "duration_min": null,
-          "distance_km": null,
-          "rest_sec": 30,
-          "cues": "Extend opposite arm and leg fully, maintaining a neutral spine. Hold each rep for 1 second and avoid rotating your hips."
+          "cues": "Control the rotation, maintain upright posture, open hips dynamically on each side"
         },
         {
           "kind": "endurance",
           "exercise_id": null,
-          "name": "Light Treadmill or Track Jog",
+          "name": "Air Bike - Easy Pace",
           "sets": 1,
           "reps": null,
           "weight_kg": null,
           "duration_min": 5.0,
           "distance_km": null,
-          "rest_sec": 0,
-          "cues": "Easy conversational pace, focus on relaxed form and getting your body temperature up gradually."
+          "rest_sec": null,
+          "cues": "Build heart rate gradually, light resistance, find rhythm for transition to main workout"
         }
       ]
     },
@@ -65,26 +53,26 @@
         {
           "kind": "endurance",
           "exercise_id": null,
-          "name": "Tempo Run - Progressive Build",
+          "name": "Air Bike - Tempo Effort",
           "sets": 1,
           "reps": null,
           "weight_kg": null,
-          "duration_min": 30.0,
+          "duration_min": 32.0,
           "distance_km": null,
-          "rest_sec": 0,
-          "cues": "Start at a comfortably hard pace (RPE 6). After 10 minutes, increase to sustained tempo pace (RPE 7-8). Maintain steady breathing\u2014aim for 3 counts in, 3 counts out. Focus on consistent turnover and efficient ground contact. This is an aerobic workout designed to improve lactate threshold, critical for the 45km Engelbrektsloppet. Monitor your effort carefully; you should be able to speak only short sentences."
+          "rest_sec": null,
+          "cues": "Maintain RPE 7-8 throughout. Steady cadence around 90-100 rpm. This is challenging but sustainable pace. Focus on consistent effort matching race-pace demands for the 45km Engelbrektsloppet. Sit tall, engage core, smooth pedal stroke."
         },
         {
-          "kind": "endurance",
+          "kind": "strength",
           "exercise_id": null,
-          "name": "Light Recovery Jog",
-          "sets": 1,
-          "reps": null,
+          "name": "Ab Wheel",
+          "sets": 2,
+          "reps": 8,
           "weight_kg": null,
-          "duration_min": 5.0,
+          "duration_min": null,
           "distance_km": null,
-          "rest_sec": 0,
-          "cues": "Easy pace, bring heart rate down gradually. This active recovery aids lactate clearance and promotes blood flow."
+          "rest_sec": 60,
+          "cues": "Control the rollout and return. Engage core maximally. Move with intention. Maintain neutral spine alignment throughout. This strengthens the anterior core critical for endurance racing."
         }
       ]
     },
@@ -94,38 +82,38 @@
         {
           "kind": "recovery",
           "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Slow, controlled movements. Extend opposite arm and leg fully. Hold briefly. Focus on stability and balance. Breathing steady."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
           "name": "Calf Stretch",
           "sets": 2,
           "reps": null,
           "weight_kg": null,
-          "duration_min": 1.0,
+          "duration_min": 1.5,
           "distance_km": null,
-          "rest_sec": 30,
-          "cues": "Hold each leg at the wall or bar. Keep your heel down and lean forward until you feel a gentle stretch. Breathe deeply."
+          "rest_sec": null,
+          "cues": "Hold each side 45 seconds. Keep heel down, lean forward gently. Calf recovery is important after tempo effort."
         },
         {
           "kind": "recovery",
           "exercise_id": null,
           "name": "Biceps Wall Stretch",
-          "sets": 2,
+          "sets": 1,
           "reps": null,
           "weight_kg": null,
-          "duration_min": 1.0,
+          "duration_min": 1.5,
           "distance_km": null,
-          "rest_sec": 30,
-          "cues": "Stand facing a wall with arm extended and palm up. Gently rotate your body away to increase the stretch. Hold for 30 seconds each side."
-        },
-        {
-          "kind": "recovery",
-          "exercise_id": null,
-          "name": "Static Standing Quad Stretch",
-          "sets": 2,
-          "reps": null,
-          "weight_kg": null,
-          "duration_min": 1.0,
-          "distance_km": null,
-          "rest_sec": 30,
-          "cues": "Pull your foot toward your glute, keeping your knee aligned under your hip. Hold for 30 seconds each leg without bouncing."
+          "rest_sec": null,
+          "cues": "Place forearm against wall at shoulder height. Step forward gently to feel stretch. Hold 45 seconds each side. Release tension in upper body."
         },
         {
           "kind": "recovery",
@@ -136,16 +124,16 @@
           "weight_kg": null,
           "duration_min": null,
           "distance_km": null,
-          "rest_sec": 0,
-          "cues": "Gentle, easy movements to promote spinal mobility and aid recovery. Move with your breath and relax the nervous system."
+          "rest_sec": 30,
+          "cues": "Slow, gentle flow. Allow spine to decompress after intense effort. Breathing drives the movement. Full restoration of mobility."
         }
       ]
     }
   ],
   "rationale": [
-    "Tempo workout targets lactate threshold development, essential for ultramarathon performance over 45km. RPE 7-8 provides the right intensity window to improve aerobic capacity without overtraining with 20 days until race.",
-    "Recent training shows consistent endurance work; this tempo session adds intensity variation while respecting the athlete's 'great' current status. Progressive build structure allows the body to adapt gradually.",
-    "Includes activation patterns (Cat-Cow, 90/90 Hip Switches, Bird Dog) from recent sessions to maintain mobility and neuromuscular coordination before the harder running effort."
+    "Tempo workout at RPE 7-8 directly trains the lactate threshold and aerobic capacity needed for a 45km race in 20 days. Air Bike provides controlled tempo stimulus while reducing impact stress.",
+    "Recent training shows 3 consecutive endurance sessions; this tempo effort maintains aerobic focus while integrating targeted strength work (Ab Wheel) to reinforce core stability critical for ultra-distance running/racing performance.",
+    "Duration of 50 minutes matches target exactly, with 32 minutes at tempo pace supplemented by mobility prep and focused core strengthening with active recovery to support the demanding 45km event goal."
   ],
   "questions": null,
   "is_completed": false,

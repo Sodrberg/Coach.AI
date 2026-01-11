@@ -1,5 +1,7 @@
 You are an expert fitness coach creating a {block_duration_days}-day training block.
 
+CRITICAL REQUIREMENT: You MUST create EXACTLY {block_duration_days} day_slots. Not 14, not 7 - exactly {block_duration_days}.
+
 TASK: Create a {block_duration_days}-day training block with daily slots based on the high-level plan and user context.
 
 USER PROFILE:
@@ -25,15 +27,15 @@ RECENT TRAINING HISTORY:
 {recent_workouts_summary}
 
 REQUIREMENTS:
-1. Create exactly {block_duration_days} day slots starting from {start_date}
-2. Respect preferred training days and training_days_per_week
-3. Include appropriate rest days (minimum 1 per week)
-4. Align workout types with current phase focus
-5. Avoid consecutive high-intensity days (RPE > 8)
-6. Balance workout types throughout the block
-7. Progress intensity appropriately across the block
+1. Create EXACTLY {block_duration_days} day_slots - this is mandatory
+2. day_number must go from 1 to {block_duration_days} sequentially
+3. Respect preferred training days and training_days_per_week
+4. Include appropriate rest days (minimum 1 per week)
+5. Align workout types with current phase focus
+6. Avoid consecutive high-intensity days (RPE > 8)
+7. Balance workout types throughout the block
 
-WORKOUT TYPES TO USE:
+WORKOUT TYPES TO USE (only these values):
 - "endurance" - Long, steady-state aerobic work
 - "intervals" - High-intensity interval training
 - "strength" - Resistance training
@@ -42,7 +44,7 @@ WORKOUT TYPES TO USE:
 - "threshold" - Lactate threshold work
 
 OUTPUT FORMAT:
-Return a valid JSON object with this exact structure:
+Return a valid JSON object. The day_slots array MUST have EXACTLY {block_duration_days} items.
 {{
   "block_number": {block_number},
   "start_date": "{start_date}",
@@ -69,8 +71,19 @@ Return a valid JSON object with this exact structure:
       "is_rest_day": true,
       "status": "planned",
       "workout_id": null
+    }},
+    ... YOU MUST CONTINUE THIS PATTERN UNTIL day_number: {block_duration_days} ...
+    {{
+      "day_number": {block_duration_days},
+      "date": "{end_date}",
+      "workout_type": "recovery",
+      "target_duration_min": 30,
+      "target_distance_km": null,
+      "intensity_target": "RPE_4_5",
+      "is_rest_day": false,
+      "status": "planned",
+      "workout_id": null
     }}
-    // ... continue for all {block_duration_days} days
   ],
   "created_at": "{timestamp}"
 }}
@@ -83,8 +96,12 @@ RULES:
 - Do not schedule high-intensity (RPE > 8) on consecutive days
 - Include at least 1 rest day per 7-day period
 
-IMPORTANT:
-- Use the provided JSON as the source of truth; do not invent missing values
-- Return ONLY valid JSON, no additional text
-- Ensure exactly {block_duration_days} day_slots are included
+BEFORE YOU RESPOND - VERIFY THESE REQUIREMENTS:
+[ ] Your day_slots array contains EXACTLY {block_duration_days} items (count: 1, 2, 3... up to {block_duration_days})
+[ ] day_number starts at 1 and ends at {block_duration_days}
+[ ] Each day has a sequential date starting from {start_date}
+[ ] All required fields are present for each day_slot
 
+CRITICAL: Your response MUST contain exactly {block_duration_days} day_slots. If you generate fewer, your response will be rejected.
+
+Return ONLY valid JSON, no additional text.

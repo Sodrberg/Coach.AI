@@ -139,13 +139,8 @@ export function useGeneratePlan() {
   return useMutation({
     mutationFn: ({ userId, goalId }) => planApi.generate(userId, goalId),
     onSuccess: (data) => {
-      // #region agent log
-      fetch('http://127.0.0.1:7242/ingest/ec7cf0ec-5098-4120-a457-e76f87ea854b',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'useApi.js:useGeneratePlan:onSuccess',message:'Plan generation onSuccess called',data:{hasHighLevelPlan:!!data?.high_level_plan,hasErrorCode:!!data?.error_code,errorCode:data?.error_code,keys:Object.keys(data||{})},hypothesisId:'B,C',timestamp:Date.now()})}).catch(()=>{});
-      // #endregion
+      // Handle ErrorResponse returned with 200 OK status
       if (data?.error_code) {
-        // #region agent log
-        fetch('http://127.0.0.1:7242/ingest/ec7cf0ec-5098-4120-a457-e76f87ea854b',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'useApi.js:useGeneratePlan:errorResponse',message:'Backend returned ErrorResponse with 200 OK',data:{error_code:data.error_code,message:data.message},hypothesisId:'B',timestamp:Date.now()})}).catch(()=>{});
-        // #endregion
         throw new Error(data.message || 'Plan generation failed');
       }
       queryClient.setQueryData(['plan', data.high_level_plan.user_id], data);

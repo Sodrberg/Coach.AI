@@ -1,0 +1,25 @@
+{
+  "plan_id": "plan_user_e7fde6dffbbc_2026-01-11T22:13:25.805706",
+  "goal_id": "goal_1768166005594",
+  "user_id": "user_e7fde6dffbbc",
+  "duration_weeks": 8,
+  "overview_markdown": "# 8-Week Training Plan for Engelbrektsloppet 45km\n\n## Plan Summary\nThis strategic 8-week training plan is designed to prepare you for the Engelbrektsloppet 45km ski race on February 1st, 2026. With your advanced fitness level, 10 years of training history, and no current injuries, this plan leverages periodization principles to maximize performance while managing fatigue and injury risk.\n\n## Training Philosophy\nGiven the demanding nature of a 45km ultraendurance ski race, the plan follows a three-phase periodized approach:\n- **Base Building (Weeks 1-3)**: Establish aerobic foundation and skiing-specific strength\n- **Build Phase (Weeks 4-6)**: Increase training intensity, introduce race-pace work, and develop lactate threshold\n- **Peak/Taper (Weeks 7-8)**: Reduce volume while maintaining intensity, focus on recovery and race preparation\n\n## Weekly Structure\nYou'll train 5 days per week (Monday-Friday) with the following general framework:\n- **2-3 Aerobic/Long Duration Sessions**: Build base capacity and fat-burning efficiency\n- **1-2 Intensity Sessions**: Develop power and race-pace tolerance\n- **1 Strength/Power Session**: Maintain muscular strength and prevent injuries\n- **Active Recovery/Flexibility**: Integrated into training days\n\n## Key Adaptations for 45km Racing\n- Progressive long-distance work to build race-specific endurance\n- Emphasis on sustained power output at race pace\n- Integration of terrain-specific training when possible\n- Adequate recovery nutrition and sleep protocols\n- Mental preparation and race strategy development in final weeks\n\n## Timeline Rationale\nWith only 20 weeks until the race, this 8-week block represents the final push toward peak fitness. The compressed timeline requires efficient training and excellent recovery practices. The remaining 12 weeks post-plan should allow for race-specific taper and final technical refinement.\n\n## Expected Outcomes\nBy week 8, you should demonstrate:\n- Significantly improved aerobic capacity and economy\n- Ability to sustain race pace for extended durations\n- Enhanced muscular strength and injury resilience\n- Mental confidence and tactical race plan",
+  "phase_breakdown": [
+    {
+      "weeks": "1-3",
+      "focus": "Base Building & Aerobic Development",
+      "description": "Establish aerobic foundation and skiing-specific adaptations. Emphasize moderate-intensity, longer-duration sessions (45-90 minutes) to build fat-oxidation capacity. Include 1-2 strength sessions focusing on lower body, core stability, and upper body power. Introduce 1 tempo/threshold session to establish baseline fitness. Training should feel sustainable and build consistency. Focus on technical skiing efficiency and movement quality."
+    },
+    {
+      "weeks": "4-6",
+      "focus": "Build Phase & Intensity Development",
+      "description": "Progressively increase training intensity and specificity. Incorporate 2 focused intensity sessions per week including race-pace work, tempo intervals, and threshold building. Maintain aerobic base with 2-3 longer endurance sessions (60-120 minutes). Reduce pure strength work to 1 maintenance session. Begin introducing back-to-back training days to simulate race demands. Gradually build weekly volume toward peak. Expected weekly training volume should increase 10-15% per week."
+    },
+    {
+      "weeks": "7-8",
+      "focus": "Peak & Taper for Race",
+      "description": "Reduce overall training volume by 20-30% while maintaining intensity. Week 7 represents the final peak with race-simulation efforts at goal race pace. Week 8 is a controlled taper focusing on recovery, activation, and mental preparation. Include 2-3 short, high-quality intensity sessions (20-30 minutes) to maintain neural activation. Prioritize sleep, nutrition, and stress management. Focus on race strategy, equipment check, and mental visualization."
+    }
+  ],
+  "created_at": "2026-01-11T22:13:25.805706"
+}

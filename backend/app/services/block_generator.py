@@ -85,16 +85,22 @@ class BlockGenerator:
         """Build the system prompt."""
         block_days = settings.block_duration_days
         return f"""You are an expert fitness coach creating detailed training schedules.
+
+MOST IMPORTANT RULE: You MUST create EXACTLY {block_days} day_slots in your response. Not 14, not 7, not any other number - exactly {block_days}. This is mandatory and non-negotiable.
+
 Your task is to create a {block_days}-day training block with appropriate workout types and rest days.
 
 CRITICAL RULES:
-1. Always output valid JSON matching the specified schema
-2. Create EXACTLY {block_days} day_slots
-3. Dates must be sequential starting from start_date
-4. Respect the user's preferred training days
-5. Include minimum 1 rest day per 7-day period
-6. Do not schedule high-intensity (RPE > 8) on consecutive days
-7. Balance workout types appropriately for the training phase"""
+1. Your day_slots array MUST contain EXACTLY {block_days} items
+2. day_number must go from 1 to {block_days} sequentially
+3. Always output valid JSON matching the specified schema
+4. Dates must be sequential starting from start_date
+5. Respect the user's preferred training days
+6. Include minimum 1 rest day per 7-day period
+7. Do not schedule high-intensity (RPE > 8) on consecutive days
+8. Balance workout types appropriately for the training phase
+
+Remember: EXACTLY {block_days} day_slots. Count them before responding."""
 
     def _build_prompt(
         self,

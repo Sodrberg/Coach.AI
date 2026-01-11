@@ -128,16 +128,9 @@ class JSONStore:
         goals = self.get_goals_for_user(user_id)
         if not goals:
             return None
-        # #region agent log
-        import json as _json; open('/Users/linussoderberg/agentic-coach/.cursor/debug.log','a').write(_json.dumps({"location":"json_store.py:get_active_goal","message":"Goals found for user","data":{"user_id":user_id,"goal_count":len(goals),"goal_ids":[g.goal_id for g in goals],"target_dates":[g.target_date for g in goals]},"hypothesisId":"goal_selection","timestamp":__import__('time').time()})+'\n')
-        # #endregion
         # Return the most recently created goal (goal_id contains timestamp: goal_{timestamp})
         # Sort by goal_id descending to get the most recently created
-        active_goal = max(goals, key=lambda g: g.goal_id)
-        # #region agent log
-        import json as _json; open('/Users/linussoderberg/agentic-coach/.cursor/debug.log','a').write(_json.dumps({"location":"json_store.py:get_active_goal:selected","message":"Selected active goal","data":{"selected_goal_id":active_goal.goal_id,"selected_target_date":active_goal.target_date},"hypothesisId":"goal_selection","timestamp":__import__('time').time()})+'\n')
-        # #endregion
-        return active_goal
+        return max(goals, key=lambda g: g.goal_id)
 
     # ==================== High Level Plan ====================
 

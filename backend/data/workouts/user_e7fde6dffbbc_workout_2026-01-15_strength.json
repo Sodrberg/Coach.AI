@@ -1,0 +1,153 @@
+{
+  "workout_id": "workout_2026-01-15_strength",
+  "scheduled_for_date": "2026-01-15",
+  "title": "Lower Body & Core Strength Focus - Engelbrektsloppet Preparation",
+  "workout_type": "strength",
+  "estimated_duration_min": 45,
+  "intensity_target": "RPE_6_7",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move through full range of motion, coordinate breathing with movement. Exhale on extension, inhale on flexion."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Keep chest upright, control the transition between sides. Focus on hip mobility and stability."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Extend opposite arm and leg fully, maintain neutral spine. Squeeze glutes at full extension."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Back Squat",
+          "sets": 4,
+          "reps": 6,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Drive through heels, maintain upright torso. Descend until thighs are parallel or deeper. Core tight throughout."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bent Over Row",
+          "sets": 3,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 75,
+          "cues": "Hinge from hips, maintain neutral spine. Pull elbows back and up, squeeze shoulder blades together at top."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Cable Core Press",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Press from chest height, resist rotation. Brace core, press explosively, control return. Builds anti-rotation stability for trail running."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bulgarian Split Squat",
+          "sets": 3,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Back foot elevated, front knee tracks over toes. Lower under control until front thigh is parallel. Builds single-leg strength."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Wall or bench support, keep heel on ground, lean forward gently. Hold for full duration, feel stretch in calf."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Back Extension",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Controlled movement, light weight or bodyweight. Strengthen posterior chain in recovery mode, avoid excessive lumbar extension."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.5,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Arm extended against wall, rotate chest away. Gentle stretch, full breathing. Promotes upper body recovery."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "With 20 days until Engelbrektsloppet 45km, this strength session focuses on lower body power and anti-rotation core stability essential for technical trail running on long distances. Back Squat and Bulgarian Split Squat build unilateral and bilateral leg strength for climbing and descending.",
+    "Recent training shows solid endurance base (70min sessions); this strength stimulus at RPE 6-7 provides neuromuscular adaptation without excessive fatigue accumulation. Cable Core Press specifically targets rotational stability crucial for maintaining form on varied terrain.",
+    "Advanced fitness level allows for heavier compound movements with shorter rest periods (60-90sec). Warmup reuses proven mobility sequences from recent workouts. Total duration targets 45 minutes as specified."
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

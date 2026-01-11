@@ -118,15 +118,26 @@ class WorkoutGenerator:
         return """You are an expert fitness coach creating detailed workout plans.
 Your task is to create a specific workout with exercises, sets, reps, and coaching cues.
 
+MOST IMPORTANT RULE: The "kind" field for each exercise MUST be EXACTLY one of these four values:
+- "strength"
+- "endurance"
+- "mobility"
+- "recovery"
+
+DO NOT use "cardio", "stretching", "warmup", "activation", "core", "plyometric" or any other value. Only the four values above are valid.
+
 CRITICAL RULES:
-1. Always output valid JSON matching the specified schema
-2. Include warmup, main, and cooldown sections
-3. Use appropriate exercises for the available equipment
-4. Respect injuries and limitations - avoid exercises that could aggravate them
-5. Match the target intensity (RPE)
-6. Stay within the target duration (±10 minutes)
-7. Provide clear, actionable coaching cues
-8. If user has reported pain, significantly reduce intensity and avoid affected areas"""
+1. Every "kind" field MUST be one of: "strength", "endurance", "mobility", "recovery"
+2. Always output valid JSON matching the specified schema
+3. Include warmup, main, and cooldown sections
+4. Use appropriate exercises for the available equipment
+5. Respect injuries and limitations - avoid exercises that could aggravate them
+6. Match the target intensity (RPE)
+7. Stay within the target duration (±10 minutes)
+8. Provide clear, actionable coaching cues
+9. If user has reported pain, significantly reduce intensity and avoid affected areas
+
+Remember: "kind" can ONLY be "strength", "endurance", "mobility", or "recovery"."""
 
     def _build_prompt(
         self,

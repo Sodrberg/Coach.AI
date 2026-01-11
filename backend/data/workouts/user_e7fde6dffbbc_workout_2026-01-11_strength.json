@@ -1,0 +1,165 @@
+{
+  "workout_id": "workout_2026-01-11_strength",
+  "scheduled_for_date": "2026-01-11",
+  "title": "Upper Body Strength Focus with Core Stability",
+  "workout_type": "strength",
+  "estimated_duration_min": 55,
+  "intensity_target": "RPE_6_7",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly through the full range of motion. Inhale on cow, exhale on cat. Warm up the spine gradually."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Band Pullaparts",
+          "sets": 2,
+          "reps": 15,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Use a light resistance band. Pull the band apart with arms at shoulder height, squeezing shoulder blades together. Control the return."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 1,
+          "reps": 2,
+          "weight_kg": null,
+          "duration_min": 0.75,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Place arms against wall at shoulder height. Step forward gently to stretch the chest and biceps. Hold each side for 20-30 seconds."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bench Press",
+          "sets": 4,
+          "reps": 6,
+          "weight_kg": 75.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Control the descent over 2 seconds. Press explosively. Keep shoulder blades retracted. Grip slightly wider than shoulder width."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bent-Over Row",
+          "sets": 4,
+          "reps": 6,
+          "weight_kg": 75.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Hinge at hips with slight knee bend. Row the bar to your lower chest. Squeeze shoulder blades at the top. Keep core engaged."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Assisted Dip",
+          "sets": 3,
+          "reps": 8,
+          "weight_kg": 30.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Use assistance machine if available. Lower body by bending elbows to 90 degrees. Press back to start. Control the negative portion."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Cable Curl",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": 30.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Use a straight bar attachment. Keep elbows fixed at your sides. Curl smoothly without swinging. Pause briefly at the top."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Cable Core Press",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": 25.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Stand perpendicular to the cable machine. Press away from your chest explosively. Resist rotation. Brace your core throughout."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly and deliberately. Extend opposite arm and leg. Hold for 1-2 seconds. This develops core stability and mind-muscle connection."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Sit with both knees bent at 90 degrees. Rotate hips smoothly side to side. Focus on hip mobility and flexibility."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": 2,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Stand facing a wall. Step one leg back and press heel to ground. Hold 30 seconds per leg. Keep hips square to wall."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "Recent training shows heavy focus on bench press and mobility work; this session continues upper body strength development at RPE 6-7 intensity while avoiding excessive volume after back-to-back sessions.",
+    "Intermediate fitness level allows for 4-6 rep ranges on compound lifts (bench and rows) to build strength efficiently within the 55-minute window.",
+    "Included dynamic core exercises (Cable Core Press) and hip mobility (90/90 Hip Switches) to complement recent endurance training and maintain movement quality."
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

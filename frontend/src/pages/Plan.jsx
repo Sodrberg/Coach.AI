@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { getUserId } from '../hooks/useApi';
+import { getUserId, useMoveWorkout } from '../hooks/useApi';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Link } from 'react-router-dom';
 
@@ -23,6 +24,8 @@ const typeBgColors = {
 
 export default function Plan() {
   const userId = getUserId();
+  const [selectedDay, setSelectedDay] = useState(null);
+  const moveMutation = useMoveWorkout();
   
   const { data: plan, isLoading, error } = useQuery({
     queryKey: ['plan', userId],
@@ -33,6 +36,40 @@ export default function Plan() {
     },
     retry: false,
   });
+
+  const handleDayClick = (day) => {
+    // Don't allow selecting past days
+    const today = new Date().toISOString().split('T')[0];
+    if (day.date < today) return;
+
+    if (!selectedDay) {
+      // Only allow selecting workout days (not rest days)
+      if (!day.is_rest_day) {
+        setSelectedDay(day);
+      }
+    } else if (selectedDay.date === day.date) {
+      // Deselect if clicking the same day
+      setSelectedDay(null);
+    } else {
+      // Move the workout to the clicked day
+      moveMutation.mutate(
+        { fromDate: selectedDay.date, toDate: day.date },
+        {
+          onSuccess: () => {
+            setSelectedDay(null);
+          },
+          onError: (error) => {
+            console.error('Failed to move workout:', error);
+            setSelectedDay(null);
+          },
+        }
+      );
+    }
+  };
+
+  const cancelSelection = () => {
+    setSelectedDay(null);
+  };
 
   if (isLoading) {
     return <LoadingSpinner message="Loading your plan..." />;
@@ -117,7 +154,49 @@ export default function Plan() {
 
       {/* Calendar View */}
       <div className="card">
-        <h2 className="section-header">Current Block Schedule</h2>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="section-header !mb-0">Current Block Schedule</h2>
+          {selectedDay && (
+            <button
+              onClick={cancelSelection}
+              className="text-sm text-text-muted hover:text-text-primary transition-colors"
+            >
+              Cancel
+            </button>
+          )}
+        </div>
+
+        {/* Selection instruction banner */}
+        {selectedDay && (
+          <div className="mb-4 p-3 rounded-lg bg-accent/10 border border-accent/30 flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+              <svg className="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <p className="text-sm text-accent font-medium">
+                Moving {selectedDay.workout_type} workout from{' '}
+                {new Date(selectedDay.date).toLocaleDateString('en', { weekday: 'short', month: 'short', day: 'numeric' })}
+              </p>
+              <p className="text-xs text-text-muted mt-0.5">
+                Tap another day to move it there, or tap the same day to cancel
+              </p>
+            </div>
+            {moveMutation.isPending && (
+              <div className="w-5 h-5 border-2 border-accent/30 border-t-accent rounded-full animate-spin" />
+            )}
+          </div>
+        )}
+
+        {/* Error message */}
+        {moveMutation.isError && (
+          <div className="mb-4 p-3 rounded-lg bg-red-500/10 border border-red-500/30">
+            <p className="text-sm text-red-400">
+              Failed to move workout. Please try again.
+            </p>
+          </div>
+        )}
         
         {weeks.map((week, weekIndex) => (
           <div key={weekIndex} className="mb-8 last:mb-0">
@@ -128,16 +207,22 @@ export default function Plan() {
               {week.map((day) => {
                 const isToday = day.date === today;
                 const isPast = day.date < today;
+                const isSelected = selectedDay?.date === day.date;
+                const isValidTarget = selectedDay && !isPast && selectedDay.date !== day.date;
                 const typeStyle = day.is_rest_day
                   ? 'bg-surface-elevated text-text-muted'
                   : typeBgColors[day.workout_type] || 'bg-surface-elevated';
 
                 return (
-                  <div
+                  <button
                     key={day.day_number}
+                    onClick={() => handleDayClick(day)}
+                    disabled={isPast || moveMutation.isPending}
                     className={`relative p-2 sm:p-3 rounded-lg text-center transition-all ${typeStyle} ${
                       isToday ? 'ring-2 ring-accent ring-offset-2 ring-offset-surface-card' : ''
-                    } ${isPast ? 'opacity-40' : ''}`}
+                    } ${isPast ? 'opacity-40 cursor-not-allowed' : 'cursor-pointer hover:scale-105'} ${
+                      isSelected ? 'ring-2 ring-accent scale-105' : ''
+                    } ${isValidTarget ? 'ring-1 ring-accent/50 ring-dashed' : ''}`}
                   >
                     <div className="text-xs text-text-muted font-medium">
                       {new Date(day.date).toLocaleDateString('en', { weekday: 'short' })}
@@ -160,7 +245,14 @@ export default function Plan() {
                         </svg>
                       </span>
                     )}
-                  </div>
+                    {isSelected && (
+                      <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent flex items-center justify-center">
+                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                    )}
+                  </button>
                 );
               })}
             </div>

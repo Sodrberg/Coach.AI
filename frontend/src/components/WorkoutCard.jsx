@@ -101,11 +101,6 @@ export default function WorkoutCard({ workout, editable = false, onWorkoutChange
               </span>
             </div>
           </div>
-          {editable && (
-            <span className="text-xs px-2 py-1 rounded-full bg-accent/10 text-accent font-medium">
-              Editing
-            </span>
-          )}
         </div>
 
         {/* Rationale */}

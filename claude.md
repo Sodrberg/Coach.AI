@@ -1,13 +1,19 @@
-# claude.md — Training Coach App (JSON in → JSON out)
+# claude.md — Training Coach App (Fullstack)
 
-You are Claude Code working in a codebase for a consumer mobile fitness app (App Store target). Your job is to help implement a backend-driven "AI coach" that generates training plans and next workouts.
+You are Claude Code working in a codebase for a fullstack fitness coaching application. The app features an AI-powered coach that generates personalized training plans and workouts.
+
+## Project Overview
+- **Current state**: Fullstack web app with React frontend and FastAPI backend
+- **Future state**: Native iOS app (using a dedicated iOS framework) with the same backend
+- **Backend design principle**: The API is frontend-agnostic. All endpoints return JSON and are designed to support any client (web, iOS, Android). The backend must remain decoupled from any specific frontend implementation.
 
 ## Non-negotiables
-- **App input = JSON object. App output = JSON object.**
+- **API input = JSON object. API output = JSON object.**
 - Never return free-form output from core endpoints; always conform to schemas.
 - If required data is missing, output a **JSON object describing missing fields/questions** (still JSON out).
 - Prioritize **simplicity, stability, and testability** over "clever agent architectures".
 - All safety/guardrail rules must be enforceable in code (not only in prompts).
+- **Backend must be frontend-agnostic**: Design APIs so they work with the current React web app and a future iOS native app without changes.
 
 ## Product scope (MVP)
 - User has a profile + goal (e.g., Vasaloppet in 8 weeks).
@@ -19,7 +25,6 @@ You are Claude Code working in a codebase for a consumer mobile fitness app (App
 - If user provides negative feedback (sore, tired, pain), system adjusts current day's workout and may regenerate upcoming days in current block (typically next 1–3 days).
 - System stores all completed workouts with exercise details, timestamps, and feedback as context for future workout generation.
 - UI is a traditional workout list (exercises top-to-bottom; sets/reps or time/distance).
-- **This project is backend-focused only. UI/frontend is out of scope.**
 
 ## How It Works (User Flow)
 1. **Setup**: User creates profile + enters goal
@@ -45,7 +50,22 @@ You are Claude Code working in a codebase for a consumer mobile fitness app (App
    - History is summarized into a compact snapshot before sending to the LLM
 
 ## Architecture (keep it minimal)
-- **Mobile app** talks only to **our backend**.
+
+### Frontend (Current: React Web App)
+- **Stack**: React + Vite + Tailwind CSS
+- **Location**: `frontend/`
+- **Pages**: Login, Home, Profile, Goal, Workout, Plan, Log
+- **Components**: FeedbackForm, WorkoutCard, ExerciseItem, Layout, LoadingSpinner, ExercisePicker
+- **API layer**: `src/api/client.js` handles all backend communication
+- **Design guidance**: See `.claude/frontend-design/SKILL.md` for UI/UX standards
+
+### Frontend (Future: iOS Native App)
+- A dedicated iOS framework will replace the React frontend
+- The backend API remains unchanged—designed to be client-agnostic
+- All current endpoints will serve the iOS app without modification
+
+### Backend (FastAPI + LLM)
+- **Any frontend client** talks only to **our backend** via REST API
 - Backend is the "LLM gateway":
   - builds a compact `FitnessSnapshot` from stored data (raw history → summary)
   - calls LLM to generate plan/workout JSON
@@ -319,8 +339,10 @@ LLM should be guided, but **code is the enforcement**.
   - `history_summary`: aggregated stats for older history (weekly averages, intensity distribution, common exercises, recent PRs)
 - The LLM should base decisions on `FitnessSnapshot` only.
 
-## Files & folders (recommended)
-- `app/` or `src/`
+## Files & folders
+
+### Backend (`backend/`)
+- `app/`
   - `models/` (Pydantic schemas)
   - `services/`
     - `snapshot_builder.py`
@@ -332,9 +354,22 @@ LLM should be guided, but **code is the enforcement**.
     - `validator.py`
     - `repair.py`
   - `api/` (FastAPI routes)
-  - `tests/`
+- `tests/`
 - `prompts/` (versioned prompt templates)
-- `docs/` (product notes, schema docs)
+- `data/` (JSON fixtures)
+
+### Frontend (`frontend/`)
+- `src/`
+  - `api/` (API client)
+  - `components/` (reusable UI components)
+  - `pages/` (route pages: Login, Home, Profile, Goal, Workout, Plan, Log)
+  - `hooks/` (custom React hooks)
+  - `assets/` (static assets)
+- `public/` (public assets)
+- Tailwind config, Vite config, ESLint config
+
+### Project Root
+- `.claude/` (AI assistant configuration and skills)
 
 ## Endpoint contracts (MVP)
 Design endpoints as pure JSON I/O:
@@ -347,6 +382,8 @@ Design endpoints as pure JSON I/O:
 - `POST /block/generate-next` → generates next `ThreeWeekBlock` (triggered automatically or manually)
 
 ## Testing requirements
+
+### Backend
 - Unit tests for:
   - snapshot builder (deterministic)
   - validator rules
@@ -357,6 +394,11 @@ Design endpoints as pure JSON I/O:
   - fixed snapshots → expected JSON shapes
   - feedback scenarios → expected adjustments
 - Mock LLM responses for tests; do not hit external APIs in unit tests.
+
+### Frontend
+- Component tests for key UI components
+- Integration tests for API client
+- E2E tests for critical user flows (login, view workout, submit feedback)
 
 ## Coding standards
 - Type hints everywhere.
@@ -394,10 +436,11 @@ Do not guess missing values.
 - Wearable integrations (heart rate, sleep)
 - Payment/subscriptions
 - Multi-language support
-- Frontend/UI implementation
+- Native iOS app (planned for post-MVP)
 - Full production DB migrations (focus on logic/services first)
 
 ## Future considerations (post-MVP)
+- **Native iOS app**: Replace React web frontend with a dedicated iOS framework (backend API remains unchanged)
 - Chat interface for nuanced coaching
 - Context compression improvements
 - Advanced adaptation (multi-week replanning)

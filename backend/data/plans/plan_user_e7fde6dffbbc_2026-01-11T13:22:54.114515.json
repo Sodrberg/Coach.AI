@@ -1,0 +1,25 @@
+{
+  "plan_id": "plan_user_e7fde6dffbbc_2026-01-11T13:22:54.114515",
+  "goal_id": "goal_1768134173920",
+  "user_id": "user_e7fde6dffbbc",
+  "duration_weeks": 8,
+  "overview_markdown": "# 8-Week Training Plan for Engelbrektsloppet 45km\n\n## Plan Summary\n\nThis 8-week training plan is designed to prepare you for the Engelbrektsloppet 45km race scheduled for February 1, 2026. With 20 weeks until the event, this represents the immediate pre-race block focused on race-specific preparation and peak performance.\n\n## Athlete Profile Analysis\n\n**Strengths:**\n- 10 years of training history provides excellent aerobic foundation\n- Intermediate fitness level indicates readiness for structured intensity\n- No injuries or limitations allows full training potential\n- 3 training days per week is appropriate for ultraendurance event prep\n\n**Considerations:**\n- 45km ultramarathon requires exceptional aerobic capacity and mental resilience\n- Training frequency (3 days/week) must maximize efficiency with quality over quantity\n- 20 weeks total timeline suggests this 8-week block should focus on peak race simulation\n\n## Training Philosophy\n\nThis plan emphasizes:\n1. **Long, steady-state efforts** to build race-pace familiarity and mental toughness\n2. **Tempo and threshold work** to improve lactate clearance at sustained efforts\n3. **Race-specific pacing** and fueling strategies tested in training\n4. **Progressive volume** with strategic recovery to avoid overtraining\n5. **Health as priority** - sustainable intensity to prevent injury and burnout\n\n## Weekly Structure\n\n**Tuesday:** Tempo/Threshold Work (Speed development and aerobic power)\n**Wednesday:** Long/Steady State (Ultraendurance specificity)\n**Sunday:** Moderate Intensity or Recovery (Builds volume without excessive fatigue)\n\nThis distribution allows 24-48 hour recovery between hard efforts while accumulating substantial weekly stimulus.\n\n## Phase Breakdown\n\n**Phase 1 (Weeks 1-2): Race Build**\n- Focus on establishing race-pace feel at longer distances\n- Introduce race-simulation elements (fueling, pacing strategy)\n- Build confidence and mental resilience\n- Expected weekly volume: moderate-high\n\n**Phase 2 (Weeks 3-6): Peak Performance**\n- Progressive increase in long-run distance and intensity\n- Sustained tempo efforts to improve threshold power\n- Race-specific pacing practice\n- Expected weekly volume: highest of the plan\n- Incorporation of terrain/elevation similar to Engelbrektsloppet\n\n**Phase 3 (Weeks 7-8): Peak and Taper**\n- Reduce volume while maintaining intensity\n- Final race-simulation workout with full fueling plan\n- Emphasis on recovery, sleep, and physiological adaptation\n- Mental preparation and confidence building\n- Carbohydrate loading protocols in final week\n\n## Key Training Principles\n\n- **Polarized approach:** Distinguish clearly between easy, moderate, and hard efforts\n- **Progressive overload:** Gradually increase long-run distance and intensity\n- **Specificity:** Training closely mimics race distance, terrain, and pacing\n- **Recovery integration:** Strategic rest days and reduced weeks prevent accumulated fatigue\n- **Nutrition practice:** All long runs are opportunities to practice race-day fueling strategy\n\n## Expected Outcomes\n\nBy week 8, you should demonstrate:\n- Comfort sustaining 45km at target race pace\n- Tested nutrition and hydration strategy\n- Improved aerobic capacity and lactate threshold\n- Mental resilience and confidence for ultraendurance effort\n- Proper recovery protocols and injury prevention knowledge",
+  "phase_breakdown": [
+    {
+      "weeks": "1-2",
+      "focus": "Race Build",
+      "description": "Establish race-pace comfort and introduce race simulation elements. Tuesday sessions focus on tempo work at marathon-to-ultramarathon paces. Wednesday long runs progress from 25-32km with practiced fueling strategy. Sunday provides moderate intensity maintenance. Goal: Build confidence and test logistics for Engelbrektsloppet."
+    },
+    {
+      "weeks": "3-6",
+      "focus": "Peak Performance",
+      "description": "Progressive volume increase with peak long runs reaching 38-42km. Tuesday tempo efforts extend to 8-10km sustained at threshold pace. Wednesday long runs incorporate varied terrain and elevation to simulate race conditions. Sunday sessions support recovery while maintaining aerobic stimulus. Goal: Achieve peak fitness and race-specific preparation with highest training stress."
+    },
+    {
+      "weeks": "7-8",
+      "focus": "Peak and Taper",
+      "description": "Strategic volume reduction while maintaining intensity. Week 7 features final race-simulation workout (35-40km at race pace with full fueling). Week 8 emphasizes recovery, reduced volume, and complete fueling/pacing strategy refinement. Tuesday sessions maintain threshold work but reduce duration. Wednesday transitions to 15-20km easy runs. Goal: Arrive at race day fresh, confident, and prepared with proven race strategy."
+    }
+  ],
+  "created_at": "2026-01-11T13:22:54.114515"
+}

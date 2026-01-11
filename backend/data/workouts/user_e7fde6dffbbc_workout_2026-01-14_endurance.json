@@ -1,0 +1,165 @@
+{
+  "workout_id": "workout_2026-01-14_endurance",
+  "scheduled_for_date": "2026-01-14",
+  "title": "Steady-State Endurance Run - 90 Minutes (Engelbrektsloppet Prep)",
+  "workout_type": "endurance",
+  "estimated_duration_min": 90,
+  "intensity_target": "RPE_5_6",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly and deliberately, synchronizing breath with movement. Arch on inhale, round on exhale. Activate core throughout."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Extend opposite arm and leg while maintaining a neutral spine. Pause briefly at full extension. Keep movements controlled and balanced."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Rotate hips smoothly between positions, maintaining upright posture. Focus on hip mobility and preparation for running mechanics."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Easy Jogging",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 5.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Build heart rate gradually. Stay conversational - you should be able to speak in full sentences. Focus on relaxed, efficient cadence."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Steady-State Running - Phase 1",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 28.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Maintain RPE 5-6 (conversational pace). Focus on consistent breathing pattern - try 3-4 steps per breath. Relax shoulders, keep arms at 90 degrees. Monitor for steady effort without strain."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Steady-State Running - Phase 2",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 28.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Continue same pace and intensity. Mid-workout mental checkpoint: assess breathing ease, leg fatigue level, and hydration needs. Maintain discipline - do not accelerate beyond target RPE."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Steady-State Running - Phase 3 (Final Push)",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 24.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Maintain RPE 5-6 for final segment. Legs may feel fatigue - this is normal. Focus on form: upright posture, steady cadence, controlled breathing. You are building aerobic base for 45km race."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Easy Walking",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 3.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Gradually reduce intensity. Walk at easy pace, allow heart rate to drop naturally. Focus on steady breathing and recovery."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold each side 30 seconds. Keep heel planted, lean forward gently. No bouncing - static stretch only."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold each arm 30 seconds. Place palm on wall at shoulder height, gently turn away. Feel stretch in front of shoulder."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Slow, controlled movements to mobilize spine post-run. Synchronize with breath for relaxation and recovery."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "At 20 days out from Engelbrektsloppet 45km, building aerobic endurance base is critical. 90-minute steady-state run at RPE 5-6 develops aerobic capacity and race-specific fatigue adaptation without excess injury risk.",
+    "Recent training shows strong recovery with 'great' status. User has completed multiple endurance sessions; this workout builds on that foundation with appropriate duration matching the target 90-minute slot.",
+    "RPE 5-6 intensity is sustainable for long-duration training, promoting fat oxidation and aerobic development while preserving nervous system recovery. No injuries reported, allowing full running volume."
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

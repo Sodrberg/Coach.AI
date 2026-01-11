@@ -1,0 +1,115 @@
+{
+  "log_id": "log_1768065710314",
+  "user_id": "user_e7fde6dffbbc",
+  "workout_id": "workout_2026-01-10_endurance",
+  "date": "2026-01-10T17:21:50.314Z",
+  "completed": true,
+  "workout_type": "endurance",
+  "duration_min": 70,
+  "rpe_actual": 7,
+  "exercises": [
+    {
+      "name": "Cat-Cow",
+      "sets": 1,
+      "reps": 12,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Bird Dog",
+      "sets": 1,
+      "reps": 10,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "90/90 Hip Switches",
+      "sets": 1,
+      "reps": 8,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Adductor Rockbacks",
+      "sets": 1,
+      "reps": 10,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Air Bike",
+      "sets": 1,
+      "reps": null,
+      "weight_kg": null,
+      "duration_per_set_sec": 300,
+      "distance_km": null,
+      "rest_sec": 0
+    },
+    {
+      "name": "Air Bike Steady State",
+      "sets": 1,
+      "reps": null,
+      "weight_kg": null,
+      "duration_per_set_sec": 3000,
+      "distance_km": null,
+      "rest_sec": 0
+    },
+    {
+      "name": "Air Bike Active Recovery",
+      "sets": 1,
+      "reps": null,
+      "weight_kg": null,
+      "duration_per_set_sec": 300,
+      "distance_km": null,
+      "rest_sec": 0
+    },
+    {
+      "name": "Cat-Cow",
+      "sets": 1,
+      "reps": 10,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Calf Stretch",
+      "sets": 2,
+      "reps": 1,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Biceps Wall Stretch",
+      "sets": 2,
+      "reps": 1,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Adductor Rockbacks",
+      "sets": 1,
+      "reps": 8,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    }
+  ],
+  "volume_km": null,
+  "feedback": "felt_great",
+  "intensity": "medium",
+  "notes": null
+}

@@ -1,0 +1,153 @@
+{
+  "workout_id": "workout_2026-01-13_tempo",
+  "scheduled_for_date": "2026-01-13",
+  "title": "Tempo Run with Dynamic Activation - Engelbrektsloppet Prep",
+  "workout_type": "tempo",
+  "estimated_duration_min": 50,
+  "intensity_target": "RPE_7_8",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly and deliberately, synchronizing breath with movement. Arch on inhale, round on exhale to mobilize the spine."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Control the switching motion, keeping your torso upright. Feel the external rotation and mobility in each hip position."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Extend opposite arm and leg fully, maintaining a neutral spine. Hold each rep for 1 second and avoid rotating your hips."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Light Treadmill or Track Jog",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 5.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Easy conversational pace, focus on relaxed form and getting your body temperature up gradually."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Tempo Run - Progressive Build",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 30.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Start at a comfortably hard pace (RPE 6). After 10 minutes, increase to sustained tempo pace (RPE 7-8). Maintain steady breathing\u2014aim for 3 counts in, 3 counts out. Focus on consistent turnover and efficient ground contact. This is an aerobic workout designed to improve lactate threshold, critical for the 45km Engelbrektsloppet. Monitor your effort carefully; you should be able to speak only short sentences."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Light Recovery Jog",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 5.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Easy pace, bring heart rate down gradually. This active recovery aids lactate clearance and promotes blood flow."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold each leg at the wall or bar. Keep your heel down and lean forward until you feel a gentle stretch. Breathe deeply."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Stand facing a wall with arm extended and palm up. Gently rotate your body away to increase the stretch. Hold for 30 seconds each side."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Static Standing Quad Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Pull your foot toward your glute, keeping your knee aligned under your hip. Hold for 30 seconds each leg without bouncing."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Gentle, easy movements to promote spinal mobility and aid recovery. Move with your breath and relax the nervous system."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "Tempo workout targets lactate threshold development, essential for ultramarathon performance over 45km. RPE 7-8 provides the right intensity window to improve aerobic capacity without overtraining with 20 days until race.",
+    "Recent training shows consistent endurance work; this tempo session adds intensity variation while respecting the athlete's 'great' current status. Progressive build structure allows the body to adapt gradually.",
+    "Includes activation patterns (Cat-Cow, 90/90 Hip Switches, Bird Dog) from recent sessions to maintain mobility and neuromuscular coordination before the harder running effort."
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

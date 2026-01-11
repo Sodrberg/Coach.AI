@@ -64,6 +64,30 @@ class WorkoutPlan(BaseModel):
     questions: Optional[List[str]] = Field(
         None, description="Clarifying questions if critical info missing"
     )
+    is_completed: bool = Field(
+        default=False, description="Whether the workout has been logged/completed"
+    )
+    next_workout_date: Optional[str] = Field(
+        None, description="Next scheduled workout date (populated when completed)"
+    )
+
+
+class CustomWorkoutRequest(BaseModel):
+    """Request to create a custom standalone workout."""
+
+    user_id: str = Field(..., description="User creating the workout")
+    title: str = Field(..., description="Workout title")
+    workout_type: str = Field(
+        ..., description="Type (e.g., 'strength', 'endurance', 'recovery')"
+    )
+    estimated_duration_min: int = Field(..., ge=1, description="Estimated duration in minutes")
+    intensity_target: str = Field(
+        default="moderate", description="Target intensity"
+    )
+    sections: List[WorkoutSection] = Field(..., description="Workout sections")
+    scheduled_for_date: Optional[str] = Field(
+        None, description="Target date (YYYY-MM-DD). Defaults to today if not provided."
+    )
 
 
 class WorkoutLog(BaseModel):

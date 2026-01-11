@@ -1,0 +1,189 @@
+{
+  "workout_id": "workout_2026-01-13_strength",
+  "scheduled_for_date": "2026-01-13",
+  "title": "Full-Body Strength Focus with Upper and Lower Emphasis",
+  "workout_type": "strength",
+  "estimated_duration_min": 55,
+  "intensity_target": "RPE_6_7",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly through each repetition, focusing on spinal articulation. Inhale as you extend, exhale as you flex. Warm up the entire spine and core."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Extend opposite arm and leg slowly with control. Hold each rep for 1 second. Keep your hips level and core engaged throughout."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Rotate hips smoothly between 90/90 positions. Keep chest upright. This mobilizes hips and prepares them for lower body work."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Band Pullaparts",
+          "sets": 2,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Use light resistance band. Pull the band apart to chest height with slight bend in elbows. Squeeze shoulder blades together at the peak."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bench Press",
+          "sets": 4,
+          "reps": 6,
+          "weight_kg": 75.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Control descent to chest over 2 seconds. Drive feet into floor. Explosively press back up. Maintain neutral wrist position throughout."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bent Over Row",
+          "sets": 4,
+          "reps": 6,
+          "weight_kg": 75.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Maintain 45-degree hip hinge. Row bar to lower chest, elbows close to body. Squeeze shoulder blades at top. Control descent with loaded hold."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Back Squat",
+          "sets": 3,
+          "reps": 8,
+          "weight_kg": 80.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Descend with chest upright, knees tracking over toes. Break at hips and knees simultaneously. Drive through midfoot to stand. Full depth with control."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Assisted Dip",
+          "sets": 3,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Lower body with controlled descent, elbows at 45 degrees from torso. Push through hands to extend arms. Adjust assistance to maintain good form."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Biceps Curl",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": 15.0,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Keep elbows stationary at sides. Curl dumbbells in controlled arc. Squeeze biceps at the top for 1 second before lowering with control."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Cable Woodchop",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Stand perpendicular to cable machine. Rotate through core, extending across body. Maintain neutral spine throughout. Control the eccentric phase."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 30.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Place forearm on wall at shoulder height. Gently rotate body away. Hold steady stretch, breathe deeply. 30 seconds per side."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 30.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Face wall, place hands on wall. Step one leg back, keep heel on ground. Lean forward gently into stretch. 30 seconds per leg."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Perform slow, deliberate repetitions to decompress spine. Focus on breathing and returning to neutral spine position. Finish relaxed."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "Recent training has focused heavily on endurance work (70min sessions) with light strength touches; this 55-minute strength-focused session with RPE 6-7 provides necessary progression while maintaining balance and avoiding overtraining.",
+    "User's intermediate fitness level and current 'great' status support moderate-weight, compound movement focus (Bench Press, Rows, Squats) with adequate rest periods (60-90 seconds) appropriate for strength development at RPE 6-7.",
+    "Workout includes familiar exercises from recent sessions (Bench Press, 90/90 Hip Switches, Cat-Cow, Bird Dog) ensuring movement pattern continuity while adding complementary lower body and accessory work (Squats, Dips, Curls, Woodchops) for well-rounded strength development."
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

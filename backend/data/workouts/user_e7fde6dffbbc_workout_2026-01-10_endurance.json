@@ -1,0 +1,163 @@
+{
+  "workout_id": "workout_2026-01-10_endurance",
+  "scheduled_for_date": "2026-01-10",
+  "title": "Vasaloppet Aerobic Base Building - Low Back Friendly Endurance Session",
+  "workout_type": "endurance",
+  "estimated_duration_min": 70,
+  "intensity_target": "RPE_5_6",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly and controlled. Focus on gentle spinal articulation without forcing extension. Prioritize mobility over range of motion given mild back soreness."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Alternate sides slowly. Keep core engaged and neutral spine. This activates stabilizer muscles while being low-impact on the back."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Control the movement through hips. Engage core throughout. Excellent for hip mobility without spinal stress."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Adductor Rockbacks",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Rock gently back onto heels, feeling stretch in inner thighs. Maintain neutral spine. Prepares legs for endurance work."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Air Bike",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 5.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Easy, steady pace. RPE 2-3. Gradually increase heart rate. Focus on smooth pedal strokes to prepare cardiovascular system."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Air Bike Steady State",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 50.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Maintain RPE 5-6 (conversational pace). Keep cadence steady around 85-95 RPM. This is your aerobic base builder for Vasaloppet. Focus on consistency over intensity. Monitor posture\u2014sit upright to minimize back stress. Break into 10-minute blocks mentally: Block 1 (min 0-10) establish rhythm, Block 2 (min 10-20) settle into effort, Block 3 (min 20-30) maintain steady push, Block 4 (min 30-40) focus on form and breathing, Block 5 (min 40-50) strong finish at same effort level."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Air Bike Active Recovery",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 5.0,
+          "distance_km": null,
+          "rest_sec": 0,
+          "cues": "Decrease intensity gradually. RPE 2-3. Light spinning to flush metabolic byproducts and begin recovery."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Gentle spinal mobility. Move slowly and mindfully. Promotes blood flow to fatigued muscles and helps reduce back tension."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": 1,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold each side 20-30 seconds. Lean into stretch. Counteracts calf tightness from cycling/running training."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": 1,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Hold each arm 20-30 seconds against wall. Releases upper body tension accumulated during long endurance effort."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Adductor Rockbacks",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Gentle rocking motion. Hold stretch at end range for 2 seconds per rep. Addresses leg tightness from endurance work."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "This endurance session builds aerobic base for Vasaloppet 90km race. 50 minutes of steady-state cycling at RPE 5-6 develops aerobic capacity without excessive intensity, appropriate for 51 days before event.",
+    "Given mild back soreness (3/5), the workout avoids high-impact activities and uses Air Bike as primary tool\u2014excellent for Vasaloppet-specific conditioning while minimizing spinal loading. Warmup and cooldown include mobility work to manage back discomfort.",
+    "3-day gap since last session and current soreness status warrant starting slightly easier with thorough mobility activation. The 70-minute total duration includes progressive warmup and recovery-focused cooldown, ensuring adequate work capacity development while respecting current recovery status."
+  ],
+  "questions": null
+}

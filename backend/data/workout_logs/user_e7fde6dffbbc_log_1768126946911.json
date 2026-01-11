@@ -1,0 +1,34 @@
+{
+  "log_id": "log_1768126946911",
+  "user_id": "user_e7fde6dffbbc",
+  "workout_id": "custom_f2c8e56c",
+  "date": "2026-01-11T10:22:26.911Z",
+  "completed": true,
+  "workout_type": "strength",
+  "duration_min": 15,
+  "rpe_actual": 6,
+  "exercises": [
+    {
+      "name": "Bench Press",
+      "sets": 3,
+      "reps": 10,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 60
+    },
+    {
+      "name": "90/90 Hip Switches",
+      "sets": 3,
+      "reps": 10,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 60
+    }
+  ],
+  "volume_km": null,
+  "feedback": "felt_great",
+  "intensity": "medium",
+  "notes": null
+}

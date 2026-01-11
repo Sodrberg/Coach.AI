@@ -1,0 +1,50 @@
+{
+  "workout_id": "custom_f2c8e56c",
+  "scheduled_for_date": "2026-01-11",
+  "title": "workput",
+  "workout_type": "strength",
+  "estimated_duration_min": 15,
+  "intensity_target": "moderate",
+  "sections": [
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bench Press",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Plant your feet, pull your shoulders back, lower the bar to mid-chest, and press up with control and full-body tension."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Sit with both knees bent at 90 degrees, rotate your hips to drop both knees to one side, then sweep them smoothly to the other, keeping your chest proud as your hips roll through."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "Custom workout created by user"
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

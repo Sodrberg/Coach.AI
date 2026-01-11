@@ -10,11 +10,10 @@
     "gym"
   ],
   "injuries_or_limitations": "",
-  "training_days_per_week": 4,
+  "training_days_per_week": 3,
   "preferred_training_days": [
-    "monday",
     "tuesday",
-    "friday",
-    "saturday"
+    "wednesday",
+    "sunday"
   ]
 }

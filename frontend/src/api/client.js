@@ -112,6 +112,12 @@ export const workoutApi = {
   log: (log) => request('/workout/log', { method: 'POST', body: log }),
   resolvePending: (userId, pendingDate, resolution) => 
     request(`/workout/resolve-pending?user_id=${userId}&pending_date=${pendingDate}&resolution=${resolution}`, { method: 'POST' }),
+  swapToToday: (userId) => 
+    request(`/workout/swap-to-today?user_id=${userId}`, { method: 'POST' }),
+  saveCustom: (workout) => 
+    request('/workout/custom', { method: 'POST', body: workout }),
+  move: (userId, fromDate, toDate) =>
+    request(`/workout/move?user_id=${userId}&from_date=${fromDate}&to_date=${toDate}`, { method: 'POST' }),
 };
 
 // Block endpoints

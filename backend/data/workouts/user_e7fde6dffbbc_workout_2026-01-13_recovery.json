@@ -1,6 +1,6 @@
 {
   "workout_id": "workout_2026-01-13_recovery",
-  "scheduled_for_date": "2026-01-13",
+  "scheduled_for_date": "2026-01-12",
   "title": "Active Recovery & Mobility - Vasaloppet Prep",
   "workout_type": "recovery",
   "estimated_duration_min": 30,
@@ -135,5 +135,7 @@
     "Training for 90km Vasaloppet ski race requires specific mobility and stability in hips, ankles, and feet. This session prioritizes these areas while maintaining low intensity.",
     "Active recovery approach uses mobility and light movement to promote blood flow and adaptations without creating fatigue debt, allowing proper preparation for harder training ahead with 53 days until race."
   ],
-  "questions": null
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
 }

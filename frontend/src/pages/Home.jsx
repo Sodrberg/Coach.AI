@@ -1,6 +1,8 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useProfile, useGoal, useTodayWorkout } from '../hooks/useApi';
 import LoadingSpinner from '../components/LoadingSpinner';
+import TrainAnywayModal from '../components/TrainAnywayModal';
 
 const typeStyles = {
   strength: 'text-strength',
@@ -12,9 +14,22 @@ const typeStyles = {
 export default function Home() {
   const { data: profile, isLoading: profileLoading, error: profileError } = useProfile();
   const { data: goal } = useGoal();
-  const { data: workout, isLoading: workoutLoading } = useTodayWorkout();
+  const { data: workout, isLoading: workoutLoading, refetch } = useTodayWorkout();
+  const [showTrainAnyway, setShowTrainAnyway] = useState(false);
+  const [customWorkout, setCustomWorkout] = useState(null);
+  const navigate = useNavigate();
 
   const isLoading = profileLoading || workoutLoading;
+
+  // Use custom workout if available, otherwise use fetched workout
+  const todayWorkout = customWorkout || workout;
+
+  const handleWorkoutReady = (newWorkout) => {
+    setShowTrainAnyway(false);
+    setCustomWorkout(newWorkout);  // Store the workout directly for immediate display
+    refetch();  // Still refetch to update cache
+    navigate('/workout');
+  };
 
   // If no profile, show onboarding
   if (!profileLoading && (profileError || !profile)) {
@@ -92,38 +107,66 @@ export default function Home() {
       <div className="card">
         <h2 className="section-header">Today's Workout</h2>
         
-        {workout?.is_rest_day ? (
+        {todayWorkout?.is_rest_day ? (
           <div className="text-center py-6">
             <div className="w-16 h-16 rounded-full bg-surface-elevated flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🧘</span>
             </div>
             <p className="font-heading font-semibold text-text-primary text-lg">Rest Day</p>
             <p className="text-text-secondary mt-1">Take time to recover and recharge</p>
+            <button
+              onClick={() => setShowTrainAnyway(true)}
+              className="btn-secondary mt-4"
+            >
+              Train Anyway
+            </button>
           </div>
-        ) : workout ? (
+        ) : todayWorkout?.is_completed ? (
+          <div className="text-center py-6">
+            <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <p className="font-heading font-semibold text-text-primary text-lg">Workout Completed!</p>
+            <p className="text-text-secondary mt-1">{todayWorkout.title}</p>
+            {todayWorkout.next_workout_date && (
+              <p className="text-text-muted text-sm mt-3">
+                Next workout: {new Date(todayWorkout.next_workout_date).toLocaleDateString('en', {
+                  weekday: 'long',
+                  month: 'short',
+                  day: 'numeric'
+                })}
+              </p>
+            )}
+            <Link to="/workout" className="text-accent hover:text-accent-light text-sm mt-3 inline-block transition-colors">
+              View Details
+            </Link>
+          </div>
+        ) : todayWorkout ? (
           <div>
             <div className="flex items-start justify-between mb-5">
               <div>
-                <p className={`text-sm font-medium capitalize ${typeStyles[workout.workout_type] || 'text-text-secondary'}`}>
-                  {workout.workout_type}
+                <p className={`text-sm font-medium capitalize ${typeStyles[todayWorkout.workout_type] || 'text-text-secondary'}`}>
+                  {todayWorkout.workout_type}
                 </p>
                 <p className="text-xl font-heading font-bold text-text-primary mt-1">
-                  {workout.title}
+                  {todayWorkout.title}
                 </p>
               </div>
               <div className="text-right bg-surface-elevated rounded-lg px-4 py-2">
                 <p className="text-2xl font-heading font-bold text-text-primary">
-                  {workout.estimated_duration_min}
+                  {todayWorkout.estimated_duration_min}
                 </p>
                 <p className="text-text-muted text-xs uppercase tracking-wide">min</p>
               </div>
             </div>
             
             <div className="flex items-center gap-3 text-sm text-text-secondary mb-6">
-              <span className="px-2.5 py-1 bg-surface-elevated rounded-md">{workout.intensity_target}</span>
+              <span className="px-2.5 py-1 bg-surface-elevated rounded-md">{todayWorkout.intensity_target}</span>
               <span className="text-text-muted">•</span>
               <span>
-                {workout.sections?.reduce((acc, s) => acc + s.items.length, 0) || 0} exercises
+                {todayWorkout.sections?.reduce((acc, s) => acc + s.items.length, 0) || 0} exercises
               </span>
             </div>
 
@@ -174,6 +217,14 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Train Anyway Modal */}
+      <TrainAnywayModal
+        isOpen={showTrainAnyway}
+        onClose={() => setShowTrainAnyway(false)}
+        nextWorkoutDate={todayWorkout?.next_workout_date}
+        onWorkoutReady={handleWorkoutReady}
+      />
     </div>
   );
 }

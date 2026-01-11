@@ -4,18 +4,21 @@ FastAPI routes for training coach API.
 All endpoints return JSON - either data or error responses.
 """
 
+import json
 import logging
 import uuid
 from datetime import datetime
-from typing import Union
+from pathlib import Path
+from typing import List, Optional, Union
 
 from fastapi import APIRouter, HTTPException
 
 from app.models.plan import CompletePlan, ThreeWeekBlock
 from app.models.responses import ClarifyingQuestions, ErrorResponse, RestDayResponse
-from app.models.user import UserFeedback, UserGoal, UserProfile
-from app.models.workout import WorkoutLog, WorkoutPlan
+from app.models.user import Session, UserFeedback, UserGoal, UserProfile
+from app.models.workout import CustomWorkoutRequest, WorkoutLog, WorkoutPlan
 from app.services.block_generator import block_generator
+from app.services.workout_rescheduler import workout_rescheduler
 from app.services.high_level_plan_generator import high_level_plan_generator
 from app.services.snapshot_builder import snapshot_builder
 from app.services.workout_adjuster import workout_adjuster
@@ -25,6 +28,97 @@ from app.storage.json_store import store
 logger = logging.getLogger(__name__)
 
 router = APIRouter()
+
+
+# ==================== Auth Endpoints ====================
+
+
+@router.post("/auth/register")
+async def register(name: str, email: str) -> dict:
+    """
+    Register a new user.
+    
+    Creates a new session and returns session data.
+    """
+    # Check if user already exists
+    existing = store.find_user_by_email(email)
+    if existing:
+        return {
+            "session_id": existing.session_id,
+            "user_id": existing.user_id,
+            "name": existing.name,
+            "email": existing.email,
+        }
+
+    # Create new user
+    session_id = f"sess_{uuid.uuid4().hex}"
+    user_id = f"user_{uuid.uuid4().hex[:12]}"
+    
+    session = Session(
+        session_id=session_id,
+        user_id=user_id,
+        name=name,
+        email=email,
+        created_at=datetime.now().isoformat(),
+    )
+    
+    if not store.save_session(session):
+        raise HTTPException(status_code=500, detail="Failed to create session")
+    
+    logger.info(f"Registered new user {user_id} with email {email}")
+    return {
+        "session_id": session_id,
+        "user_id": user_id,
+        "name": name,
+        "email": email,
+    }
+
+
+@router.post("/auth/login")
+async def login(email: str) -> dict:
+    """
+    Login an existing user by email.
+    
+    Returns existing session or creates a new one if user exists.
+    """
+    existing = store.find_user_by_email(email)
+    if not existing:
+        raise HTTPException(status_code=404, detail="User not found. Please register first.")
+    
+    logger.info(f"User {existing.user_id} logged in")
+    return {
+        "session_id": existing.session_id,
+        "user_id": existing.user_id,
+        "name": existing.name,
+        "email": existing.email,
+    }
+
+
+@router.post("/auth/logout")
+async def logout(session_id: str) -> dict:
+    """
+    Logout a user by deleting their session.
+    """
+    store.delete_session(session_id)
+    logger.info(f"Session {session_id} logged out")
+    return {"success": True}
+
+
+@router.get("/auth/me")
+async def get_current_user(session_id: str) -> dict:
+    """
+    Get current user info from session.
+    """
+    session = store.get_session(session_id)
+    if not session:
+        raise HTTPException(status_code=401, detail="Invalid or expired session")
+    
+    return {
+        "session_id": session.session_id,
+        "user_id": session.user_id,
+        "name": session.name,
+        "email": session.email,
+    }
 
 
 # ==================== Profile Endpoints ====================
@@ -110,10 +204,16 @@ async def generate_plan(
     
     Returns CompletePlan or ClarifyingQuestions if info is missing.
     """
+    # #region agent log
+    import json as _json; open('/Users/linussoderberg/agentic-coach/.cursor/debug.log','a').write(_json.dumps({"location":"routes.py:generate_plan:entry","message":"Plan generation started","data":{"user_id":user_id,"goal_id":goal_id},"hypothesisId":"A,B","timestamp":__import__('time').time()})+'\n')
+    # #endregion
     # Build snapshot
     snapshot = snapshot_builder.build_snapshot(user_id)
 
     if not snapshot:
+        # #region agent log
+        import json as _json; open('/Users/linussoderberg/agentic-coach/.cursor/debug.log','a').write(_json.dumps({"location":"routes.py:generate_plan:no_snapshot","message":"Snapshot is None - returning ClarifyingQuestions","data":{"user_id":user_id},"hypothesisId":"A","timestamp":__import__('time').time()})+'\n')
+        # #endregion
         return ClarifyingQuestions(
             questions=[
                 "What is your current fitness level?",
@@ -130,10 +230,16 @@ async def generate_plan(
             message=f"Goal {goal_id} does not match user's active goal",
         )
 
+    # #region agent log
+    import json as _json; open('/Users/linussoderberg/agentic-coach/.cursor/debug.log','a').write(_json.dumps({"location":"routes.py:generate_plan:before_hlp","message":"Snapshot built, generating high-level plan","data":{"has_current_plan":snapshot.current_plan is not None,"has_current_block":snapshot.current_block is not None},"hypothesisId":"A","timestamp":__import__('time').time()})+'\n')
+    # #endregion
     # Generate high-level plan
     high_level_plan = high_level_plan_generator.generate(snapshot)
 
     if not high_level_plan:
+        # #region agent log
+        import json as _json; open('/Users/linussoderberg/agentic-coach/.cursor/debug.log','a').write(_json.dumps({"location":"routes.py:generate_plan:hlp_failed","message":"High-level plan generation FAILED","data":{},"hypothesisId":"B,D","timestamp":__import__('time').time()})+'\n')
+        # #endregion
         return ErrorResponse(
             error_code="PLAN_GENERATION_FAILED",
             message="Failed to generate high-level plan",
@@ -151,6 +257,9 @@ async def generate_plan(
     )
 
     if not first_block:
+        # #region agent log
+        import json as _json; open('/Users/linussoderberg/agentic-coach/.cursor/debug.log','a').write(_json.dumps({"location":"routes.py:generate_plan:block_failed","message":"Block generation FAILED","data":{},"hypothesisId":"B,D","timestamp":__import__('time').time()})+'\n')
+        # #endregion
         return ErrorResponse(
             error_code="BLOCK_GENERATION_FAILED",
             message="Failed to generate training block",
@@ -184,7 +293,33 @@ async def generate_plan(
 
     store.save_complete_plan(user_id, complete_plan)
 
+    # #region agent log
+    import json as _json; open('/Users/linussoderberg/agentic-coach/.cursor/debug.log','a').write(_json.dumps({"location":"routes.py:generate_plan:success","message":"Plan generation SUCCEEDED - returning CompletePlan","data":{"plan_id":high_level_plan.plan_id,"block_number":first_block.block_number,"workouts_count":len(detailed_workouts)},"hypothesisId":"B,C,D","timestamp":__import__('time').time()})+'\n')
+    # #endregion
     logger.info(f"Generated complete plan for user {user_id}")
+    return complete_plan
+
+
+@router.get(
+    "/plan/complete",
+    response_model=Union[CompletePlan, ErrorResponse],
+)
+async def get_complete_plan(
+    user_id: str,
+) -> Union[CompletePlan, ErrorResponse]:
+    """
+    Get the complete training plan for a user.
+    
+    Returns the high-level plan and current block.
+    """
+    complete_plan = store.get_complete_plan(user_id)
+    
+    if not complete_plan:
+        return ErrorResponse(
+            error_code="NO_ACTIVE_PLAN",
+            message="No training plan found. Please generate a plan first.",
+        )
+    
     return complete_plan
 
 
@@ -202,31 +337,57 @@ async def get_workout_today(
     Get today's workout.
     
     Returns:
-    - WorkoutPlan if there's a workout scheduled
+    - WorkoutPlan if there's a workout scheduled (with is_completed status)
     - RestDayResponse if today is a rest day
     - ErrorResponse if no plan exists or generation fails
     """
     today = datetime.now().strftime("%Y-%m-%d")
 
+    # Get current block to check slot status
+    block = store.get_current_block(user_id, today)
+    
+    # Find today's slot if block exists
+    today_slot = None
+    if block:
+        for slot in block.day_slots:
+            if slot.date == today:
+                today_slot = slot
+                break
+
     # Check for existing workout
     existing_workout = store.get_workout_for_date(user_id, today)
     if existing_workout:
+        # Check if workout has been completed:
+        # 1. Check slot status (for scheduled workouts)
+        # 2. Check if there's a workout log with this workout_id (for custom workouts)
+        is_completed = False
+        
+        if today_slot and today_slot.status == "completed":
+            is_completed = True
+        else:
+            # Check workout logs for this workout_id
+            today_logs = store.get_workout_logs_in_range(user_id, today, today)
+            for log in today_logs:
+                if log.workout_id == existing_workout.workout_id:
+                    is_completed = True
+                    break
+        
+        existing_workout.is_completed = is_completed
+        
+        # Find next workout date if completed
+        if is_completed and block:
+            for slot in block.day_slots:
+                if slot.date > today and not slot.is_rest_day:
+                    existing_workout.next_workout_date = slot.date
+                    break
+        
         return existing_workout
 
-    # Get current block
-    block = store.get_current_block(user_id, today)
     if not block:
         return ErrorResponse(
             error_code="NO_ACTIVE_PLAN",
             message="No active training plan found. Please generate a plan first.",
         )
-
-    # Find today's slot
-    today_slot = None
-    for slot in block.day_slots:
-        if slot.date == today:
-            today_slot = slot
-            break
 
     if not today_slot:
         return ErrorResponse(
@@ -271,6 +432,8 @@ async def get_workout_today(
     today_slot.workout_id = workout.workout_id
     store.save_block(user_id, block)
 
+    # New workout is not completed
+    workout.is_completed = False
     return workout
 
 
@@ -340,6 +503,322 @@ async def log_workout(log: WorkoutLog) -> WorkoutLog:
                 break
 
     return log
+
+
+@router.post(
+    "/workout/swap-to-today",
+    response_model=Union[WorkoutPlan, ErrorResponse],
+)
+async def swap_workout_to_today(
+    user_id: str,
+) -> Union[WorkoutPlan, ErrorResponse]:
+    """
+    Swap the next scheduled workout with today's rest day.
+    
+    This moves the next workout to today and makes that day a rest day instead.
+    """
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    # Get current block
+    block = store.get_current_block(user_id, today)
+    if not block:
+        return ErrorResponse(
+            error_code="NO_ACTIVE_PLAN",
+            message="No active training plan found",
+        )
+
+    # Find today's slot and verify it's a rest day
+    today_slot = None
+    today_idx = -1
+    for i, slot in enumerate(block.day_slots):
+        if slot.date == today:
+            today_slot = slot
+            today_idx = i
+            break
+
+    if not today_slot:
+        return ErrorResponse(
+            error_code="DATE_OUT_OF_RANGE",
+            message=f"Today ({today}) is not within the current training block",
+        )
+
+    if not today_slot.is_rest_day:
+        return ErrorResponse(
+            error_code="NOT_REST_DAY",
+            message="Today is not a rest day",
+        )
+
+    # Find next workout day
+    next_workout_slot = None
+    next_workout_idx = -1
+    for i in range(today_idx + 1, len(block.day_slots)):
+        slot = block.day_slots[i]
+        if not slot.is_rest_day:
+            next_workout_slot = slot
+            next_workout_idx = i
+            break
+
+    if not next_workout_slot:
+        return ErrorResponse(
+            error_code="NO_UPCOMING_WORKOUT",
+            message="No upcoming workout found to swap",
+        )
+
+    # Swap the slots
+    # Store next workout's data
+    workout_data = {
+        "workout_type": next_workout_slot.workout_type,
+        "target_duration_min": next_workout_slot.target_duration_min,
+        "target_distance_km": next_workout_slot.target_distance_km,
+        "intensity_target": next_workout_slot.intensity_target,
+        "workout_id": next_workout_slot.workout_id,
+    }
+
+    # Make today a workout day
+    today_slot.is_rest_day = False
+    today_slot.workout_type = workout_data["workout_type"]
+    today_slot.target_duration_min = workout_data["target_duration_min"]
+    today_slot.target_distance_km = workout_data["target_distance_km"]
+    today_slot.intensity_target = workout_data["intensity_target"]
+    today_slot.status = "planned"
+    today_slot.workout_id = None  # Will generate fresh
+
+    # Make the next workout day a rest day
+    next_workout_slot.is_rest_day = True
+    next_workout_slot.workout_type = None
+    next_workout_slot.target_duration_min = None
+    next_workout_slot.target_distance_km = None
+    next_workout_slot.intensity_target = None
+    next_workout_slot.workout_id = None
+    next_workout_slot.status = "planned"
+
+    # Save the updated block
+    store.save_block(user_id, block)
+
+    logger.info(f"Swapped workout from {next_workout_slot.date} to {today} for user {user_id}")
+
+    # Now generate and return today's workout
+    snapshot = snapshot_builder.build_snapshot(user_id, today)
+    if not snapshot:
+        return ErrorResponse(
+            error_code="SNAPSHOT_FAILED",
+            message="Failed to build user context",
+        )
+
+    workout = workout_generator.generate(snapshot, today_slot)
+    if not workout:
+        return ErrorResponse(
+            error_code="WORKOUT_GENERATION_FAILED",
+            message="Failed to generate workout",
+            retry_allowed=True,
+        )
+
+    # Save and return
+    store.save_workout(user_id, workout)
+    today_slot.workout_id = workout.workout_id
+    store.save_block(user_id, block)
+
+    return workout
+
+
+@router.post(
+    "/workout/custom",
+    response_model=WorkoutPlan,
+)
+async def save_custom_workout(
+    workout_request: CustomWorkoutRequest,
+) -> WorkoutPlan:
+    """
+    Save a user-created custom workout.
+    
+    Links the workout to the corresponding DaySlot in the training block
+    so it appears in the schedule view.
+    """
+    today = datetime.now().strftime("%Y-%m-%d")
+    target_date = workout_request.scheduled_for_date or today
+    workout_id = f"custom_{uuid.uuid4().hex[:8]}"
+
+    # Create the workout plan
+    workout = WorkoutPlan(
+        workout_id=workout_id,
+        scheduled_for_date=target_date,
+        title=workout_request.title,
+        workout_type=workout_request.workout_type,
+        estimated_duration_min=workout_request.estimated_duration_min,
+        intensity_target=workout_request.intensity_target,
+        sections=workout_request.sections,
+        rationale=["Custom workout created by user"],
+    )
+
+    # Save the workout
+    store.save_workout(workout_request.user_id, workout)
+
+    # Link to day slot if block exists
+    block = store.get_current_block(workout_request.user_id, target_date)
+    if block:
+        for slot in block.day_slots:
+            if slot.date == target_date:
+                slot.workout_id = workout_id
+                slot.workout_type = workout_request.workout_type
+                slot.is_rest_day = False
+                slot.status = "planned"
+                store.save_block(workout_request.user_id, block)
+                
+                # Also update the complete plan so /plan/complete returns updated data
+                complete_plan = store.get_complete_plan(workout_request.user_id)
+                if complete_plan:
+                    complete_plan.current_block = block
+                    store.save_complete_plan(workout_request.user_id, complete_plan)
+                break
+
+    logger.info(f"Saved custom workout {workout_id} for user {workout_request.user_id} on {target_date}")
+
+    return workout
+
+
+@router.post(
+    "/workout/move",
+    response_model=Union[dict, ErrorResponse],
+)
+async def move_workout(
+    user_id: str,
+    from_date: str,
+    to_date: str,
+) -> Union[dict, ErrorResponse]:
+    """
+    Move a workout from one date to another.
+    
+    If the target date has a workout, the two workouts are swapped.
+    If the target date is a rest day, the workout is moved there and the source becomes a rest day.
+    """
+    if from_date == to_date:
+        return ErrorResponse(
+            error_code="SAME_DATE",
+            message="Source and target dates are the same",
+        )
+
+    # Get current block
+    block = store.get_current_block(user_id, from_date)
+    if not block:
+        return ErrorResponse(
+            error_code="NO_ACTIVE_PLAN",
+            message="No active training block found",
+        )
+
+    # Verify target date is also in the block
+    if not (block.start_date <= to_date <= block.end_date):
+        return ErrorResponse(
+            error_code="DATE_OUT_OF_RANGE",
+            message=f"Target date {to_date} is not within the current training block",
+        )
+
+    # Find both slots
+    from_slot = None
+    to_slot = None
+    for slot in block.day_slots:
+        if slot.date == from_date:
+            from_slot = slot
+        elif slot.date == to_date:
+            to_slot = slot
+
+    if not from_slot:
+        return ErrorResponse(
+            error_code="SOURCE_NOT_FOUND",
+            message=f"Could not find slot for source date {from_date}",
+        )
+    if not to_slot:
+        return ErrorResponse(
+            error_code="TARGET_NOT_FOUND",
+            message=f"Could not find slot for target date {to_date}",
+        )
+
+    if from_slot.is_rest_day:
+        return ErrorResponse(
+            error_code="NO_WORKOUT_TO_MOVE",
+            message="Source date is a rest day with no workout to move",
+        )
+
+    # Store from_slot data
+    from_data = {
+        "workout_type": from_slot.workout_type,
+        "target_duration_min": from_slot.target_duration_min,
+        "target_distance_km": from_slot.target_distance_km,
+        "intensity_target": from_slot.intensity_target,
+        "workout_id": from_slot.workout_id,
+        "is_rest_day": from_slot.is_rest_day,
+        "status": from_slot.status,
+    }
+
+    # Store to_slot data
+    to_data = {
+        "workout_type": to_slot.workout_type,
+        "target_duration_min": to_slot.target_duration_min,
+        "target_distance_km": to_slot.target_distance_km,
+        "intensity_target": to_slot.intensity_target,
+        "workout_id": to_slot.workout_id,
+        "is_rest_day": to_slot.is_rest_day,
+        "status": to_slot.status,
+    }
+
+    # Move from_slot data to to_slot
+    to_slot.workout_type = from_data["workout_type"]
+    to_slot.target_duration_min = from_data["target_duration_min"]
+    to_slot.target_distance_km = from_data["target_distance_km"]
+    to_slot.intensity_target = from_data["intensity_target"]
+    to_slot.workout_id = from_data["workout_id"]
+    to_slot.is_rest_day = False
+    to_slot.status = "planned"
+
+    # Move to_slot data to from_slot (swap) or make it a rest day
+    if to_data["is_rest_day"]:
+        # Target was rest day, source becomes rest day
+        from_slot.workout_type = None
+        from_slot.target_duration_min = None
+        from_slot.target_distance_km = None
+        from_slot.intensity_target = None
+        from_slot.workout_id = None
+        from_slot.is_rest_day = True
+        from_slot.status = "planned"
+    else:
+        # Swap: target had a workout, move it to source
+        from_slot.workout_type = to_data["workout_type"]
+        from_slot.target_duration_min = to_data["target_duration_min"]
+        from_slot.target_distance_km = to_data["target_distance_km"]
+        from_slot.intensity_target = to_data["intensity_target"]
+        from_slot.workout_id = to_data["workout_id"]
+        from_slot.is_rest_day = False
+        from_slot.status = "planned"
+
+    # Update scheduled_for_date on affected WorkoutPlan objects
+    if from_data["workout_id"]:
+        from_workout = store.get_workout(user_id, from_data["workout_id"])
+        if from_workout:
+            from_workout.scheduled_for_date = to_date
+            store.save_workout(user_id, from_workout)
+
+    if not to_data["is_rest_day"] and to_data["workout_id"]:
+        to_workout = store.get_workout(user_id, to_data["workout_id"])
+        if to_workout:
+            to_workout.scheduled_for_date = from_date
+            store.save_workout(user_id, to_workout)
+
+    # Save the updated block
+    store.save_block(user_id, block)
+
+    # Also update the complete plan so /plan/complete returns updated data
+    complete_plan = store.get_complete_plan(user_id)
+    if complete_plan:
+        complete_plan.current_block = block
+        store.save_complete_plan(user_id, complete_plan)
+
+    logger.info(f"Moved workout from {from_date} to {to_date} for user {user_id}")
+
+    return {
+        "success": True,
+        "from_date": from_date,
+        "to_date": to_date,
+        "swapped": not to_data["is_rest_day"],
+    }
 
 
 # ==================== Block Management Endpoints ====================
@@ -417,6 +896,76 @@ async def generate_next_block(
 
     logger.info(f"Generated block {next_block_num} for user {user_id}")
     return next_block
+
+
+# ==================== Exercises Endpoints ====================
+
+
+# Load exercises from JSON file once at startup
+_exercises_cache: Optional[List[dict]] = None
+
+
+def _load_exercises() -> List[dict]:
+    """Load exercises from the JSON file."""
+    global _exercises_cache
+    if _exercises_cache is None:
+        exercises_path = Path(__file__).parent.parent.parent / "exercises.json"
+        if exercises_path.exists():
+            with open(exercises_path, "r") as f:
+                data = json.load(f)
+                _exercises_cache = data.get("data", {}).get("exercises", [])
+        else:
+            _exercises_cache = []
+            logger.warning(f"Exercises file not found at {exercises_path}")
+    return _exercises_cache
+
+
+@router.get("/exercises")
+async def get_exercises(
+    search: Optional[str] = None,
+    exercise_type: Optional[str] = None,
+    body_part: Optional[str] = None,
+) -> dict:
+    """
+    Get exercises from the database with optional filtering.
+    
+    Args:
+        search: Search term to filter by name
+        exercise_type: Filter by exercise type (strength, cardio, mobility, etc.)
+        body_part: Filter by body part (legs, back, chest, etc.)
+    
+    Returns:
+        List of exercises matching the filters
+    """
+    exercises = _load_exercises()
+    
+    # Apply filters
+    filtered = exercises
+    
+    if search:
+        search_lower = search.lower()
+        filtered = [
+            ex for ex in filtered
+            if search_lower in ex.get("name", "").lower()
+            or search_lower in (ex.get("alternativeName") or "").lower()
+        ]
+    
+    if exercise_type:
+        filtered = [
+            ex for ex in filtered
+            if ex.get("exerciseType", "").lower() == exercise_type.lower()
+        ]
+    
+    if body_part:
+        filtered = [
+            ex for ex in filtered
+            if ex.get("bodyPart", "").lower() == body_part.lower()
+        ]
+    
+    return {
+        "exercises": filtered,
+        "total": len(filtered),
+    }
 
 
 # ==================== Health Check ====================

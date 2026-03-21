@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Layout from './components/Layout';
+import { ToastProvider } from './components/Toast';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Goal from './pages/Goal';
@@ -8,6 +9,7 @@ import Plan from './pages/Plan';
 import Workout from './pages/Workout';
 import Log from './pages/Log';
 import Login from './pages/Login';
+import Onboarding from './pages/Onboarding';
 import { isLoggedIn } from './hooks/useApi';
 
 // Create a client
@@ -39,6 +41,7 @@ function PublicRoute({ children }) {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      <ToastProvider>
       <BrowserRouter>
         <Routes>
           {/* Public route - Login */}
@@ -59,6 +62,7 @@ function App() {
                 <Layout>
                   <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/onboarding" element={<Onboarding />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/goal" element={<Goal />} />
                     <Route path="/plan" element={<Plan />} />
@@ -71,6 +75,7 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
+      </ToastProvider>
     </QueryClientProvider>
   );
 }

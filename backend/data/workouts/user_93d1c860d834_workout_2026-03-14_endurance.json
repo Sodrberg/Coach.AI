@@ -1,0 +1,165 @@
+{
+  "workout_id": "workout_2026-03-14_endurance",
+  "scheduled_for_date": "2026-03-15",
+  "title": "Full-Body Endurance Circuit for Weight Loss",
+  "workout_type": "endurance",
+  "estimated_duration_min": 45,
+  "intensity_target": "RPE_5_6",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly through each rep, sync movement with breathing. Arch on inhale, round on exhale."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Control the movement, keep hips engaged. Don't rush\u2014focus on opening hips gradually."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Butt Kicks",
+          "sets": 1,
+          "reps": 30,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Light, quick pace. Drive heels toward glutes. Keep arms pumping naturally at sides."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Burpees",
+          "sets": 3,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Full range of motion: squat down, jump back to plank, lower chest, jump feet to hands, explosively jump up. Breathe throughout."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Bear Crawl",
+          "sets": 3,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Stay in a tight plank position. Move diagonally or in a line. Keep hips level. Maintain core tension throughout."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bicycle Crunch",
+          "sets": 3,
+          "reps": 15,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Controlled tempo, no neck pulling. Bring opposite elbow to knee in a twisting motion. Keep lower back pressed to floor."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Agility Ladder Run",
+          "sets": 3,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.5,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "If no ladder available, simulate with quick directional footwork. Focus on rapid foot placement and cardiovascular effort. Maintain RPE 5-6."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Extend opposite arm and leg slowly. Squeeze glute and core. Return to start with control. Keep hips stable, no rotation."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.5,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Hold each leg 45 seconds. Keep heel down and toes pointing forward. Lean gently forward to deepen stretch."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Child's Pose",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 2.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Knees wide, big toes together, sink hips back toward heels. Rest forehead on ground. Breathe deeply and relax."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Place arms against wall at shoulder height, palms up. Step forward gently until stretch is felt in biceps and shoulders. Hold steady."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "User is returning from extended rest (999 days), so workout emphasizes moderate-intensity endurance circuits with bodyweight exercises to rebuild conditioning and work toward weight loss goal without excessive joint stress.",
+    "RPE 5-6 intensity target achieved through continuous movement patterns (burpees, bear crawls, ladder drills) that elevate heart rate while allowing recovery between sets, appropriate for intermediate fitness level with no equipment limitations.",
+    "45-minute duration balanced with warmup mobility work, mixed endurance/strength main circuit targeting full body, and thorough cooldown to aid recovery and prevent delayed-onset soreness after extended training gap."
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

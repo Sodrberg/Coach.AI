@@ -1,0 +1,165 @@
+{
+  "workout_id": "workout_2026-03-18_strength",
+  "scheduled_for_date": "2026-03-18",
+  "title": "Full-Body Strength & Weight Loss Foundation",
+  "workout_type": "strength",
+  "estimated_duration_min": 50,
+  "intensity_target": "RPE_6_7",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly and deliberately, synchronizing breath with movement. Inhale on cow, exhale on cat. Focus on spinal articulation."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Extend opposite arm and leg simultaneously, maintaining neutral spine. Hold each rep for 1 second at full extension. Keep core engaged throughout."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Stand sideways to wall, place forearm against wall with palm up. Gently rotate body away. Hold and breathe steadily."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Burpees",
+          "sets": 3,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Start standing, drop to plank position with controlled movement. Lower chest to ground, push back explosively to standing. Maintain core stability throughout. Breathe out on exertion."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bulgarian Split Squat",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 75,
+          "cues": "Rear foot elevated on a low surface. Front knee tracks over toes as you lower. Keep torso upright and chest proud. Drive through front heel to return to start."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bear Crawl",
+          "sets": 3,
+          "reps": 20,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 75,
+          "cues": "Start in plank position with hips slightly elevated. Move opposite arm and leg forward in controlled fashion. Keep core tight and hips level. This is a full-body strengthener."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Ab Scissors",
+          "sets": 2,
+          "reps": 15,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Lie on back, legs extended and slightly elevated. Cross legs in a scissoring motion, alternating which leg is on top. Keep lower back pressed to floor throughout."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bench Dip",
+          "sets": 3,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 75,
+          "cues": "Hands on elevated surface behind you, feet on ground. Lower body by bending elbows to approximately 90 degrees. Keep elbows tucked close to body. Drive through palms to return."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.5,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Step forward into a lunge position, keeping rear heel on ground and leg straight. Feel stretch in rear calf. Hold and breathe deeply. Switch sides."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Butterfly Sit-Up",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Sit with soles of feet together, knees out to sides. Gently lean back, then return to upright. Focus on slow, controlled movement. Excellent for hip and spinal mobility."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Move slowly and mindfully. Use this to decompress the spine after the intense workout. Synchronize with breath for relaxation."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "User is returning from extended rest (999 days), so workout emphasizes moderate intensity (RPE 6-7) with bodyweight exercises to re-establish baseline strength and work capacity without overloading joints.",
+    "Weight loss goal benefits from high-calorie compound movements (burpees, bear crawls, Bulgarian split squats) combined with controlled strength work to preserve muscle while creating metabolic demand.",
+    "No equipment constraints means full reliance on bodyweight exercises; progression will come from reps, sets, and movement quality rather than external load, ideal for rebuilding confidence and movement patterns."
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

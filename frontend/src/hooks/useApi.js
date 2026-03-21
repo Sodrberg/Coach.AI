@@ -3,14 +3,15 @@
  */
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { 
-  profileApi, 
-  goalApi, 
-  planApi, 
-  workoutApi, 
+import {
+  profileApi,
+  goalApi,
+  planApi,
+  workoutApi,
   blockApi,
   authApi,
   exercisesApi,
+  onboardApi,
   getStoredUser,
   storeUser,
   clearSession,
@@ -160,6 +161,17 @@ export function useTodayWorkout() {
   });
 }
 
+export function useWorkoutByDate(date) {
+  const userId = getUserId();
+  return useQuery({
+    queryKey: ['workout', 'by-date', userId, date],
+    queryFn: () => workoutApi.getByDate(userId, date),
+    enabled: !!userId && !!date,
+    retry: false,
+    staleTime: 1000 * 60 * 5,
+  });
+}
+
 export function useSubmitFeedback() {
   const queryClient = useQueryClient();
   return useMutation({
@@ -234,6 +246,25 @@ export function useGenerateNextBlock() {
     mutationFn: (userId) => blockApi.generateNext(userId),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['plan'] });
+    },
+  });
+}
+
+// Onboarding hooks
+export function useQuickOnboard() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: onboardApi.quickOnboard,
+    onSuccess: (data) => {
+      if (data?.profile) {
+        queryClient.setQueryData(['profile', data.profile.user_id], data.profile);
+      }
+      if (data?.goal) {
+        queryClient.setQueryData(['goal', data.goal.user_id], data.goal);
+      }
+      if (data?.complete_plan) {
+        queryClient.setQueryData(['plan', data.profile.user_id], data.complete_plan);
+      }
     },
   });
 }

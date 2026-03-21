@@ -1,0 +1,25 @@
+{
+  "plan_id": "plan_user_85657d5f8eb0_2026-03-15T12:21:01.033823",
+  "goal_id": "goal_f08ef55a",
+  "user_id": "user_85657d5f8eb0",
+  "duration_weeks": 8,
+  "overview_markdown": "# 8-Week Weight Loss Training Plan Overview\n\n## Plan Strategy\nThis 8-week training plan is designed to support your weight loss goal through a strategically periodized approach utilizing bodyweight exercises. With 4 training days per week and no equipment limitations, this plan emphasizes progressive caloric expenditure, metabolic conditioning, and sustainable fitness habits.\n\n## Your Profile & Considerations\n- **Age/Stats**: 30 years old, 75 kg, 175 cm (BMI: 24.5 - healthy range)\n- **Experience**: 1 year of training experience at intermediate fitness level positions you well for progressive challenge\n- **Equipment**: Bodyweight-only training using calisthenics, running, and movement-based conditioning\n- **Timeline**: 91 days (13 weeks) until target date; this 8-week plan provides a solid foundation with flexibility for continued training\n\n## Training Approach\nThe plan follows a 3-phase periodization model:\n\n**Phase 1 (Weeks 1-3): Foundation & Conditioning Base**\n- Establish training consistency and aerobic base\n- Build work capacity with moderate-intensity intervals\n- Focus on movement quality and injury prevention\n- Weekly volume: 4 sessions of 45-50 minutes\n\n**Phase 2 (Weeks 4-6): Intensity & Metabolic Build**\n- Increase training intensity through higher-intensity interval training (HIIT)\n- Incorporate strength-focused circuits using bodyweight movements\n- Elevate cardiovascular demands for enhanced fat oxidation\n- Weekly volume: 4 sessions of 50-55 minutes with strategic intensity variation\n\n**Phase 3 (Weeks 7-8): Peak Conditioning & Consolidation**\n- Maintain high intensity while monitoring recovery\n- Reduce total volume slightly to prevent overtraining\n- Emphasize consistency and sustainable pacing for post-plan continuation\n- Weekly volume: 4 sessions of 45-50 minutes with strategic recovery\n\n## Key Principles\n1. **Progressive Overload**: Increase intensity, volume, or density within each session across weeks\n2. **Metabolic Conditioning**: Emphasis on HIIT and circuit training to maximize caloric expenditure and metabolic rate\n3. **Consistency Over Perfection**: 4 training days provides sustainable weekly commitment\n4. **Recovery**: Built-in rest days to support adaptation and weight loss sustainability\n5. **Variety**: Mix of running/cardio, calisthenics circuits, and bodyweight strength to prevent adaptation plateau\n\n## Expected Outcomes\n- Improved cardiovascular fitness and work capacity\n- Enhanced metabolic rate supporting weight loss goals\n- Increased movement proficiency and functional strength\n- Sustainable training habits for long-term health\n\n## Weekly Structure Recommendation\n- **Monday**: Strength-focused circuit (Push/Pull/Legs emphasis)\n- **Tuesday**: Running/cardio + core work\n- **Wednesday**: Rest or light mobility\n- **Thursday**: High-intensity interval training (HIIT)\n- **Friday**: Mixed conditioning circuit\n- **Saturday-Sunday**: Rest days with optional light activity (walking, stretching)\n\n## Nutrition & Lifestyle Reminder\nWhile this plan provides the training stimulus for weight loss, remember that nutrition creates the caloric deficit. Support your training with a balanced diet, adequate hydration, and 7-9 hours of sleep for optimal results.",
+  "phase_breakdown": [
+    {
+      "weeks": "1-3",
+      "focus": "Foundation & Conditioning Base",
+      "description": "Establish consistent training habits and build aerobic base. Focus on moderate-intensity continuous work mixed with easy intervals. Sessions include: steady-state running (20-25 min), foundational bodyweight circuits (push-ups, squats, lunges, planks), and basic interval work (moderate effort). Emphasis on movement quality and recovery. This phase prepares your body for higher intensity in subsequent phases."
+    },
+    {
+      "weeks": "4-6",
+      "focus": "Intensity & Metabolic Build",
+      "description": "Progressively increase training intensity through HIIT protocols and circuit-based strength work. Sessions include: higher-intensity intervals (30-40 sec hard efforts with active recovery), complex bodyweight circuits (combining upper body, lower body, and core), and tempo runs. Volume remains consistent at 4 days/week but intensity increases significantly. This phase creates the greatest metabolic stimulus for weight loss."
+    },
+    {
+      "weeks": "7-8",
+      "focus": "Peak Conditioning & Consolidation",
+      "description": "Maintain high intensity while slightly reducing total volume to ensure recovery and prevent overtraining. Sessions include: strategic HIIT workouts, strength-endurance circuits, and varied-pace running. Reduce volume by 10-15% while maintaining intensity. This phase consolidates gains and demonstrates work capacity improvements while setting foundation for continued training beyond week 8."
+    }
+  ],
+  "created_at": "2026-03-15T12:21:01.033823"
+}

@@ -65,11 +65,27 @@ function TimeInput({ value, onChange, label }) {
   );
 }
 
-export default function ExerciseItem({ exercise, editable = false, onUpdate, onRemove }) {
+export default function ExerciseItem({
+  exercise, editable = false, onUpdate, onRemove,
+  completed = false, onToggleComplete, onOpenTracker, setData
+}) {
   const [showCues, setShowCues] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
 
   const kindStyle = kindStyles[exercise.kind] || 'bg-accent/10 text-accent';
+
+  // Build set summary text
+  const getSetSummary = () => {
+    if (!setData?.sets?.length) return null;
+    const doneSets = setData.sets.filter(s => s.done).length;
+    const totalSets = setData.sets.length;
+    if (setData.sets[0]?.weight_kg !== undefined) {
+      const weights = setData.sets.filter(s => s.done && s.weight_kg > 0).map(s => s.weight_kg);
+      const avgWeight = weights.length ? (weights.reduce((a, b) => a + b, 0) / weights.length).toFixed(1) : null;
+      return `${doneSets}/${totalSets} sets done${avgWeight ? ` · ${avgWeight} kg avg` : ''}`;
+    }
+    return `${doneSets}/${totalSets} done`;
+  };
 
   // Handle value changes
   const handleChange = (field, value) => {
@@ -105,17 +121,48 @@ export default function ExerciseItem({ exercise, editable = false, onUpdate, onR
   const hasSetsReps = exercise.sets !== undefined || exercise.reps !== undefined;
   const hasDuration = exercise.duration_min !== undefined;
 
+  const setSummary = getSetSummary();
+
   return (
     <div className="p-4 bg-surface-card">
       <div className="flex items-start gap-4">
-        <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${kindStyle}`}>
-          <span className="text-sm font-heading font-bold uppercase">
-            {exercise.kind?.charAt(0) || 'E'}
-          </span>
-        </div>
+        {/* Checkbox (tracking mode) or kind badge */}
+        {onToggleComplete ? (
+          <button
+            onClick={onToggleComplete}
+            className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 border-2 transition-colors ${
+              completed
+                ? 'bg-accent border-accent text-white'
+                : `border-border hover:border-text-muted ${kindStyle}`
+            }`}
+          >
+            {completed ? (
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              </svg>
+            ) : (
+              <span className="text-sm font-heading font-bold uppercase">
+                {exercise.kind?.charAt(0) || 'E'}
+              </span>
+            )}
+          </button>
+        ) : (
+          <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${kindStyle}`}>
+            <span className="text-sm font-heading font-bold uppercase">
+              {exercise.kind?.charAt(0) || 'E'}
+            </span>
+          </div>
+        )}
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-2">
-            <h4 className="font-heading font-medium text-text-primary">{exercise.name}</h4>
+            <h4
+              className={`font-heading font-medium transition-colors ${
+                completed ? 'line-through text-text-muted' : 'text-text-primary'
+              } ${onOpenTracker ? 'cursor-pointer hover:text-accent' : ''}`}
+              onClick={onOpenTracker || undefined}
+            >
+              {exercise.name}
+            </h4>
             {editable && (
               <div className="flex items-center gap-1 flex-shrink-0">
                 <button
@@ -127,6 +174,7 @@ export default function ExerciseItem({ exercise, editable = false, onUpdate, onR
                       : 'text-text-muted hover:text-text-secondary hover:bg-surface-elevated'
                   }`}
                   title={isEditing ? 'Done editing' : 'Edit exercise'}
+                  aria-label={isEditing ? 'Done editing' : 'Edit exercise'}
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
@@ -139,6 +187,7 @@ export default function ExerciseItem({ exercise, editable = false, onUpdate, onR
                     onClick={() => onRemove(exercise)}
                     className="p-1.5 rounded-md text-text-muted hover:text-red-400 hover:bg-red-400/10 transition-colors"
                     title="Remove exercise"
+                    aria-label="Remove exercise"
                   >
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -151,8 +200,19 @@ export default function ExerciseItem({ exercise, editable = false, onUpdate, onR
           
           {/* Prescription display (when not editing) */}
           {!isEditing && (
-            <p className="text-sm text-text-secondary mt-1">
+            <p className={`text-sm mt-1 ${completed ? 'text-text-muted line-through' : 'text-text-secondary'} ${onOpenTracker ? 'cursor-pointer' : ''}`}
+               onClick={onOpenTracker || undefined}
+            >
               {getPrescription()}
+            </p>
+          )}
+
+          {/* Set tracking summary */}
+          {setSummary && !isEditing && (
+            <p className="text-xs text-accent mt-1.5 font-medium cursor-pointer hover:underline"
+               onClick={onOpenTracker || undefined}
+            >
+              {setSummary}
             </p>
           )}
           

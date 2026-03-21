@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useTodayWorkout, useLogWorkout, getUserId } from '../hooks/useApi';
+import { useToast } from '../hooks/useToast';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { useState } from 'react';
 
@@ -32,7 +33,12 @@ const rpeColors = {
 
 export default function Log() {
   const navigate = useNavigate();
-  const { data: workout, isLoading } = useTodayWorkout();
+  const location = useLocation();
+  const toast = useToast();
+  const passedWorkout = location.state?.workout;
+  const passedDurationMin = location.state?.durationMin;
+  const { data: fetchedWorkout, isLoading } = useTodayWorkout();
+  const workout = passedWorkout || fetchedWorkout;
   const logWorkout = useLogWorkout();
   const [selectedRpe, setSelectedRpe] = useState(7);
   const [completionData, setCompletionData] = useState(null);
@@ -71,7 +77,7 @@ export default function Log() {
       date: new Date().toISOString(),
       completed: data.completed,
       workout_type: workout?.workout_type || 'general',
-      duration_min: parseInt(data.duration_min) || workout?.estimated_duration_min || 45,
+      duration_min: parseInt(data.duration_min) || passedDurationMin || workout?.estimated_duration_min || 45,
       rpe_actual: selectedRpe,
       exercises,
       feedback: data.feedback,
@@ -81,12 +87,13 @@ export default function Log() {
 
     logWorkout.mutate(log, {
       onSuccess: (response) => {
+        toast.success('Workout logged!');
         setCompletionData(response);
       },
     });
   };
 
-  if (isLoading) {
+  if (isLoading && !passedWorkout) {
     return <LoadingSpinner message="Loading workout..." />;
   }
 
@@ -219,13 +226,14 @@ export default function Log() {
           <p className="text-sm text-text-secondary mb-4">
             RPE {selectedRpe} — {rpeDescriptions[selectedRpe]}
           </p>
-          <div className="grid grid-cols-10 gap-1.5">
+          <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rpe) => (
               <button
                 key={rpe}
                 type="button"
                 onClick={() => setSelectedRpe(rpe)}
-                className={`py-3 rounded-lg font-heading font-semibold text-sm transition-all ${
+                aria-label={`RPE ${rpe} - ${rpeDescriptions[rpe]}`}
+                className={`py-3.5 sm:py-3 rounded-lg font-heading font-semibold text-sm transition-all ${
                   selectedRpe === rpe
                     ? `${rpeColors[rpe]} text-white shadow-sm`
                     : 'bg-surface-elevated text-text-muted hover:bg-surface-hover hover:text-text-secondary'
@@ -244,9 +252,10 @@ export default function Log() {
             <input
               type="number"
               {...register('duration_min')}
-              defaultValue={workout?.estimated_duration_min || 45}
+              defaultValue={passedDurationMin || workout?.estimated_duration_min || 45}
               className="input w-28"
               min={1}
+              aria-label="Workout duration in minutes"
             />
             <span className="text-text-secondary">minutes</span>
           </div>

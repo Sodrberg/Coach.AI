@@ -1,0 +1,30 @@
+{
+  "plan_id": "plan_user_c82d59fa7a40_2026-03-21T13:42:36.576208",
+  "goal_id": "goal_f0d30f1a",
+  "user_id": "user_c82d59fa7a40",
+  "duration_weeks": 8,
+  "overview_markdown": "# 8-Week General Fitness Performance Plan\n\n- **Goal**: Build general fitness and performance capacity\n- **Structure**: 4 days/week (Mon, Wed, Thu, Sat) \u2014 strength, conditioning, and skill work\n- **Progression**: Volume increases weeks 1-5, intensity peaks weeks 6-7, taper week 8\n- **Key Focus**:\n  - Barbell strength foundation with compound movements\n  - Metabolic conditioning to improve work capacity\n  - Movement quality and injury prevention",
+  "phase_breakdown": [
+    {
+      "weeks": "1-2",
+      "focus": "Base Building",
+      "description": "Establish movement patterns and work capacity. 3x5-8 rep compound lifts, moderate conditioning 2x/week."
+    },
+    {
+      "weeks": "3-5",
+      "focus": "Build Phase",
+      "description": "Increase volume and intensity. Add accessory work, progress to 4x8 lifts, intensify conditioning with intervals."
+    },
+    {
+      "weeks": "6-7",
+      "focus": "Peak",
+      "description": "Peak intensity on strength and short-duration conditioning. Reduce volume, sharpen performance capacity."
+    },
+    {
+      "weeks": "8",
+      "focus": "Taper",
+      "description": "Reduce volume 40%, maintain intensity. Recovery week before target event."
+    }
+  ],
+  "created_at": "2026-03-21T13:42:36.576208"
+}

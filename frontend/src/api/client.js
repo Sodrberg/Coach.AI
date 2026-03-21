@@ -41,8 +41,14 @@ class ApiError extends Error {
 }
 
 async function request(endpoint, options = {}) {
-  const url = `${API_BASE}${endpoint}`;
-  
+  // Auto-attach session_id for authentication
+  const sessionId = getSessionId();
+  let url = `${API_BASE}${endpoint}`;
+  if (sessionId) {
+    const separator = url.includes('?') ? '&' : '?';
+    url = `${url}${separator}session_id=${encodeURIComponent(sessionId)}`;
+  }
+
   const config = {
     headers: {
       'Content-Type': 'application/json',
@@ -108,6 +114,7 @@ export const planApi = {
 // Workout endpoints
 export const workoutApi = {
   getToday: (userId) => request(`/workout/today?user_id=${userId}`),
+  getByDate: (userId, date) => request(`/workout/by-date?user_id=${userId}&date=${date}`),
   submitFeedback: (feedback) => request('/workout/feedback', { method: 'POST', body: feedback }),
   log: (log) => request('/workout/log', { method: 'POST', body: log }),
   resolvePending: (userId, pendingDate, resolution) => 
@@ -136,6 +143,11 @@ export const exercisesApi = {
     const queryString = params.toString();
     return request(`/exercises${queryString ? `?${queryString}` : ''}`);
   },
+};
+
+// Onboarding endpoints
+export const onboardApi = {
+  quickOnboard: (data) => request('/onboard/quick', { method: 'POST', body: data }),
 };
 
 // Health check

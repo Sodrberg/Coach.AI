@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useProfile, useGoal, useTodayWorkout } from '../hooks/useApi';
-import LoadingSpinner from '../components/LoadingSpinner';
+import { DashboardSkeleton } from '../components/SkeletonLoader';
 import TrainAnywayModal from '../components/TrainAnywayModal';
 
 const typeStyles = {
@@ -32,7 +32,7 @@ export default function Home() {
   };
 
   // If no profile, show onboarding
-  if (!profileLoading && (profileError || !profile)) {
+  if (!profileLoading && (profileError || !profile || profile?.error_code)) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[70vh] text-center px-4 animate-in-up">
         <div className="w-20 h-20 rounded-2xl bg-surface-card border border-border flex items-center justify-center mb-8 shadow-glow-sm">
@@ -45,7 +45,7 @@ export default function Home() {
           Get personalized AI-powered training plans designed for your goals,
           schedule, and fitness level.
         </p>
-        <Link to="/profile" className="btn-primary text-lg px-10 py-4">
+        <Link to="/onboarding" className="btn-primary text-lg px-10 py-4">
           Get Started
         </Link>
       </div>
@@ -53,7 +53,7 @@ export default function Home() {
   }
 
   if (isLoading) {
-    return <LoadingSpinner message="Loading your dashboard..." />;
+    return <DashboardSkeleton />;
   }
 
   // Calculate days until goal

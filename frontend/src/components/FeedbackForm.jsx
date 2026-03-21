@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSubmitFeedback, getUserId } from '../hooks/useApi';
+import { useToast } from '../hooks/useToast';
 
 const feedbackOptions = [
   { status: 'great', label: "I feel great!", icon: '💪' },
@@ -16,7 +17,7 @@ export default function FeedbackForm({ onComplete }) {
   const [selectedStatus, setSelectedStatus] = useState(null);
   const [bodyPart, setBodyPart] = useState('');
   const [severity, setSeverity] = useState(3);
-  
+  const toast = useToast();
   const submitFeedback = useSubmitFeedback();
 
   const handleSubmit = () => {
@@ -30,6 +31,7 @@ export default function FeedbackForm({ onComplete }) {
 
     submitFeedback.mutate(feedback, {
       onSuccess: (data) => {
+        toast.success('Feedback submitted');
         onComplete?.(data);
       },
     });

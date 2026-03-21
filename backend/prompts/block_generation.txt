@@ -9,6 +9,7 @@ USER PROFILE:
 - Training Days Per Week: {training_days_per_week}
 - Preferred Days: {preferred_training_days}
 - Equipment: {available_equipment}
+- Training Type Focus: {training_type_preference}
 - Injuries/Limitations: {injuries_or_limitations}
 
 GOAL:
@@ -34,6 +35,7 @@ REQUIREMENTS:
 5. Align workout types with current phase focus
 6. Avoid consecutive high-intensity days (RPE > 8)
 7. Balance workout types throughout the block
+8. If training type focus is 'strength', prioritize strength sessions. If 'cardio', prioritize endurance/intervals/tempo. If 'both' or not specified, balance between them.
 
 WORKOUT TYPES TO USE (only these values):
 - "endurance" - Long, steady-state aerobic work

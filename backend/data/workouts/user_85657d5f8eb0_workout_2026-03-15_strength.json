@@ -1,0 +1,153 @@
+{
+  "workout_id": "workout_2026-03-15_strength",
+  "scheduled_for_date": "2026-03-15",
+  "title": "Bodyweight Strength Foundation - Full Body",
+  "workout_type": "strength",
+  "estimated_duration_min": 45,
+  "intensity_target": "RPE_6_7",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly through spinal flexion and extension. Coordinate breath: exhale on cow (arch), inhale on cat (round). Keep core engaged throughout."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Extend opposite arm and leg slowly, creating a straight line. Maintain neutral spine, avoid rotating hips. Hold each rep for 1 second at full extension."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Place palm on wall at shoulder height, fingers pointing backward. Step forward gently until stretch is felt. Breathe deeply and hold position."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Burpees",
+          "sets": 3,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Start standing, drop to plank, perform push-up, jump feet back to hands, stand and jump vertically. Keep core tight throughout. Breathe out on exertion phases."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bulgarian Split Squat",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Rear foot elevated on bench or chair, front foot forward. Lower until rear knee nearly touches ground. Keep torso upright, front knee tracking over toes. Perform all reps on one leg before switching."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bench Dip",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Hands shoulder-width on bench behind you, legs extended or slightly bent. Lower body by bending elbows to 90 degrees. Keep elbows close to body, chest upright. Push back to start position."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bent Over Row",
+          "sets": 3,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Bodyweight row using door frame or low bar. Maintain rigid plank position, pull chest toward bar. Squeeze shoulder blades together at top. Lower with control to full arm extension."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Butterfly Sit-Up",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Lie on back, knees bent with soles of feet together. Crunch up slowly, leading with chest. Lower with control. Focus on abdominal engagement and smooth movement."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Stand facing wall, one leg back with heel on ground. Lean forward until calf stretch is felt. Hold gently, switch legs. Breathe steadily throughout."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 2,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Seated with both legs at 90 degrees, alternate which leg is in front. Move smoothly, stretching hip flexors and external rotators. Keep torso upright."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "User returning from extended rest (999 days) requires graduated intensity; RPE 6-7 allows safe re-entry with moderate effort while building foundational strength for weight loss goal",
+    "Bodyweight-only strength workout maximizes compound movements (burpees, rows, squats, dips) for metabolic effect and calorie burn critical to weight loss objective over 92-day timeline",
+    "Structured warmup with mobility work and cooldown with hip/calf stretches addresses recovery needs for intermediate fitness level and prepares body for consistent future training"
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

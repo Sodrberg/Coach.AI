@@ -10,7 +10,7 @@ const typeStyles = {
   rest: 'badge-rest',
 };
 
-export default function WorkoutCard({ workout, editable = false, onWorkoutChange }) {
+export default function WorkoutCard({ workout, editable = false, onWorkoutChange, trackingData, onTrackingChange }) {
   const [expandedSections, setExpandedSections] = useState({ main: true });
   const [pickerOpen, setPickerOpen] = useState(false);
   const [targetSection, setTargetSection] = useState(null);
@@ -126,7 +126,10 @@ export default function WorkoutCard({ workout, editable = false, onWorkoutChange
                 </span>
                 <div className="flex items-center gap-3">
                   <span className="text-sm text-text-muted">
-                    {section.items.length} exercises
+                    {trackingData ? (() => {
+                      const done = section.items.filter((_, ei) => trackingData[`${sectionIndex}-${ei}`]?.completed).length;
+                      return `${done}/${section.items.length}`;
+                    })() : `${section.items.length} exercises`}
                   </span>
                   <svg 
                     className={`w-4 h-4 text-text-muted transition-transform duration-200 ${
@@ -143,15 +146,28 @@ export default function WorkoutCard({ workout, editable = false, onWorkoutChange
               
               {expandedSections[section.name] && (
                 <div className="divide-y divide-border">
-                  {section.items.map((item, exerciseIndex) => (
-                    <ExerciseItem 
-                      key={exerciseIndex} 
-                      exercise={item}
-                      editable={editable}
-                      onUpdate={(updated) => handleExerciseUpdate(sectionIndex, exerciseIndex, updated)}
-                      onRemove={() => handleExerciseRemove(sectionIndex, exerciseIndex)}
-                    />
-                  ))}
+                  {section.items.map((item, exerciseIndex) => {
+                    const trackKey = `${sectionIndex}-${exerciseIndex}`;
+                    const itemTracking = trackingData?.[trackKey];
+                    return (
+                      <ExerciseItem
+                        key={exerciseIndex}
+                        exercise={item}
+                        editable={editable}
+                        onUpdate={(updated) => handleExerciseUpdate(sectionIndex, exerciseIndex, updated)}
+                        onRemove={() => handleExerciseRemove(sectionIndex, exerciseIndex)}
+                        completed={itemTracking?.completed || false}
+                        onToggleComplete={onTrackingChange ? () => {
+                          const current = itemTracking || { completed: false, sets: [] };
+                          onTrackingChange(trackKey, { ...current, completed: !current.completed });
+                        } : undefined}
+                        onOpenTracker={onTrackingChange ? () => {
+                          onTrackingChange(trackKey, itemTracking || { completed: false, sets: [] }, 'open');
+                        } : undefined}
+                        setData={itemTracking}
+                      />
+                    );
+                  })}
                   
                   {/* Add Exercise Button */}
                   {editable && (

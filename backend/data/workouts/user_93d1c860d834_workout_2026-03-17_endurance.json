@@ -1,0 +1,177 @@
+{
+  "workout_id": "workout_2026-03-17_endurance",
+  "scheduled_for_date": "2026-03-17",
+  "title": "Bodyweight Endurance Circuit - Weight Loss Focus",
+  "workout_type": "endurance",
+  "estimated_duration_min": 40,
+  "intensity_target": "RPE_5_6",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly and deliberately, syncing breath with movement. Exhale as you round your spine, inhale as you arch."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Control the transition between sides. Keep chest upright and core engaged throughout the movement."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Butt Kicks",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Light and steady pace. Drive knees up toward glutes while maintaining light forward movement. Focus on cadence."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Burpees",
+          "sets": 3,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Maintain steady rhythm. Plant hands firmly, step or jump back to plank position, perform a push-up, then jump feet to hands and stand. Control your breathing\u2014exhale on exertion."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Bear Crawl",
+          "sets": 3,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Keep hips low and core tight. Move opposite arm and leg together. Maintain a steady, controlled pace\u2014this is about muscular endurance, not speed."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Bicycle Crunch",
+          "sets": 3,
+          "reps": 20,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Control the movement\u2014no jerking. Bring opposite elbow toward knee with each rotation. Keep neck neutral and avoid pulling on head."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bench Dip",
+          "sets": 3,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Use a sturdy chair or low surface. Lower body until arms are at 90 degrees. Keep chest upright and elbows close to body. Controlled descent and ascent."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Agility Ladder Run",
+          "sets": 3,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 0.75,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "If no ladder available, use ground markers or imagine one. Quick foot placement, staying light on your feet. Drive knees up and maintain rhythm."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.5,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Lean forward against wall or support. Keep heel grounded and leg straight. Feel gentle stretch in calf muscle. Breathe deeply."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.5,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Place palm flat against wall at shoulder height with arm extended. Gently rotate torso away from wall. Hold stretch without bouncing."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Slow, deliberate movements. Coordinate with breath to promote parasympathetic nervous system activation and recovery."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Deep Breathing",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 2.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Lie on back or sit comfortably. Inhale deeply for 4 counts, hold for 4, exhale for 4. Focus on bringing heart rate down."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "User is returning from extended rest (999 days since last workout), so workout emphasizes moderate endurance work at RPE 5-6 with adequate recovery periods rather than high intensity.",
+    "No equipment available requires bodyweight circuit format. Mixed endurance and strength exercises create metabolic demand for weight loss goal while building work capacity.",
+    "40-minute duration uses 5-min warmup, 27-min main circuit, and 8-min cooldown to stay within target window while allowing sufficient volume for weight loss progression."
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

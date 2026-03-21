@@ -1,0 +1,15 @@
+{
+  "user_id": "user_85657d5f8eb0",
+  "age": 30,
+  "weight_kg": 75.0,
+  "height_cm": 175,
+  "gender": null,
+  "fitness_level": "intermediate",
+  "training_history_years": 1,
+  "available_equipment": [
+    "none"
+  ],
+  "injuries_or_limitations": null,
+  "training_days_per_week": 4,
+  "preferred_training_days": null
+}

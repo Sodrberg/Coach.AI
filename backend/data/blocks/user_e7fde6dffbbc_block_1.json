@@ -177,7 +177,7 @@
       "intensity_target": "RPE_6_7",
       "is_rest_day": false,
       "status": "planned",
-      "workout_id": null
+      "workout_id": "workout_2026-01-26_strength"
     },
     {
       "day_number": 17,
@@ -188,7 +188,7 @@
       "intensity_target": "RPE_7_8",
       "is_rest_day": false,
       "status": "planned",
-      "workout_id": null
+      "workout_id": "workout_2026-01-27_threshold"
     },
     {
       "day_number": 18,

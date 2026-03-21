@@ -1,6 +1,5 @@
 """Application configuration."""
 
-import os
 from pathlib import Path
 
 from pydantic import Field
@@ -50,6 +49,39 @@ class Settings(BaseSettings):
     )
     pending_workout_lookback_days: int = Field(
         default=3, description="Days to check for incomplete workouts"
+    )
+
+    # Session
+    session_duration_days: int = Field(
+        default=30, description="Session expiry in days from creation"
+    )
+
+    # Rate limiting (per user)
+    rate_limit_onboard_per_hour: int = Field(
+        default=3, description="Max onboarding attempts per hour"
+    )
+    rate_limit_plan_generate_per_hour: int = Field(
+        default=3, description="Max plan generation attempts per hour"
+    )
+    rate_limit_block_generate_per_day: int = Field(
+        default=5, description="Max block generation attempts per day"
+    )
+    rate_limit_workout_today_per_hour: int = Field(
+        default=30, description="Max workout-today requests per hour"
+    )
+    rate_limit_feedback_per_hour: int = Field(
+        default=20, description="Max feedback submissions per hour"
+    )
+    rate_limit_swap_per_hour: int = Field(
+        default=10, description="Max workout swap requests per hour"
+    )
+
+    # Generation caps
+    max_blocks_per_user: int = Field(
+        default=8, description="Maximum training blocks per user (~6 months)"
+    )
+    max_days_ahead_for_blocks: int = Field(
+        default=42, description="Maximum days ahead blocks can extend beyond today"
     )
 
     model_config = {

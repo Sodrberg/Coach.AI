@@ -1,0 +1,153 @@
+{
+  "workout_id": "workout_2026-01-26_strength",
+  "scheduled_for_date": "2026-01-26",
+  "title": "Lower Body & Core Strength - Engelbrektsloppet Preparation",
+  "workout_type": "strength",
+  "estimated_duration_min": 50,
+  "intensity_target": "RPE_6_7",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly and deliberately, sync movement with breath. Arch and round the spine with control."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Extend opposite arm and leg simultaneously, maintain neutral spine. Pause 1 second at full extension."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 2,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Keep chest upright, rotate from hips. Feel the stretch in external rotators and glutes."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Back Squat",
+          "sets": 4,
+          "reps": 6,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Drive through heels, chest up, depth to parallel or below. Control descent, explosive concentric. Focus on form over load."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bent Over Row",
+          "sets": 3,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 75,
+          "cues": "Hinge at hips with slight knee bend, neutral spine. Pull elbows high, squeeze shoulder blades together at top."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bulgarian Split Squat",
+          "sets": 3,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Front knee tracks over ankle, rear leg elevated on bench. Descend controlled, front knee should not cave inward."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Cable Woodchop",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Rotate from core, keep arms relatively straight. Control the movement both directions. Engage obliques throughout."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Keep heel planted, lean forward feeling stretch in calf. Hold each side 1 minute, breathe deeply."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Adductor Rockbacks",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Rock body weight back gently, feel inner thigh stretch. Move smoothly and hold stretch at deepest point."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Arm extended at shoulder height against wall, rotate body away. Hold 1 minute each side."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "With 6 days until the Engelbrektsloppet 45km race, this strength session builds lower body resilience and core stability critical for ultra-distance ski racing, focusing on compound movements that develop functional power.",
+    "Returning after 15 days of rest, this workout re-establishes strength foundations with RPE 6-7 intensity\u2014challenging but controlled\u2014allowing proper neural adaptation before peak training resumes.",
+    "Exercise selection emphasizes squat patterns, hip stability, and rotational core strength essential for maintaining form and power transfer throughout a 45km race while respecting recovery needs before race week."
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

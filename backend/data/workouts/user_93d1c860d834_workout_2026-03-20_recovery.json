@@ -1,0 +1,153 @@
+{
+  "workout_id": "workout_2026-03-20_recovery",
+  "scheduled_for_date": "2026-03-20",
+  "title": "Gentle Recovery Flow - Mobility & Breathwork",
+  "workout_type": "recovery",
+  "estimated_duration_min": 30,
+  "intensity_target": "RPE_4_5",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly and deliberately. Inhale on cow (arching), exhale on cat (rounding). Focus on spinal mobility and breath coordination. Move at a controlled pace."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Extend opposite arm and leg slowly. Hold each rep for 1-2 seconds. Keep core stable and hips level. Breathe steadily throughout."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move gently between hip positions. Keep chest upright. Control the rotation through your hips. This prepares your joints for the main session."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Adductor Rockbacks",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Rock back slowly to feel a gentle inner-thigh stretch. Keep hips neutral and breathe into the stretch. Move with control, no bouncing. RPE should feel very easy and relaxing."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.5,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Place arm against wall with palm facing forward. Gently rotate chest away. Hold comfortably without pain. Breathe deeply and relax into the stretch."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.5,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Keep heel grounded, lean forward gently. Feel the stretch in your calf without forcing. Maintain steady breathing. Hold each side for the full duration."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Ankle Dorsiflexion Mobilization",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Pull toes toward shins gently and slowly. Move through full range without forcing. This improves ankle mobility and feels very comfortable. Breathe naturally."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Extended Child's Pose",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 2.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Rest forehead down, arms extended. Breathe deeply into your back body. Relax completely. Let tension melt away with each exhale."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Butterfly Pec Stretch (Supine Breathing)",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 2.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Lie on back with knees bent, soles of feet together. Let knees fall open gently. Breathe slowly and deeply. This opens the chest and allows full recovery."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Supine Full-Body Relaxation",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 3.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Lie flat with arms at sides, legs extended. Close eyes and breathe slowly. Mentally scan your body from head to toe, releasing any tension. Finish energized but calm."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "After 999 days without training, a full recovery-focused session is essential to rebuild mind-body connection and prepare the body for consistent training over the next 91 days without risk of overuse injury.",
+    "RPE 4-5 intensity with mobility and recovery work allows the body to adapt gently while improving flexibility and range of motion\u2014critical foundations for sustainable weight loss training ahead.",
+    "No equipment required bodyweight mobility exercises maximize accessibility and focus on movement quality, breathing patterns, and parasympathetic activation to support recovery and stress reduction."
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

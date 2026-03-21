@@ -1,0 +1,165 @@
+{
+  "workout_id": "workout_2026-03-15_strength",
+  "scheduled_for_date": "2026-03-14",
+  "title": "Bodyweight Strength Foundation - Lower & Upper Body Focus",
+  "workout_type": "strength",
+  "estimated_duration_min": 50,
+  "intensity_target": "RPE_6_7",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly and deliberately, synchronizing breath with movement. Exhale on cow, inhale on cat. Focus on spinal mobility."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Keep chest upright, control the switch between positions. Feel the hip stretch on both sides. Move with intention."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Extend opposite arm and leg simultaneously. Keep core engaged and spine neutral. Move slowly without rotation."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bulgarian Split Squat",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Place rear foot elevated on a chair or bench. Lower front knee toward ground with control. Keep torso upright and front knee tracking over ankle. Push through front heel to stand."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bent Over Row",
+          "sets": 3,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Hinge at hips with slight knee bend. Pull elbows high and back, squeezing shoulder blades together. Return to starting position with control. Maintain neutral spine throughout."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bench Dip",
+          "sets": 3,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Use a sturdy chair or bench. Lower body by bending elbows to 90 degrees. Keep chest upright and elbows close to body. Press back up to starting position. Scale by keeping feet on ground if needed."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bicycle Crunch",
+          "sets": 3,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Lie on back with hands behind head. Bring opposite elbow toward knee in a controlled pedaling motion. Fully extend opposite leg. Move deliberately without pulling on neck."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Back Extension",
+          "sets": 3,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 45,
+          "cues": "Lie face down or use a bench. Extend back by contracting glutes and lower back. Avoid hyperextension; stop when torso is parallel to ground. Maintain a neutral spine position."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Step one leg back and keep heel on ground. Lean forward gently, feeling stretch in calf. Hold each side for one minute."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Butterfly Sit-Up (static hold)",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 2.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Sit upright, bring soles of feet together, and gently press knees toward floor. Hold this relaxed position and breathe deeply. Feel the stretch in hips and inner thighs."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Stand facing wall, place palms on wall at shoulder height with arms extended. Lean forward gently. Hold stretch and breathe steadily."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "User is returning after extended rest (999 days), so workout emphasizes controlled strength with moderate intensity (RPE 6-7) using bodyweight. This allows safe re-entry while building foundational strength for weight loss goal.",
+    "Strength-focused workout targets major muscle groups (lower body, back, chest, core) with compound movements to maximize caloric burn and metabolic stimulus for weight loss over 91-day period.",
+    "No equipment constraints respected; all exercises are bodyweight-based. Warmup includes mobility work to prepare joints, main section uses 3-4 sets with 45-60 second rest for hypertrophy and strength, and cooldown emphasizes recovery stretching."
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

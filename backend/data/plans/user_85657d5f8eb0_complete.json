@@ -1,0 +1,270 @@
+{
+  "high_level_plan": {
+    "plan_id": "plan_user_85657d5f8eb0_2026-03-15T21:12:32.291516",
+    "goal_id": "goal_f08ef55a",
+    "user_id": "user_85657d5f8eb0",
+    "duration_weeks": 8,
+    "overview_markdown": "# 8-Week Weight Loss Training Plan Overview\n\n## Plan Strategy\nThis 8-week progressive training plan is designed to support weight loss and improve general fitness for an intermediate-level athlete with 1 year of training experience. With 4 training days per week and no equipment requirements, this plan utilizes bodyweight exercises, running, and high-intensity interval training (HIIT) to maximize caloric expenditure while building lean muscle mass.\n\n## Training Approach\n**Goal Focus:** Weight loss and health improvement  \n**Training Frequency:** 4 days per week  \n**Training Modalities:** Bodyweight strength, running/cardio, and metabolic conditioning  \n**Equipment:** None required (bodyweight and outdoor environment)\n\n## Weekly Structure\nThe plan follows a 3-phase periodized approach spanning 8 weeks:\n- **Weeks 1-3: Base Building Phase** - Establish aerobic foundation, build movement quality, moderate intensity\n- **Weeks 4-6: Build Phase** - Progressive intensity increase, metabolic conditioning emphasis, fat loss acceleration\n- **Weeks 7-8: Peak/Consolidation Phase** - Maintain intensity, reduce volume slightly, optimize recovery for sustainable results\n\n## Key Principles\n1. **Progressive Overload:** Gradual increases in intensity, volume, or density across phases\n2. **Metabolic Emphasis:** Combination of steady-state cardio and HIIT to maximize caloric expenditure\n3. **Strength Preservation:** 2 days per week of resistance work to maintain muscle mass during weight loss\n4. **Recovery Priority:** Appropriate volume and intensity distribution to support adherence and health\n5. **Sustainability:** Realistic, equipment-free programming that can be maintained long-term\n\n## Expected Outcomes\nOver 8 weeks, adherent athletes can expect:\n- Increased cardiovascular fitness and work capacity\n- Improved body composition (fat loss with muscle preservation)\n- Enhanced muscular endurance\n- Establishment of sustainable training habits\n\n## Training Day Distribution (Suggested)\n- **Day 1:** Strength Focus (Full Body)\n- **Day 2:** Cardio/HIIT (High Intensity)\n- **Day 3:** Active Recovery or Light Cardio\n- **Day 4:** Strength + Metabolic Conditioning\n\nNote: With 4 training days per week, include 2-3 active recovery or rest days for optimal adaptation and weight loss results.",
+    "phase_breakdown": [
+      {
+        "weeks": "1-3",
+        "focus": "Base Building & Movement Quality",
+        "description": "Foundation phase establishing aerobic base and movement patterns. Emphasis on consistent moderate-intensity work with proper form. Include 2 strength days (bodyweight circuits focusing on fundamental patterns: push, pull, squat, hinge, core) and 2 moderate-intensity cardio sessions (steady-state running or interval walks). Weekly volume moderate, intensity low to moderate. Goal: Build habits, improve movement quality, establish baseline fitness. Expected RPE: 4-6/10 on most sessions."
+      },
+      {
+        "weeks": "4-6",
+        "focus": "Progressive Build & Metabolic Conditioning",
+        "description": "Acceleration phase increasing training intensity and metabolic demand for fat loss. Introduce HIIT work and circuit-based conditioning. Maintain 2 strength days with increased complexity or density (longer circuits, shorter rest periods). Add 1-2 higher-intensity cardio/conditioning sessions (HIIT sprints, circuit training). Reduce steady-state volume slightly while increasing intensity. Weekly volume moderate to high, intensity moderate to high. Goal: Maximize caloric expenditure, improve work capacity, fat loss acceleration. Expected RPE: 6-8/10 on intensity days."
+      },
+      {
+        "weeks": "7-8",
+        "focus": "Peak Performance & Consolidation",
+        "description": "Final consolidation phase maintaining high intensity while managing fatigue. Slightly reduce overall volume to support recovery and prevent overtraining. Maintain 2 strength days with focus on quality over quantity. 2 conditioning/cardio sessions maintaining intensity gains from Phase 2. Include deliberate recovery emphasis with active rest days. Goal: Consolidate fitness gains, optimize body composition, prepare for sustainable long-term training. Expected RPE: 6-7/10, with focus on quality execution and recovery. This phase emphasizes sustainable intensity rather than maximal volume."
+      }
+    ],
+    "created_at": "2026-03-15T21:12:32.291516"
+  },
+  "current_block": {
+    "block_number": 1,
+    "start_date": "2026-03-15",
+    "end_date": "2026-04-04",
+    "day_slots": [
+      {
+        "day_number": 1,
+        "date": "2026-03-15",
+        "workout_type": "strength",
+        "target_duration_min": 45,
+        "target_distance_km": null,
+        "intensity_target": "RPE_6_7",
+        "is_rest_day": false,
+        "status": "completed",
+        "workout_id": null
+      },
+      {
+        "day_number": 2,
+        "date": "2026-03-16",
+        "workout_type": null,
+        "target_duration_min": null,
+        "target_distance_km": null,
+        "intensity_target": null,
+        "is_rest_day": true,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 3,
+        "date": "2026-03-17",
+        "workout_type": "endurance",
+        "target_duration_min": 35,
+        "target_distance_km": null,
+        "intensity_target": "RPE_5_6",
+        "is_rest_day": false,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 4,
+        "date": "2026-03-18",
+        "workout_type": null,
+        "target_duration_min": null,
+        "target_distance_km": null,
+        "intensity_target": null,
+        "is_rest_day": true,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 5,
+        "date": "2026-03-19",
+        "workout_type": "strength",
+        "target_duration_min": 45,
+        "target_distance_km": null,
+        "intensity_target": "RPE_6_7",
+        "is_rest_day": false,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 6,
+        "date": "2026-03-20",
+        "workout_type": "recovery",
+        "target_duration_min": 30,
+        "target_distance_km": null,
+        "intensity_target": "RPE_4_5",
+        "is_rest_day": false,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 7,
+        "date": "2026-03-21",
+        "workout_type": null,
+        "target_duration_min": null,
+        "target_distance_km": null,
+        "intensity_target": null,
+        "is_rest_day": true,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 8,
+        "date": "2026-03-22",
+        "workout_type": "endurance",
+        "target_duration_min": 40,
+        "target_distance_km": null,
+        "intensity_target": "RPE_5_6",
+        "is_rest_day": false,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 9,
+        "date": "2026-03-23",
+        "workout_type": null,
+        "target_duration_min": null,
+        "target_distance_km": null,
+        "intensity_target": null,
+        "is_rest_day": true,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 10,
+        "date": "2026-03-24",
+        "workout_type": "strength",
+        "target_duration_min": 50,
+        "target_distance_km": null,
+        "intensity_target": "RPE_6_7",
+        "is_rest_day": false,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 11,
+        "date": "2026-03-25",
+        "workout_type": "intervals",
+        "target_duration_min": 30,
+        "target_distance_km": null,
+        "intensity_target": "RPE_7_8",
+        "is_rest_day": false,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 12,
+        "date": "2026-03-26",
+        "workout_type": null,
+        "target_duration_min": null,
+        "target_distance_km": null,
+        "intensity_target": null,
+        "is_rest_day": true,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 13,
+        "date": "2026-03-27",
+        "workout_type": "recovery",
+        "target_duration_min": 30,
+        "target_distance_km": null,
+        "intensity_target": "RPE_4_5",
+        "is_rest_day": false,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 14,
+        "date": "2026-03-28",
+        "workout_type": null,
+        "target_duration_min": null,
+        "target_distance_km": null,
+        "intensity_target": null,
+        "is_rest_day": true,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 15,
+        "date": "2026-03-29",
+        "workout_type": "endurance",
+        "target_duration_min": 40,
+        "target_distance_km": null,
+        "intensity_target": "RPE_5_6",
+        "is_rest_day": false,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 16,
+        "date": "2026-03-30",
+        "workout_type": null,
+        "target_duration_min": null,
+        "target_distance_km": null,
+        "intensity_target": null,
+        "is_rest_day": true,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 17,
+        "date": "2026-03-31",
+        "workout_type": "strength",
+        "target_duration_min": 50,
+        "target_distance_km": null,
+        "intensity_target": "RPE_6_7",
+        "is_rest_day": false,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 18,
+        "date": "2026-04-01",
+        "workout_type": "recovery",
+        "target_duration_min": 30,
+        "target_distance_km": null,
+        "intensity_target": "RPE_4_5",
+        "is_rest_day": false,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 19,
+        "date": "2026-04-02",
+        "workout_type": null,
+        "target_duration_min": null,
+        "target_distance_km": null,
+        "intensity_target": null,
+        "is_rest_day": true,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 20,
+        "date": "2026-04-03",
+        "workout_type": "endurance",
+        "target_duration_min": 45,
+        "target_distance_km": null,
+        "intensity_target": "RPE_5_6",
+        "is_rest_day": false,
+        "status": "planned",
+        "workout_id": null
+      },
+      {
+        "day_number": 21,
+        "date": "2026-04-04",
+        "workout_type": null,
+        "target_duration_min": null,
+        "target_distance_km": null,
+        "intensity_target": null,
+        "is_rest_day": true,
+        "status": "planned",
+        "workout_id": null
+      }
+    ],
+    "created_at": "2026-03-15T21:12:43.107156"
+  },
+  "blocks_generated": [
+    1
+  ],
+  "detailed_workouts": {}
+}

@@ -1,0 +1,27 @@
+{
+  "user_id": "user_fada20561810",
+  "age": 30,
+  "weight_kg": 75.0,
+  "height_cm": 175,
+  "gender": null,
+  "fitness_level": "intermediate",
+  "training_history_years": 1,
+  "available_equipment": [
+    "barbell",
+    "dumbbells",
+    "kettlebells",
+    "pull_up_bar",
+    "resistance_bands",
+    "gym"
+  ],
+  "injuries_or_limitations": null,
+  "training_days_per_week": 5,
+  "preferred_training_days": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "friday",
+    "saturday"
+  ],
+  "training_type_preference": "cardio"
+}

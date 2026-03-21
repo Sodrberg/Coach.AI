@@ -1,0 +1,153 @@
+{
+  "workout_id": "workout_2026-01-27_threshold",
+  "scheduled_for_date": "2026-01-27",
+  "title": "Threshold Endurance Run with Strength Maintenance",
+  "workout_type": "threshold",
+  "estimated_duration_min": 60,
+  "intensity_target": "RPE_7_8",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly through full range, sync with breath. Warm up the spine and engage core."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Bird Dog",
+          "sets": 2,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Extend opposite arm and leg fully, maintain neutral spine. Focus on control, not speed."
+        },
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Light Jogging",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 3.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Easy conversational pace to elevate heart rate gradually. Build up to workout intensity."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "endurance",
+          "exercise_id": null,
+          "name": "Threshold Run",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 40.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Run at a pace you could sustain for about an hour. RPE 7-8: challenging but controlled breathing. This is race-pace effort for the 45km Engelbrektsloppet. Maintain steady effort throughout."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Back Squat",
+          "sets": 3,
+          "reps": 6,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Heavy load, explosive concentric. Maintain upright torso, knees track over toes. Drive through heels."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bent Over Row",
+          "sets": 3,
+          "reps": 6,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 75,
+          "cues": "Heavy compound pull. Keep back flat, chest up. Retract scapula and drive elbows back powerfully."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Controlled hip mobility work. Open hips gently, maintain upright posture. Breathe through each rep."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.5,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Hold each side 45 seconds. Lean into stretch, keep heel down. Release running tension in calves."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 2,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Hold 30 seconds each side. Place palm on wall, lean forward gently. Stretch chest and anterior shoulder."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Deep Breathing",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": 2.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Slow diaphragmatic breathing. Inhale for 4 counts, exhale for 4 counts. Activate parasympathetic nervous system."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "With 5 days until the 45km Engelbrektsloppet race, this threshold workout develops race-specific aerobic capacity at RPE 7-8, matching the intensity needed for sustained ultra-distance performance.",
+    "Extended running workload (40 min threshold) directly prepares for the race duration and effort level. Strength maintenance with Back Squats and Rows preserves power and running economy without compromising recovery.",
+    "16 days since last recorded workout warrants a comprehensive session; advanced fitness level supports this higher volume and intensity to consolidate training gains just before the race."
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

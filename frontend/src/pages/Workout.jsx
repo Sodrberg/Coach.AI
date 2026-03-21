@@ -1,12 +1,25 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useTodayWorkout } from '../hooks/useApi';
-import LoadingSpinner from '../components/LoadingSpinner';
+import { WorkoutSkeleton } from '../components/SkeletonLoader';
+import ConfirmModal from '../components/ConfirmModal';
 import WorkoutCard from '../components/WorkoutCard';
 import FeedbackForm from '../components/FeedbackForm';
 import TrainAnywayModal from '../components/TrainAnywayModal';
-import { Link } from 'react-router-dom';
+import SetTracker from '../components/SetTracker';
+import { useToast } from '../hooks/useToast';
+import { Link, useNavigate } from 'react-router-dom';
+
+function formatElapsed(seconds) {
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = seconds % 60;
+  if (h > 0) return `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+  return `${m}:${String(s).padStart(2, '0')}`;
+}
 
 export default function Workout() {
+  const navigate = useNavigate();
+  const toast = useToast();
   const { data: workout, isLoading, error, refetch } = useTodayWorkout();
   const [showFeedback, setShowFeedback] = useState(true);
   const [adjustedWorkout, setAdjustedWorkout] = useState(null);
@@ -14,6 +27,71 @@ export default function Workout() {
   const [showTrainAnyway, setShowTrainAnyway] = useState(false);
   const [customWorkout, setCustomWorkout] = useState(null);
   const [showCompletedDetails, setShowCompletedDetails] = useState(true);
+  const [showDiscardConfirm, setShowDiscardConfirm] = useState(false);
+  const [trackingData, setTrackingData] = useState({});
+  const [activeTrackerExercise, setActiveTrackerExercise] = useState(null); // { key, exercise }
+
+  // Timer state
+  const [timerRunning, setTimerRunning] = useState(false);
+  const [timerPaused, setTimerPaused] = useState(false);
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const timerRef = useRef(null);
+  const startTimeRef = useRef(null);
+  const accumulatedSecondsRef = useRef(0);
+
+  const timerActive = timerRunning || timerPaused;
+
+  const startWorkout = useCallback(() => {
+    accumulatedSecondsRef.current = 0;
+    startTimeRef.current = Date.now();
+    setElapsedSeconds(0);
+    setTimerRunning(true);
+    setTimerPaused(false);
+    timerRef.current = setInterval(() => {
+      setElapsedSeconds(accumulatedSecondsRef.current + Math.floor((Date.now() - startTimeRef.current) / 1000));
+    }, 1000);
+  }, []);
+
+  const pauseWorkout = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    accumulatedSecondsRef.current += Math.floor((Date.now() - startTimeRef.current) / 1000);
+    setElapsedSeconds(accumulatedSecondsRef.current);
+    setTimerRunning(false);
+    setTimerPaused(true);
+  }, []);
+
+  const resumeWorkout = useCallback(() => {
+    startTimeRef.current = Date.now();
+    setTimerRunning(true);
+    setTimerPaused(false);
+    timerRef.current = setInterval(() => {
+      setElapsedSeconds(accumulatedSecondsRef.current + Math.floor((Date.now() - startTimeRef.current) / 1000));
+    }, 1000);
+  }, []);
+
+  const completeWorkout = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    const finalSeconds = timerPaused
+      ? accumulatedSecondsRef.current
+      : accumulatedSecondsRef.current + Math.floor((Date.now() - startTimeRef.current) / 1000);
+    setTimerRunning(false);
+    setTimerPaused(false);
+    setElapsedSeconds(finalSeconds);
+    navigate('/log', {
+      state: {
+        workout: modifiedWorkout || adjustedWorkout || customWorkout || workout,
+        trackingData,
+        durationMin: Math.max(1, Math.round(finalSeconds / 60)),
+      },
+    });
+  }, [navigate, modifiedWorkout, adjustedWorkout, customWorkout, workout, trackingData, timerPaused]);
+
+  // Cleanup interval on unmount
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, []);
 
   // Use custom workout if available (from train anyway), otherwise use fetched workout
   const todayWorkout = customWorkout || workout;
@@ -45,6 +123,28 @@ export default function Workout() {
 
   const handleDiscardChanges = () => {
     setModifiedWorkout(null);
+    toast('Changes discarded');
+  };
+
+  // Handle tracking data changes from WorkoutCard
+  const handleTrackingChange = (key, data, action) => {
+    if (action === 'open') {
+      // Find the exercise from the displayed workout
+      const [sectionIdx, exerciseIdx] = key.split('-').map(Number);
+      const exercise = displayWorkout?.sections?.[sectionIdx]?.items?.[exerciseIdx];
+      if (exercise) {
+        setActiveTrackerExercise({ key, exercise });
+      }
+      return;
+    }
+    setTrackingData(prev => ({ ...prev, [key]: data }));
+  };
+
+  // Handle SetTracker update
+  const handleTrackerUpdate = (data) => {
+    if (activeTrackerExercise) {
+      setTrackingData(prev => ({ ...prev, [activeTrackerExercise.key]: data }));
+    }
   };
 
   const handleTrainAnywayComplete = (newWorkout) => {
@@ -55,7 +155,7 @@ export default function Workout() {
   };
 
   if (isLoading) {
-    return <LoadingSpinner message="Loading today's workout..." />;
+    return <WorkoutSkeleton />;
   }
 
   if (error) {
@@ -290,16 +390,14 @@ export default function Workout() {
                 <button
                   onClick={() => {
                     if (completedHasChanges) {
-                      if (window.confirm('Discard unsaved changes?')) {
-                        handleDiscardChanges();
-                        setShowCompletedDetails(false);
-                      }
+                      setShowDiscardConfirm(true);
                     } else {
                       setShowCompletedDetails(false);
                     }
                   }}
                   className="btn-secondary px-4"
                   title="Hide details"
+                  aria-label="Hide details"
                 >
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -309,12 +407,29 @@ export default function Workout() {
             </>
           )}
         </div>
+
+        <ConfirmModal
+          isOpen={showDiscardConfirm}
+          title="Discard changes?"
+          message="You have unsaved modifications to this workout. Are you sure you want to discard them?"
+          confirmLabel="Discard"
+          cancelLabel="Keep editing"
+          onConfirm={() => {
+            setShowDiscardConfirm(false);
+            handleDiscardChanges();
+            setShowCompletedDetails(false);
+          }}
+          onCancel={() => setShowDiscardConfirm(false)}
+        />
       </div>
     );
   }
 
   return (
     <div className="space-y-6 animate-in">
+      {/* Spacer for fixed action bar */}
+      {displayWorkout && !showFeedback && <div className="h-[52px]" />}
+
       {/* Header */}
       <div className="flex items-center justify-between mb-2">
         <div>
@@ -360,32 +475,79 @@ export default function Workout() {
       {/* Workout Card */}
       {displayWorkout && !showFeedback && (
         <>
-          <WorkoutCard 
+          {/* Fixed Action Bar - pinned below header */}
+          <div className="fixed top-[57px] left-0 right-0 z-40 bg-surface-card/95 border-b border-border backdrop-blur-sm">
+            <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+              {!timerActive ? (
+                <>
+                  <button
+                    onClick={startWorkout}
+                    className="btn-primary flex-1 py-2.5 text-sm"
+                  >
+                    {hasChanges ? 'Start Modified Workout' : 'Start Workout'}
+                  </button>
+                  <button
+                    onClick={() => refetch()}
+                    className="btn-secondary px-3 py-2.5 ml-2"
+                    title="Refresh workout"
+                    aria-label="Refresh workout"
+                  >
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                  </button>
+                </>
+              ) : (
+                <>
+                  <p className="text-2xl font-heading font-bold text-accent tabular-nums min-w-[5ch]">
+                    {formatElapsed(elapsedSeconds)}
+                  </p>
+                  <div className="flex items-center gap-2">
+                    {timerRunning ? (
+                      <button
+                        onClick={pauseWorkout}
+                        className="px-4 py-2 rounded-lg font-semibold text-sm bg-surface-elevated text-text-primary hover:bg-surface-elevated/80 transition-colors"
+                      >
+                        Pause
+                      </button>
+                    ) : (
+                      <button
+                        onClick={resumeWorkout}
+                        className="px-4 py-2 rounded-lg font-semibold text-sm bg-accent text-white hover:bg-accent/90 transition-colors"
+                      >
+                        Resume
+                      </button>
+                    )}
+                    <button
+                      onClick={completeWorkout}
+                      className="px-4 py-2 rounded-lg font-semibold text-sm bg-secondary text-white hover:bg-secondary/90 transition-colors"
+                    >
+                      Complete
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+
+          <WorkoutCard
             workout={displayWorkout}
             editable={true}
             onWorkoutChange={handleWorkoutChange}
+            trackingData={trackingData}
+            onTrackingChange={handleTrackingChange}
           />
-          
-          {/* Action Buttons */}
-          <div className="flex gap-3">
-            <Link 
-              to="/log" 
-              state={{ workout: displayWorkout }}
-              className="btn-primary flex-1 text-center py-3.5"
-            >
-              {hasChanges ? 'Start Modified Workout' : 'Complete Workout'}
-            </Link>
-            <button
-              onClick={() => refetch()}
-              className="btn-secondary px-4"
-              title="Refresh workout"
-            >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-              </svg>
-            </button>
-          </div>
         </>
+      )}
+
+      {/* Set Tracker Modal */}
+      {activeTrackerExercise && (
+        <SetTracker
+          exercise={activeTrackerExercise.exercise}
+          setData={trackingData[activeTrackerExercise.key]}
+          onUpdate={handleTrackerUpdate}
+          onClose={() => setActiveTrackerExercise(null)}
+        />
       )}
     </div>
   );

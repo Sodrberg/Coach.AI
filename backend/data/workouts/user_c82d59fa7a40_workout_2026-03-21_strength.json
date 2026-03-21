@@ -1,0 +1,165 @@
+{
+  "workout_id": "workout_2026-03-21_strength",
+  "scheduled_for_date": "2026-03-21",
+  "title": "Full Body Strength Foundation - Return to Training",
+  "workout_type": "strength",
+  "estimated_duration_min": 50,
+  "intensity_target": "RPE_6_7",
+  "sections": [
+    {
+      "name": "warmup",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Cat-Cow",
+          "sets": 1,
+          "reps": 10,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Move slowly through each position, synchronizing breath with movement. Arch and round the spine deliberately to warm up the entire kinetic chain."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "90/90 Hip Switches",
+          "sets": 1,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Rotate hips smoothly between positions, keeping chest upright. This opens the hip joint and prepares lower body for loading."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Banded Shoulder Dislocates",
+          "sets": 1,
+          "reps": 12,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Use a light resistance band with a wide grip. Move in a controlled arc from front to back, mobilizing shoulder joint through full range of motion."
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "items": [
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Back Squat",
+          "sets": 4,
+          "reps": 6,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 120,
+          "cues": "Keep chest up, core engaged. Drive through heels as you stand. Achieve depth where hip crease is at or below knee level. Control the descent."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bench Press",
+          "sets": 4,
+          "reps": 6,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 120,
+          "cues": "Retract shoulder blades, maintain neutral spine against bench. Lower weight to mid-chest, elbows at 45-degree angle. Press powerfully back to start."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bent Over Row",
+          "sets": 3,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 90,
+          "cues": "Hinge at hips with slight knee bend, flat back. Row weight to lower chest, squeeze shoulder blades together at top. Control the descent."
+        },
+        {
+          "kind": "strength",
+          "exercise_id": null,
+          "name": "Bulgarian Split Squat",
+          "sets": 3,
+          "reps": 8,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 60,
+          "cues": "Rear foot elevated on bench. Lower into split squat with front knee tracking over ankle. Push through front heel to stand. Maintain upright torso throughout."
+        }
+      ]
+    },
+    {
+      "name": "cooldown",
+      "items": [
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Calf Stretch",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Step one foot back, heel planted, lean forward gently. Feel stretch in calf muscle. Hold steady, breathe deeply."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Child's Pose",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 2.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Kneel and sink hips back to heels, extend arms forward. Relax completely, focus on deep breathing and mental reset."
+        },
+        {
+          "kind": "mobility",
+          "exercise_id": null,
+          "name": "Biceps Wall Stretch",
+          "sets": 1,
+          "reps": null,
+          "weight_kg": null,
+          "duration_min": 1.0,
+          "distance_km": null,
+          "rest_sec": null,
+          "cues": "Place forearm against wall, thumb pointing up. Rotate body away gently to feel stretch in biceps and shoulder. Hold and breathe."
+        },
+        {
+          "kind": "recovery",
+          "exercise_id": null,
+          "name": "Prone Thoracic Rotation",
+          "sets": 1,
+          "reps": 6,
+          "weight_kg": null,
+          "duration_min": null,
+          "distance_km": null,
+          "rest_sec": 30,
+          "cues": "Lie on side with knees bent. Open top arm across body, rotating upper back. Slow, controlled movement to mobilize spine gently post-workout."
+        }
+      ]
+    }
+  ],
+  "rationale": [
+    "User is returning to training after 999 days (extended rest), so intensity starts at RPE 6-7 with moderate weights to rebuild baseline strength safely without overloading joints or connective tissue.",
+    "Full body strength session targeting major movement patterns (squat, horizontal press, row, single-leg) with 50-minute duration suitable for intermediate fitness level using available barbell and dumbbell equipment.",
+    "Extended warmup with mobility focus prepares joints and nervous system after prolonged inactivity, while cooldown emphasizes recovery and tissue quality to support adaptation and reduce soreness."
+  ],
+  "questions": null,
+  "is_completed": false,
+  "next_workout_date": null
+}

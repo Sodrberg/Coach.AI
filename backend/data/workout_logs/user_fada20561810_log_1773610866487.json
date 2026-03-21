@@ -1,0 +1,115 @@
+{
+  "log_id": "log_1773610866487",
+  "user_id": "user_fada20561810",
+  "workout_id": "workout_2026-03-15_tempo",
+  "date": "2026-03-15T21:41:06.487Z",
+  "completed": true,
+  "workout_type": "tempo",
+  "duration_min": 1,
+  "rpe_actual": 7,
+  "exercises": [
+    {
+      "name": "Cat-Cow",
+      "sets": 1,
+      "reps": 10,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "90/90 Hip Switches",
+      "sets": 1,
+      "reps": 8,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Butt Kicks",
+      "sets": 1,
+      "reps": null,
+      "weight_kg": null,
+      "duration_per_set_sec": 60,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Agility Ladder Run",
+      "sets": 1,
+      "reps": null,
+      "weight_kg": null,
+      "duration_per_set_sec": 60,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Tempo Run",
+      "sets": 1,
+      "reps": null,
+      "weight_kg": null,
+      "duration_per_set_sec": 1500,
+      "distance_km": null,
+      "rest_sec": null
+    },
+    {
+      "name": "Back Squat",
+      "sets": 3,
+      "reps": 8,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 90
+    },
+    {
+      "name": "Bent Over Row",
+      "sets": 3,
+      "reps": 8,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 90
+    },
+    {
+      "name": "Calf Stretch",
+      "sets": 1,
+      "reps": null,
+      "weight_kg": null,
+      "duration_per_set_sec": 120,
+      "distance_km": null,
+      "rest_sec": null
+    },
+    {
+      "name": "Biceps Wall Stretch",
+      "sets": 1,
+      "reps": null,
+      "weight_kg": null,
+      "duration_per_set_sec": 90,
+      "distance_km": null,
+      "rest_sec": null
+    },
+    {
+      "name": "Bird Dog",
+      "sets": 1,
+      "reps": 8,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Cat-Cow",
+      "sets": 1,
+      "reps": 10,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": null
+    }
+  ],
+  "volume_km": null,
+  "feedback": "felt_great",
+  "intensity": "medium",
+  "notes": null
+}

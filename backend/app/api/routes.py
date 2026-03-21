@@ -7,12 +7,16 @@ All endpoints return JSON - either data or error responses.
 import json
 import logging
 import uuid
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Optional, Union
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 
+from app.api.auth import get_authenticated_user, validate_user_id_matches_session
+from app.api.rate_limiter import require_rate_limit
+from app.config import settings
+from app.models.onboarding import QuickOnboardRequest, QuickOnboardResponse
 from app.models.plan import CompletePlan, ThreeWeekBlock
 from app.models.responses import ClarifyingQuestions, ErrorResponse, RestDayResponse
 from app.models.user import Session, UserFeedback, UserGoal, UserProfile
@@ -20,6 +24,7 @@ from app.models.workout import CustomWorkoutRequest, WorkoutLog, WorkoutPlan
 from app.services.block_generator import block_generator
 from app.services.workout_rescheduler import workout_rescheduler
 from app.services.high_level_plan_generator import high_level_plan_generator
+from app.services.quick_onboard import quick_onboard_service
 from app.services.snapshot_builder import snapshot_builder
 from app.services.workout_adjuster import workout_adjuster
 from app.services.workout_generator import workout_generator
@@ -60,6 +65,7 @@ async def register(name: str, email: str) -> dict:
         name=name,
         email=email,
         created_at=datetime.now().isoformat(),
+        expires_at=(datetime.now() + timedelta(days=settings.session_duration_days)).isoformat(),
     )
     
     if not store.save_session(session):
@@ -125,28 +131,36 @@ async def get_current_user(session_id: str) -> dict:
 
 
 @router.post("/profile", response_model=UserProfile)
-async def save_profile(profile: UserProfile) -> UserProfile:
+async def save_profile(
+    profile: UserProfile,
+    session: Session = Depends(get_authenticated_user),
+) -> UserProfile:
     """
     Save user profile.
-    
+
     Returns the saved profile.
     """
+    validate_user_id_matches_session(profile.user_id, session)
+
     if not store.save_profile(profile):
         raise HTTPException(status_code=500, detail="Failed to save profile")
 
-    logger.info(f"Saved profile for user {profile.user_id}")
+    logger.info(f"Saved profile for user {session.user_id}")
     return profile
 
 
 @router.get("/profile/{user_id}", response_model=Union[UserProfile, ErrorResponse])
-async def get_profile(user_id: str) -> Union[UserProfile, ErrorResponse]:
+async def get_profile(
+    user_id: str,
+    session: Session = Depends(get_authenticated_user),
+) -> Union[UserProfile, ErrorResponse]:
     """Get user profile by ID."""
-    profile = store.get_profile(user_id)
+    profile = store.get_profile(session.user_id)
 
     if not profile:
         return ErrorResponse(
             error_code="PROFILE_NOT_FOUND",
-            message=f"Profile not found for user {user_id}",
+            message=f"Profile not found for user {session.user_id}",
         )
 
     return profile
@@ -156,31 +170,82 @@ async def get_profile(user_id: str) -> Union[UserProfile, ErrorResponse]:
 
 
 @router.post("/goal", response_model=UserGoal)
-async def save_goal(goal: UserGoal) -> UserGoal:
+async def save_goal(
+    goal: UserGoal,
+    session: Session = Depends(get_authenticated_user),
+) -> UserGoal:
     """
     Save user goal.
-    
+
     Returns the saved goal.
     """
+    validate_user_id_matches_session(goal.user_id, session)
+
     if not store.save_goal(goal):
         raise HTTPException(status_code=500, detail="Failed to save goal")
 
-    logger.info(f"Saved goal {goal.goal_id} for user {goal.user_id}")
+    logger.info(f"Saved goal {goal.goal_id} for user {session.user_id}")
     return goal
 
 
 @router.get("/goal/{user_id}", response_model=Union[UserGoal, ErrorResponse])
-async def get_active_goal(user_id: str) -> Union[UserGoal, ErrorResponse]:
+async def get_active_goal(
+    user_id: str,
+    session: Session = Depends(get_authenticated_user),
+) -> Union[UserGoal, ErrorResponse]:
     """Get the active goal for a user."""
-    goal = store.get_active_goal(user_id)
+    goal = store.get_active_goal(session.user_id)
 
     if not goal:
         return ErrorResponse(
             error_code="GOAL_NOT_FOUND",
-            message=f"No active goal found for user {user_id}",
+            message=f"No active goal found for user {session.user_id}",
         )
 
     return goal
+
+
+# ==================== Onboarding Endpoints ====================
+
+
+@router.post(
+    "/onboard/quick",
+    response_model=Union[QuickOnboardResponse, ErrorResponse],
+)
+async def quick_onboard(
+    request: QuickOnboardRequest,
+    session: Session = Depends(require_rate_limit(settings.rate_limit_onboard_per_hour, 3600)),
+) -> Union[QuickOnboardResponse, ErrorResponse]:
+    """
+    Quick onboarding for new users.
+
+    Takes a free-text goal and training days per week, infers structured
+    profile/goal via LLM, then generates a complete training plan.
+    """
+    validate_user_id_matches_session(request.user_id, session)
+
+    # Idempotency: return existing plan if user already onboarded
+    existing_plan = store.get_complete_plan(session.user_id)
+    if existing_plan:
+        profile = store.get_profile(session.user_id)
+        goal = store.get_active_goal(session.user_id)
+        if profile and goal:
+            logger.info(f"Returning existing plan for already-onboarded user {session.user_id}")
+            return QuickOnboardResponse(
+                profile=profile, goal=goal, complete_plan=existing_plan
+            )
+
+    result = quick_onboard_service.onboard(request)
+
+    if not result:
+        return ErrorResponse(
+            error_code="ONBOARDING_FAILED",
+            message="Failed to complete onboarding. Please try again.",
+            retry_allowed=True,
+        )
+
+    logger.info(f"Quick onboarding completed for user {session.user_id}")
+    return result
 
 
 # ==================== Plan Generation Endpoints ====================
@@ -191,19 +256,27 @@ async def get_active_goal(user_id: str) -> Union[UserGoal, ErrorResponse]:
     response_model=Union[CompletePlan, ClarifyingQuestions, ErrorResponse],
 )
 async def generate_plan(
-    user_id: str,
     goal_id: str,
+    session: Session = Depends(require_rate_limit(settings.rate_limit_plan_generate_per_hour, 3600)),
 ) -> Union[CompletePlan, ClarifyingQuestions, ErrorResponse]:
     """
     Generate a complete training plan.
-    
+
     Creates:
     - 8-week high-level plan
     - Initial 21-day block with day slots
     - Detailed workouts for the first 7 days
-    
+
     Returns CompletePlan or ClarifyingQuestions if info is missing.
     """
+    user_id = session.user_id
+
+    # Idempotency: return existing plan if already generated
+    existing_plan = store.get_complete_plan(user_id)
+    if existing_plan:
+        logger.info(f"Returning existing plan for user {user_id}")
+        return existing_plan
+
     # Build snapshot
     snapshot = snapshot_builder.build_snapshot(user_id)
 
@@ -254,26 +327,15 @@ async def generate_plan(
     # Save block
     store.save_block(user_id, first_block)
 
-    # Generate detailed workouts for first 7 days
-    detailed_workouts = {}
-    for slot in first_block.day_slots[:7]:
-        if not slot.is_rest_day:
-            workout = workout_generator.generate(snapshot, slot)
-            if workout:
-                store.save_workout(user_id, workout)
-                detailed_workouts[slot.date] = workout.workout_id
-                # Update slot with workout_id
-                slot.workout_id = workout.workout_id
-
-    # Save updated block with workout IDs
-    store.save_block(user_id, first_block)
+    # Detailed workouts are generated just-in-time when the user
+    # requests their workout for a given day (GET /workout/today).
 
     # Create and save complete plan
     complete_plan = CompletePlan(
         high_level_plan=high_level_plan,
         current_block=first_block,
         blocks_generated=[1],
-        detailed_workouts=detailed_workouts,
+        detailed_workouts={},
     )
 
     store.save_complete_plan(user_id, complete_plan)
@@ -287,14 +349,14 @@ async def generate_plan(
     response_model=Union[CompletePlan, ErrorResponse],
 )
 async def get_complete_plan(
-    user_id: str,
+    session: Session = Depends(get_authenticated_user),
 ) -> Union[CompletePlan, ErrorResponse]:
     """
     Get the complete training plan for a user.
-    
+
     Returns the high-level plan and current block.
     """
-    complete_plan = store.get_complete_plan(user_id)
+    complete_plan = store.get_complete_plan(session.user_id)
     
     if not complete_plan:
         return ErrorResponse(
@@ -313,16 +375,17 @@ async def get_complete_plan(
     response_model=Union[WorkoutPlan, RestDayResponse, ErrorResponse],
 )
 async def get_workout_today(
-    user_id: str,
+    session: Session = Depends(require_rate_limit(settings.rate_limit_workout_today_per_hour, 3600)),
 ) -> Union[WorkoutPlan, RestDayResponse, ErrorResponse]:
     """
     Get today's workout.
-    
+
     Returns:
     - WorkoutPlan if there's a workout scheduled (with is_completed status)
     - RestDayResponse if today is a rest day
     - ErrorResponse if no plan exists or generation fails
     """
+    user_id = session.user_id
     today = datetime.now().strftime("%Y-%m-%d")
 
     # Get current block to check slot status
@@ -419,30 +482,95 @@ async def get_workout_today(
     return workout
 
 
+@router.get(
+    "/workout/by-date",
+    response_model=Union[WorkoutPlan, RestDayResponse, dict, ErrorResponse],
+)
+async def get_workout_by_date(
+    date: str,
+    session: Session = Depends(get_authenticated_user),
+) -> Union[WorkoutPlan, RestDayResponse, dict, ErrorResponse]:
+    """
+    Get a workout for a specific date (read-only, no JIT generation).
+
+    Returns:
+    - WorkoutPlan if a detailed workout exists for that date
+    - RestDayResponse if the date is a rest day
+    - {"status": "not_generated"} if no workout has been generated yet
+    - ErrorResponse if no plan exists or date is out of range
+    """
+    user_id = session.user_id
+    block = store.get_current_block(user_id, date)
+    if not block:
+        return ErrorResponse(
+            error_code="NO_ACTIVE_PLAN",
+            message="No active training plan found.",
+        )
+
+    day_slot = None
+    for slot in block.day_slots:
+        if slot.date == date:
+            day_slot = slot
+            break
+
+    if not day_slot:
+        return ErrorResponse(
+            error_code="DATE_OUT_OF_RANGE",
+            message=f"Date {date} is not within the current training block",
+        )
+
+    if day_slot.is_rest_day:
+        next_workout_date = None
+        for slot in block.day_slots:
+            if slot.date > date and not slot.is_rest_day:
+                next_workout_date = slot.date
+                break
+        return RestDayResponse(date=date, next_workout_date=next_workout_date)
+
+    existing_workout = store.get_workout_for_date(user_id, date)
+    if existing_workout:
+        # Check completion status
+        is_completed = day_slot.status == "completed"
+        if not is_completed:
+            logs = store.get_workout_logs_in_range(user_id, date, date)
+            for log in logs:
+                if log.workout_id == existing_workout.workout_id:
+                    is_completed = True
+                    break
+        existing_workout.is_completed = is_completed
+        return existing_workout
+
+    return {"status": "not_generated", "message": "This workout hasn't been generated yet."}
+
+
 @router.post(
     "/workout/feedback",
     response_model=Union[WorkoutPlan, RestDayResponse, ErrorResponse],
 )
 async def submit_feedback(
     feedback: UserFeedback,
+    session: Session = Depends(require_rate_limit(settings.rate_limit_feedback_per_hour, 3600)),
 ) -> Union[WorkoutPlan, RestDayResponse, ErrorResponse]:
     """
     Submit pre-workout feedback and get adjusted workout.
-    
+
     Applies ADJUSTMENT_RULES based on feedback status.
     Returns adjusted WorkoutPlan.
     """
+    validate_user_id_matches_session(feedback.user_id, session)
+    user_id = session.user_id
+
     # Save feedback
     store.save_feedback(feedback)
 
     today = datetime.now().strftime("%Y-%m-%d")
 
     # Get today's workout
-    workout = store.get_workout_for_date(feedback.user_id, today)
+    workout = store.get_workout_for_date(user_id, today)
 
     if not workout:
         # Try to generate it first
-        result = await get_workout_today(feedback.user_id)
+        result = await get_workout_today(session=session)
         if isinstance(result, ErrorResponse):
             return result
         if isinstance(result, RestDayResponse):
@@ -453,19 +581,25 @@ async def submit_feedback(
     if feedback.status != "great":
         adjusted_workout = workout_adjuster.adjust(workout, feedback)
         # Save adjusted workout (overwrites original)
-        store.save_workout(feedback.user_id, adjusted_workout)
+        store.save_workout(user_id, adjusted_workout)
         return adjusted_workout
 
     return workout
 
 
 @router.post("/workout/log", response_model=WorkoutLog)
-async def log_workout(log: WorkoutLog) -> WorkoutLog:
+async def log_workout(
+    log: WorkoutLog,
+    session: Session = Depends(get_authenticated_user),
+) -> WorkoutLog:
     """
     Log a completed workout.
-    
+
     Saves the workout log with all exercise details and feedback.
     """
+    validate_user_id_matches_session(log.user_id, session)
+    user_id = session.user_id
+
     # Generate log ID if not provided
     if not log.log_id:
         log.log_id = f"log_{uuid.uuid4().hex[:8]}"
@@ -473,15 +607,15 @@ async def log_workout(log: WorkoutLog) -> WorkoutLog:
     if not store.save_workout_log(log):
         raise HTTPException(status_code=500, detail="Failed to save workout log")
 
-    logger.info(f"Saved workout log {log.log_id} for user {log.user_id}")
+    logger.info(f"Saved workout log {log.log_id} for user {user_id}")
 
     # Update day slot status if workout_id matches
-    block = store.get_current_block(log.user_id, log.date[:10])
+    block = store.get_current_block(user_id, log.date[:10])
     if block:
         for slot in block.day_slots:
             if slot.workout_id == log.workout_id:
                 slot.status = "completed" if log.completed else "skipped"
-                store.save_block(log.user_id, block)
+                store.save_block(user_id, block)
                 break
 
     return log
@@ -492,13 +626,14 @@ async def log_workout(log: WorkoutLog) -> WorkoutLog:
     response_model=Union[WorkoutPlan, ErrorResponse],
 )
 async def swap_workout_to_today(
-    user_id: str,
+    session: Session = Depends(require_rate_limit(settings.rate_limit_swap_per_hour, 3600)),
 ) -> Union[WorkoutPlan, ErrorResponse]:
     """
     Swap the next scheduled workout with today's rest day.
-    
+
     This moves the next workout to today and makes that day a rest day instead.
     """
+    user_id = session.user_id
     today = datetime.now().strftime("%Y-%m-%d")
 
     # Get current block
@@ -609,13 +744,17 @@ async def swap_workout_to_today(
 )
 async def save_custom_workout(
     workout_request: CustomWorkoutRequest,
+    session: Session = Depends(get_authenticated_user),
 ) -> WorkoutPlan:
     """
     Save a user-created custom workout.
-    
+
     Links the workout to the corresponding DaySlot in the training block
     so it appears in the schedule view.
     """
+    validate_user_id_matches_session(workout_request.user_id, session)
+    user_id = session.user_id
+
     today = datetime.now().strftime("%Y-%m-%d")
     target_date = workout_request.scheduled_for_date or today
     workout_id = f"custom_{uuid.uuid4().hex[:8]}"
@@ -633,10 +772,10 @@ async def save_custom_workout(
     )
 
     # Save the workout
-    store.save_workout(workout_request.user_id, workout)
+    store.save_workout(user_id, workout)
 
     # Link to day slot if block exists
-    block = store.get_current_block(workout_request.user_id, target_date)
+    block = store.get_current_block(user_id, target_date)
     if block:
         for slot in block.day_slots:
             if slot.date == target_date:
@@ -644,16 +783,16 @@ async def save_custom_workout(
                 slot.workout_type = workout_request.workout_type
                 slot.is_rest_day = False
                 slot.status = "planned"
-                store.save_block(workout_request.user_id, block)
-                
+                store.save_block(user_id, block)
+
                 # Also update the complete plan so /plan/complete returns updated data
-                complete_plan = store.get_complete_plan(workout_request.user_id)
+                complete_plan = store.get_complete_plan(user_id)
                 if complete_plan:
                     complete_plan.current_block = block
-                    store.save_complete_plan(workout_request.user_id, complete_plan)
+                    store.save_complete_plan(user_id, complete_plan)
                 break
 
-    logger.info(f"Saved custom workout {workout_id} for user {workout_request.user_id} on {target_date}")
+    logger.info(f"Saved custom workout {workout_id} for user {user_id} on {target_date}")
 
     return workout
 
@@ -663,16 +802,17 @@ async def save_custom_workout(
     response_model=Union[dict, ErrorResponse],
 )
 async def move_workout(
-    user_id: str,
     from_date: str,
     to_date: str,
+    session: Session = Depends(get_authenticated_user),
 ) -> Union[dict, ErrorResponse]:
     """
     Move a workout from one date to another.
-    
+
     If the target date has a workout, the two workouts are swapped.
     If the target date is a rest day, the workout is moved there and the source becomes a rest day.
     """
+    user_id = session.user_id
     if from_date == to_date:
         return ErrorResponse(
             error_code="SAME_DATE",
@@ -811,13 +951,15 @@ async def move_workout(
     response_model=Union[ThreeWeekBlock, ErrorResponse],
 )
 async def generate_next_block(
-    user_id: str,
+    session: Session = Depends(require_rate_limit(settings.rate_limit_block_generate_per_day, 86400)),
 ) -> Union[ThreeWeekBlock, ErrorResponse]:
     """
     Generate the next 21-day training block.
-    
+
     Called when approaching end of current block (day ~18-19).
     """
+    user_id = session.user_id
+
     # Get current plan
     complete_plan = store.get_complete_plan(user_id)
     if not complete_plan:
@@ -826,13 +968,29 @@ async def generate_next_block(
             message="No active training plan found",
         )
 
+    # Guard: max total blocks per user
+    if len(complete_plan.blocks_generated) >= settings.max_blocks_per_user:
+        return ErrorResponse(
+            error_code="MAX_BLOCKS_REACHED",
+            message=f"Maximum of {settings.max_blocks_per_user} training blocks reached.",
+        )
+
+    # Guard: don't generate blocks too far ahead
+    latest_block = store.get_latest_block(user_id)
+    if latest_block:
+        days_ahead = (datetime.fromisoformat(latest_block.end_date) - datetime.now()).days
+        if days_ahead > settings.max_days_ahead_for_blocks:
+            return ErrorResponse(
+                error_code="BLOCKS_TOO_FAR_AHEAD",
+                message="You already have enough upcoming training blocks generated.",
+            )
+
     # Determine next block number
     current_block_num = max(complete_plan.blocks_generated)
     next_block_num = current_block_num + 1
 
     # Calculate start date (day after current block ends)
     current_block = complete_plan.current_block
-    from datetime import timedelta
 
     end_date = datetime.fromisoformat(current_block.end_date)
     next_start = end_date + timedelta(days=1)

@@ -1,0 +1,115 @@
+{
+  "log_id": "log_1774097810989",
+  "user_id": "user_c82d59fa7a40",
+  "workout_id": "workout_2026-03-21_strength",
+  "date": "2026-03-21T12:56:50.989Z",
+  "completed": true,
+  "workout_type": "strength",
+  "duration_min": 45,
+  "rpe_actual": 7,
+  "exercises": [
+    {
+      "name": "Cat-Cow",
+      "sets": 1,
+      "reps": 10,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "90/90 Hip Switches",
+      "sets": 1,
+      "reps": 8,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Banded Shoulder Dislocates",
+      "sets": 1,
+      "reps": 12,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    },
+    {
+      "name": "Back Squat",
+      "sets": 4,
+      "reps": 6,
+      "weight_kg": null,
+      "duration_per_set_sec": 600,
+      "distance_km": null,
+      "rest_sec": 120
+    },
+    {
+      "name": "Bench Press",
+      "sets": 4,
+      "reps": 6,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 120
+    },
+    {
+      "name": "Bent Over Row",
+      "sets": 3,
+      "reps": 8,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 90
+    },
+    {
+      "name": "Bulgarian Split Squat",
+      "sets": 3,
+      "reps": 8,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 60
+    },
+    {
+      "name": "Calf Stretch",
+      "sets": 1,
+      "reps": null,
+      "weight_kg": null,
+      "duration_per_set_sec": 60,
+      "distance_km": null,
+      "rest_sec": null
+    },
+    {
+      "name": "Child's Pose",
+      "sets": 1,
+      "reps": null,
+      "weight_kg": null,
+      "duration_per_set_sec": 120,
+      "distance_km": null,
+      "rest_sec": null
+    },
+    {
+      "name": "Biceps Wall Stretch",
+      "sets": 1,
+      "reps": null,
+      "weight_kg": null,
+      "duration_per_set_sec": 60,
+      "distance_km": null,
+      "rest_sec": null
+    },
+    {
+      "name": "Prone Thoracic Rotation",
+      "sets": 1,
+      "reps": 6,
+      "weight_kg": null,
+      "duration_per_set_sec": null,
+      "distance_km": null,
+      "rest_sec": 30
+    }
+  ],
+  "volume_km": null,
+  "feedback": "felt_great",
+  "intensity": "medium",
+  "notes": null
+}

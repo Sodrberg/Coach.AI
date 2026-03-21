@@ -136,6 +136,7 @@ Remember: EXACTLY {block_days} day_slots. Count them before responding."""
             training_days_per_week=profile.training_days_per_week,
             preferred_training_days=preferred_days_str,
             available_equipment=", ".join(profile.available_equipment),
+            training_type_preference=getattr(profile, 'training_type_preference', None) or 'both',
             injuries_or_limitations=profile.injuries_or_limitations or "None",
             goal_type=goal.goal_type,
             target_event=goal.target_event or "General fitness",

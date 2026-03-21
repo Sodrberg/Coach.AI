@@ -32,6 +32,10 @@ class UserProfile(BaseModel):
         None,
         description="Preferred days of week (e.g., ['monday', 'wednesday', 'friday'])",
     )
+    training_type_preference: Optional[Literal["cardio", "strength", "both"]] = Field(
+        None,
+        description="Preferred training type focus (cardio, strength, or both)",
+    )
 
 
 class UserGoal(BaseModel):
